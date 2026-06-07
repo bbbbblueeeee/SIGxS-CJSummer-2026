@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bj6i2oh5bior" path="res://Scripts/global.gd" id="1_nqxm2"]
 [ext_resource type="PackedScene" uid="uid://cr3ifwbq6cxph" path="res://Scenes/chore.tscn" id="2_goscw"]
+[ext_resource type="PackedScene" uid="uid://b7sc6ex8q1xen" path="res://Scenes/player.tscn" id="3_7la68"]
 [ext_resource type="PackedScene" uid="uid://wpxkwx5rtm7g" path="res://Scenes/ui.tscn" id="3_ppfu0"]
 [ext_resource type="PackedScene" uid="uid://boenjddqfliwj" path="res://Scenes/time.tscn" id="4_ppfu0"]
 
@@ -11,6 +12,8 @@ script = ExtResource("1_nqxm2")
 [node name="World" type="Node2D" parent="." unique_id=1648158631]
 
 [node name="Chore" parent="World" unique_id=666247928 instance=ExtResource("2_goscw")]
+
+[node name="Player" parent="World" unique_id=735912576 instance=ExtResource("3_7la68")]
 
 [node name="GUI" type="Control" parent="." unique_id=1168162784]
 layout_mode = 3
