@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cpfxnwgynxrlt"]
+
+[ext_resource type="Script" uid="uid://bm4qm2jekenw6" path="res://Scripts/obedience.gd" id="1_0ol6k"]
+
+[node name="Obedience" type="Node" unique_id=1811855102]
+script = ExtResource("1_0ol6k")

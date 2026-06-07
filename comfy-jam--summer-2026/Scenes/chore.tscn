@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cr3ifwbq6cxph"]
+
+[ext_resource type="Script" uid="uid://bntsiimfq8d4c" path="res://Scripts/chore.gd" id="1_32aft"]
+[ext_resource type="Script" uid="uid://batgqtnnexc13" path="res://Scripts/time_component.gd" id="2_23t8f"]
+[ext_resource type="Script" uid="uid://cqlu6c6fy60ea" path="res://Scripts/point_component.gd" id="3_n7txj"]
+[ext_resource type="Script" uid="uid://ceqohbu735puy" path="res://Scenes/area_component.gd" id="4_23t8f"]
+
+[node name="Chore" type="Node2D" unique_id=666247928 node_paths=PackedStringArray("time_component", "point_component")]
+script = ExtResource("1_32aft")
+time_component = NodePath("TimeComponent")
+point_component = NodePath("PointComponent")
+
+[node name="TimeComponent" type="Node2D" parent="." unique_id=1742744375]
+script = ExtResource("2_23t8f")
+
+[node name="PointComponent" type="Node2D" parent="." unique_id=255666949]
+script = ExtResource("3_n7txj")
+
+[node name="AreaComponent" type="Area2D" parent="." unique_id=635572821]
+script = ExtResource("4_23t8f")
