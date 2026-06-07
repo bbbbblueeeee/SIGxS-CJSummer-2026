@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b7sc6ex8q1xen"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lv5ao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
+
+[node name="Player" type="AnimatedSprite2D" unique_id=735912576]
+sprite_frames = SubResource("SpriteFrames_lv5ao")
+
+[node name="MoveComponent" type="Node2D" parent="." unique_id=1081324767]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1664032059]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2014980602]
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_f60y1")

@@ -1,5 +1,7 @@
-extends Node2D
-class_name TimeComponent
+extends Node
+signal time_changed(activity_time)
+signal chore_completed(chore)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

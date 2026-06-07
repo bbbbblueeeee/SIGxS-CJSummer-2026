@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnflgbfa0lbmx"]
+
+[ext_resource type="Script" uid="uid://bj6i2oh5bior" path="res://Scripts/global.gd" id="1_nqxm2"]
+[ext_resource type="PackedScene" uid="uid://cr3ifwbq6cxph" path="res://Scenes/chore.tscn" id="2_goscw"]
+[ext_resource type="PackedScene" uid="uid://wpxkwx5rtm7g" path="res://Scenes/ui.tscn" id="3_ppfu0"]
+
+[node name="GameController" type="Node" unique_id=2020275606]
+script = ExtResource("1_nqxm2")
+
+[node name="World" type="Node2D" parent="." unique_id=1648158631]
+
+[node name="Chore" parent="World" unique_id=666247928 instance=ExtResource("2_goscw")]
+
+[node name="GUI" type="Control" parent="." unique_id=1168162784]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UI" parent="GUI" unique_id=1805872978 instance=ExtResource("3_ppfu0")]
+layout_mode = 1
