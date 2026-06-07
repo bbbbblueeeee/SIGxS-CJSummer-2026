@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b7sc6ex8q1xen"]
 
 [ext_resource type="Texture2D" uid="uid://cys7ch83tu8bq" path="res://Assets/Temporary/TEMP_PlayerSprite.png" id="1_cvnsp"]
-[ext_resource type="Script" uid="uid://cp5oo5uyau01a" path="res://Scenes/move_component.gd" id="2_6t5aa"]
-[ext_resource type="Script" uid="uid://bf16m8mnkjp2r" path="res://Scenes/player.gd" id="2_vgqql"]
+[ext_resource type="Script" uid="uid://cp5oo5uyau01a" path="res://Scripts/move_component.gd" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://bf16m8mnkjp2r" path="res://Scripts/player.gd" id="2_vgqql"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lv5ao"]
 animations = [{

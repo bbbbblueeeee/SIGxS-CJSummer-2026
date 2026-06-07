@@ -13,10 +13,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("move left"):
 		direction = -1
-		print("now moving left")
 	if Input.is_action_just_pressed("move right"):
 		direction = 1
-		print("now moving right")
 	if !Input.is_action_pressed("move left") and !Input.is_action_pressed("move right"):
 		direction = 0
 	get_parent().position.x += (direction*speed)
