@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1qcno3gutt6f"]
 
-[ext_resource type="Script" uid="uid://ps2uq3gxd2m8" path="res://Scenes/obedience_points.gd" id="1_argeb"]
+[ext_resource type="Script" uid="uid://ps2uq3gxd2m8" path="res://Scripts/obedience_points.gd" id="1_argeb"]
 
 [node name="ObediencePoints" type="Node2D" unique_id=1972092476]
 script = ExtResource("1_argeb")
