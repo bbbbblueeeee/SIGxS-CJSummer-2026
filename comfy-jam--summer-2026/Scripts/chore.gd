@@ -3,8 +3,8 @@ extends Node2D
 @export var chore_name : String
 @export var time_taken : int
 @export var point_value : int
-@export var selectable := true
-var player_in_area := false
+@export var selectable : bool = true
+var player_in_area : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
