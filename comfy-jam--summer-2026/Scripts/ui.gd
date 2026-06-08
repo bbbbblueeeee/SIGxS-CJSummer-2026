@@ -16,5 +16,3 @@ func _process(delta: float) -> void:
 func on_chore_completed(chore):
 	time += chore.time_taken
 	points += chore.point_value
-	print("Current Time: "+str(time))
-	print("Current Obedience Points: "+str(points))

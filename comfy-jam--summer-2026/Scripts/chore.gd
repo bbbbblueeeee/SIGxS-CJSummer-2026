@@ -30,7 +30,7 @@ func show_dialogue_box():
 	dialogue_box.start(dialogue,"start")
 
 func deselect():
-	await (get_tree().create_timer(0.5).timeout)
+	await (get_tree().create_timer(0.2).timeout)
 	is_selected = false
 
 func chore_completed():
