@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bwipbfce36eug"]
 
 [ext_resource type="Script" uid="uid://dw0p4opjkgkjx" path="res://Scripts/dialogue_chore.gd" id="1_g406w"]
+[ext_resource type="Texture2D" uid="uid://dnanmitdwxhql" path="res://Assets/icon.svg" id="2_ig6vh"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_juolu"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ig6vh"]
 [ext_resource type="AudioStream" uid="uid://ldhbforak0pt" path="res://Assets/Temporary/freesound-community-type-ui-38782_SDCZliLj.mp3" id="4_juolu"]
@@ -134,24 +135,49 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=1428277592]
 layout_mode = 2
+alignment = 1
+
+[node name="Control2" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1928044981]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control2" unique_id=1543289529]
+layout_mode = 0
+offset_top = 12.5
+offset_right = 128.0
+offset_bottom = 140.5
+texture = ExtResource("2_ig6vh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1624289611]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=507199029]
+[node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1479220417]
+layout_mode = 2
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=507199029]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
-layout_mode = 2
+layout_mode = 0
+offset_left = 150.0
+offset_top = 4.0
+offset_right = 1117.0
+offset_bottom = 32.0
 mouse_filter = 1
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_juolu")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1225160028 instance=ExtResource("2_juolu")]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+offset_left = 150.0
+offset_top = 36.0
+offset_right = 1115.0
+offset_bottom = 153.0
+grow_horizontal = 1
 size_flags_vertical = 3
 text = "Dialogue..."
 
@@ -198,6 +224,6 @@ stream = ExtResource("4_juolu")
 volume_db = 5.0
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="finished_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_finished_typing"]
-[connection signal="started_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_started_typing"]
+[connection signal="finished_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control/DialogueLabel" to="." method="_on_dialogue_label_finished_typing"]
+[connection signal="started_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control/DialogueLabel" to="." method="_on_dialogue_label_started_typing"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
