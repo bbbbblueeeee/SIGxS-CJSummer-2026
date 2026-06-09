@@ -1,5 +1,6 @@
 extends AnimatedSprite2D
 
+@onready var move_component: Node2D = $MoveComponent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,4 +11,19 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	calculate_direction()
+	calculate_animation()
+
+func calculate_direction() -> void:
+	if move_component.direction > 0:
+		flip_h = true
+	elif move_component.direction < 0:
+		flip_h = false
+
+
+func calculate_animation() -> void:
+	if move_component.direction != 0:
+		play("walk")
+	else:
+		play("idle")
+		
