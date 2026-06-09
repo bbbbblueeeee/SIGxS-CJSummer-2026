@@ -1,15 +1,16 @@
 extends Node2D
 
+class_name Chore
 @export var chore_name : String
 @export var time_taken : int
 @export var point_value : int
+var index : int
 var player_in_area : bool = false
 var is_selected : bool = false
 var completed : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position.x = 500
 	position.y = 300
 	print(chore_name)
 	print("Time Taken: "+str(time_taken))

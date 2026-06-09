@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cnflgbfa0lbmx"]
 
 [ext_resource type="Script" uid="uid://bj6i2oh5bior" path="res://Scripts/global.gd" id="1_nqxm2"]
-[ext_resource type="PackedScene" uid="uid://cr3ifwbq6cxph" path="res://Scenes/chore.tscn" id="2_goscw"]
+[ext_resource type="Script" uid="uid://c3gchgxdu132l" path="res://Scripts/world.gd" id="2_27abl"]
 [ext_resource type="PackedScene" uid="uid://b7sc6ex8q1xen" path="res://Scenes/player.tscn" id="3_7la68"]
 [ext_resource type="PackedScene" uid="uid://wpxkwx5rtm7g" path="res://Scenes/ui.tscn" id="3_ppfu0"]
+[ext_resource type="PackedScene" uid="uid://l13lm78v14we" path="res://Scenes/chore_manager.tscn" id="4_27abl"]
 [ext_resource type="PackedScene" uid="uid://boenjddqfliwj" path="res://Scenes/time.tscn" id="4_ppfu0"]
 [ext_resource type="PackedScene" uid="uid://1qcno3gutt6f" path="res://Scenes/obedience_points.tscn" id="6_k0qbb"]
 
@@ -11,10 +12,11 @@
 script = ExtResource("1_nqxm2")
 
 [node name="World" type="Node2D" parent="." unique_id=1648158631]
-
-[node name="Chore" parent="World" unique_id=666247928 instance=ExtResource("2_goscw")]
+script = ExtResource("2_27abl")
 
 [node name="Player" parent="World" unique_id=735912576 instance=ExtResource("3_7la68")]
+
+[node name="ChoreManager" parent="World" unique_id=956873693 instance=ExtResource("4_27abl")]
 
 [node name="GUI" type="Control" parent="." unique_id=1168162784]
 layout_mode = 3

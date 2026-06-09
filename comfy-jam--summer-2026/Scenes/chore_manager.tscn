@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://l13lm78v14we"]
+
+[ext_resource type="Script" uid="uid://b4f4b2rlaoddw" path="res://Scripts/chore_manager.gd" id="1_8shd2"]
+
+[node name="ChoreManager" type="Node2D" unique_id=956873693]
+script = ExtResource("1_8shd2")
