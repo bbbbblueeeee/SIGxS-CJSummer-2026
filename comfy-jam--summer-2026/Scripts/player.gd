@@ -5,8 +5,9 @@ extends AnimatedSprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	position.x = 100
-	position.y = 300
-	pass # Replace with function body.
+	position.y = 500
+	scale = Vector2(1.25,1.25)
+	$Area2D.scale = Vector2(5,7)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

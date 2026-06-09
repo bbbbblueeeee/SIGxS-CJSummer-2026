@@ -11,7 +11,8 @@ var completed : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position.y = 300
+	scale = Vector2(4,4)
+	position.y = 600
 	print(chore_name)
 	print("Time Taken: "+str(time_taken))
 	print("Point Value: "+str(point_value))
