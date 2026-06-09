@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dw0p4opjkgkjx" path="res://Scripts/dialogue_chore.gd" id="1_g406w"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_juolu"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ig6vh"]
+[ext_resource type="AudioStream" uid="uid://ldhbforak0pt" path="res://Assets/Temporary/freesound-community-type-ui-38782_SDCZliLj.mp3" id="4_juolu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -193,6 +194,10 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
+stream = ExtResource("4_juolu")
+volume_db = 5.0
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="finished_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_finished_typing"]
+[connection signal="started_typing" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_started_typing"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
