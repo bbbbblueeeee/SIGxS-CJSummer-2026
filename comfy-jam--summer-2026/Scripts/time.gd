@@ -21,9 +21,16 @@ func _process(delta: float) -> void:
 func on_chore_completed(chore):
 	current_time += chore.time_taken
 	calculate_time()
+	Signals.time_updated.emit(current_time)
 
 func calculate_time():
-	if current_time > 12:
+	if current_time == 24:
+		displayed_time = 12
+		time_marker = "AM"
+	elif current_time == 12:
+		displayed_time = 12
+		time_marker = "PM"
+	elif current_time > 12:
 		displayed_time = current_time - 12
 		time_marker = "PM"
 	else:

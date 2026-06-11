@@ -1,5 +1,6 @@
 extends Node
 signal chore_completed(chore)
+signal time_updated(time)
 
 
 # Called when the node enters the scene tree for the first time.

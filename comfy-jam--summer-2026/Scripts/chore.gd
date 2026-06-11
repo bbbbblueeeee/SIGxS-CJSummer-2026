@@ -8,6 +8,8 @@ var index : int
 var player_in_area : bool = false
 var is_selected : bool = false
 var completed : bool = false
+var will_end_past_ten : bool = false
+var will_end_past_midnight : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +18,7 @@ func _ready() -> void:
 	print(chore_name)
 	print("Time Taken: "+str(time_taken))
 	print("Point Value: "+str(point_value))
+	Signals.time_updated.connect(calculate_end_time)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,3 +48,15 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	player_in_area = false
+
+func calculate_end_time(time: int) -> void:
+	var end_time = time_taken + time
+	if end_time > 24:
+		will_end_past_midnight = true
+		will_end_past_ten = true
+	elif end_time > 22:
+		will_end_past_midnight = false
+		will_end_past_ten = true
+	else:
+		will_end_past_midnight = false
+		will_end_past_ten = false
