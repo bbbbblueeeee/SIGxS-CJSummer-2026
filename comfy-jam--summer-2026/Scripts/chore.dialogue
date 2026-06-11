@@ -1,0 +1,10 @@
+~ start
+Player: You've just selected the {{get_parent().chore_name}} chore.
+Player: Completing this chore will take {{get_parent().time_taken}} hours and award {{get_parent().point_value}} obedience points.
+Player: Would you like to proceed with this chore?
+- Yes.
+	do get_parent().chore_completed()
+	Player: All done!
+- No.
+	do get_parent().deselect()
+=> END

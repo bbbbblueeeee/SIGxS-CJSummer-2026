@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dp0l1dufniqbp"
+path="res://.godot/imported/chore.dialogue-726fbbfaffc8ec7d5580680f73863fca.tres"
+
+[deps]
+
+source_file="res://Scripts/chore.dialogue"
+dest_files=["res://.godot/imported/chore.dialogue-726fbbfaffc8ec7d5580680f73863fca.tres"]
+
+[params]
+
+defaults=true

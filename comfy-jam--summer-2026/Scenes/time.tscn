@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://boenjddqfliwj"]
+
+[ext_resource type="Script" uid="uid://b6s6kpus0pu2p" path="res://Scripts/time.gd" id="1_uv3t7"]
+
+[node name="Time" type="Node2D" unique_id=1515553904]
+script = ExtResource("1_uv3t7")
+
+[node name="time_display" type="Label" parent="." unique_id=1791625785]
+offset_left = 230.0
+offset_top = 141.0
+offset_right = 539.0
+offset_bottom = 281.0
+theme_override_font_sizes/font_size = 102
+text = "xx : 00"
