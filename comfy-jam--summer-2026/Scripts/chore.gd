@@ -36,6 +36,7 @@ func deselect():
 	is_selected = false
 
 func chore_completed():
+	Signals.chore_completed.emit(self)
 	completed = true
 	$Sprite2D.set_texture(null)
 

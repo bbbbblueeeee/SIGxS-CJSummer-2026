@@ -1,4 +1,5 @@
 extends Node
+signal chore_completed(chore)
 signal time_updated(time)
 signal move_background(position)
 
