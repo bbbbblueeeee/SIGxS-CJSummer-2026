@@ -13,6 +13,7 @@ time_taken = 2
 point_value = 15
 
 [node name="Area2D" type="Area2D" parent="." unique_id=724769985]
+position = Vector2(16, 16)
 script = ExtResource("4_23t8f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1052236281]
@@ -20,6 +21,7 @@ shape = SubResource("RectangleShape2D_23t8f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078621858]
 texture = ExtResource("3_32aft")
+centered = false
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

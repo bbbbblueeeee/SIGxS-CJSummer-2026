@@ -7,7 +7,7 @@ var chores_dict = [
 	["Fix Bed",1,5,1000],
 	["Set Table",1,5,200],
 	["Do Laundry",3,30,500],
-	["Dust Bookshelf",2,20,600],
+	["Dust Bookshelf",2,20,-600],
 	["Organize Cabinet",2,20,1100],
 	["Hang Clothes",3,30,100],
 	["Do Summer Homework",5,55,300],
@@ -16,43 +16,41 @@ var chores_dict = [
 	["Unclog the Sink",3,30,400]
 ]
 
+var day_0_chores = [0, 1, 2]
+var day_1_chores = [3, 4, 5]
+var day_2_chores = [6, 7, 8]
+var day_3_chores = [9, 10, 11]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Signals.chore_completed.connect(on_chore_completed)
+	pass
 
 
 func create_chores_list(day):
-	if day==1:
-		create_chore(0)
-		create_chore(1)
-		create_chore(2)
+	if day==0:
+		for number in day_0_chores:
+			create_chore(number)
+	elif day==1:
+		for number in day_1_chores:
+			create_chore(number)
 	elif day==2:
-		create_chore(3)
-		create_chore(4)
-		create_chore(5)
+		for number in day_2_chores:
+			create_chore(number)
 	elif day==3:
-		create_chore(6)
-		create_chore(7)
-		create_chore(8)
-	elif day==4:
-		create_chore(9)
-		create_chore(10)
-		create_chore(11)
+		for number in day_3_chores:
+			create_chore(number)
 
-func create_chore(index :int):
+func create_chore(number : int):
 	var new_chore = load("res://Scenes/chore.tscn").instantiate()
-	new_chore.chore_name = chores_dict[index][0]
-	new_chore.time_taken = chores_dict[index][1]
-	new_chore.point_value = chores_dict[index][2]
-	new_chore.position.x = chores_dict[index][3]
+	new_chore.chore_name = chores_dict[number][0]
+	new_chore.time_taken = chores_dict[number][1]
+	new_chore.point_value = chores_dict[number][2]
+	new_chore.position.x = chores_dict[number][3]
+	new_chore.initial_position = chores_dict[number][3]
 	add_child(new_chore,true)
 	chores_array.append(new_chore)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
-
-func on_chore_completed(chore):
-	chores_array.remove_at(chore.index)
