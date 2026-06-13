@@ -24,6 +24,7 @@ visibility_layer = 2
 visibility_layer = 2
 
 [node name="GUI" type="Control" parent="World" unique_id=1168162784]
+z_index = 73
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
