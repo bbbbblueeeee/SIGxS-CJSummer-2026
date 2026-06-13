@@ -111,7 +111,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f60y1"]
 
 [node name="Player" type="AnimatedSprite2D" unique_id=735912576]
-z_index = 30
+z_index = 10
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_lv5ao")
 animation = &"walk"

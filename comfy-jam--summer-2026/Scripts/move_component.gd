@@ -4,11 +4,13 @@ extends Node2D
 var direction : int
 var new_position : int
 var background_offset : int
+var house : Node2D
+var i = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	house = get_parent().get_parent().get_node("House")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,22 +29,31 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move left") or Input.is_action_pressed("move right"):
 		new_position = get_parent().position.x + direction*speed
 		background_offset -= direction*speed
-		if background_offset > -1280 and background_offset < 2560:
+		if background_offset >= -1280 and background_offset <= 2560:
 			if get_parent().position.x != 608:
 				get_parent().position.x = new_position
 				background_offset += direction*speed
+				i+=1
+				print("moving player "+ str(i))
 			else:
 				Signals.move_background.emit(background_offset)
-		elif background_offset <= -1280:
+				i+=1
+				print("move background "+ str(i))
+		elif background_offset < -1280:
+			print("right edge")
 			background_offset = -1280
-			Signals.move_background.emit(background_offset)
-			if new_position >= 1152:
-				new_position = 1152 
+			if new_position > 1152:
+				new_position = 1152
+				print("sjldfkjalsdjfka")
 			get_parent().position.x = new_position
-		elif background_offset >= 2560:
+		elif background_offset > 2560:
+			print("left edge")
 			background_offset = 2560
-			Signals.move_background.emit(background_offset)
-			if new_position <= 0:
+			if new_position < 0:
 				new_position = 0
+				if house.current_floor == 1:
+					Signals.change_floors.emit(2)
+				elif house.current_floor == 2:
+					Signals.change_floors.emit(1)
 			get_parent().position.x = new_position
 		
