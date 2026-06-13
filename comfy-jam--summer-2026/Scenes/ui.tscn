@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wpxkwx5rtm7g"]
 
 [ext_resource type="Script" uid="uid://d2ersc0nn3mdf" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Texture2D" uid="uid://tsacsja5np88" path="res://Assets/UI/UI Sprite.png" id="2_qdvrb"]
 
 [node name="UI" type="Control" unique_id=1805872978]
 layout_mode = 3
@@ -11,3 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jxero")
 time = 8
+
+[node name="UI Sprite" type="Sprite2D" parent="." unique_id=1969065893]
+position = Vector2(164, 122)
+scale = Vector2(0.2710938, 0.2710938)
+texture = ExtResource("2_qdvrb")

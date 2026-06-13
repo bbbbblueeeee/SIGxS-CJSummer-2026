@@ -120,7 +120,7 @@ script = ExtResource("2_vgqql")
 
 [node name="MoveComponent" type="Node2D" parent="." unique_id=1081324767]
 script = ExtResource("2_6t5aa")
-speed = 8.0
+speed = 13.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1664032059]
 position = Vector2(64, 150)
