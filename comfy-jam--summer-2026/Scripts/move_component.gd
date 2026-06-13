@@ -27,6 +27,10 @@ func _process(delta: float) -> void:
 		direction = 0
 	
 	if Input.is_action_pressed("move left") or Input.is_action_pressed("move right"):
+		if Input.is_action_pressed("sprint"):
+			speed = 20.0
+		else:
+			speed = 13.0
 		new_position = get_parent().position.x + direction*speed
 		background_offset -= direction*speed
 		if background_offset >= -1280 and background_offset <= 2560:
