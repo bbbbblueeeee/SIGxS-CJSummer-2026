@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var points: Label = $points_display/points
+@onready var points_display: Label = $points_display
 @export var current_points:int
 
 # Called when the node enters the scene tree for the first time.
@@ -14,7 +14,7 @@ func on_chore_completed(chore):
 	points_total()
 
 func points_total():
-	points.text = str(current_points)
+	points_display.text = "OP: " + str(current_points)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

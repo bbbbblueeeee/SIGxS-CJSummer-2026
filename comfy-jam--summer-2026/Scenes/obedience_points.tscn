@@ -6,18 +6,9 @@
 script = ExtResource("1_argeb")
 
 [node name="points_display" type="Label" parent="." unique_id=1835790691]
-offset_left = 624.0
-offset_top = 14.0
-offset_right = 1140.0
-offset_bottom = 83.0
-theme_override_font_sizes/font_size = 50
-text = "Obedience Points: "
-
-[node name="points" type="Label" parent="points_display" unique_id=1388433757]
-layout_mode = 0
-offset_left = 449.0
-offset_top = 1.0
-offset_right = 511.0
-offset_bottom = 70.0
-theme_override_font_sizes/font_size = 50
-text = "XX"
+offset_left = 102.0
+offset_top = 108.81
+offset_right = 248.0
+offset_bottom = 177.81003
+theme_override_font_sizes/font_size = 40
+text = "OP: xx"

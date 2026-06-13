@@ -18,18 +18,20 @@ script = ExtResource("2_27abl")
 [node name="Player" parent="World" unique_id=735912576 instance=ExtResource("3_7la68")]
 
 [node name="House" parent="World" unique_id=831075696 instance=ExtResource("4_6nxga")]
+visibility_layer = 2
 
 [node name="ChoreManager" parent="World/House" unique_id=956873693 instance=ExtResource("4_27abl")]
+visibility_layer = 2
 
-[node name="GUI" type="Control" parent="." unique_id=1168162784]
+[node name="GUI" type="Control" parent="World" unique_id=1168162784]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="UI" parent="GUI" unique_id=1805872978 instance=ExtResource("3_ppfu0")]
+[node name="UI" parent="World/GUI" unique_id=1805872978 instance=ExtResource("3_ppfu0")]
 layout_mode = 1
 
-[node name="Time" parent="GUI" unique_id=1515553904 instance=ExtResource("4_ppfu0")]
+[node name="Time" parent="World/GUI" unique_id=1515553904 instance=ExtResource("4_ppfu0")]
 
-[node name="ObediencePoints" parent="GUI" unique_id=1972092476 instance=ExtResource("6_k0qbb")]
+[node name="ObediencePoints" parent="World/GUI" unique_id=1972092476 instance=ExtResource("6_k0qbb")]
