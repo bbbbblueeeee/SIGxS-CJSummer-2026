@@ -1,22 +1,24 @@
 extends Node2D
 
+var chores_1f = []
+var chores_2f = []
 var chores_array = []
 var chores_dict = [
-	["Take Care of Plant",1,5,700],
-	["Sweep Floor",2,15,1000],
-	["Set Table",1,5,200],
-	["Do Laundry",3,30,500],
-	["Dust Bookshelf",2,20,-600],
-	["Organize Cabinet",2,20,1100],
-	["Hang Clothes",3,30,100],
-	["Do Summer Homework",5,55,300],
-	["Replace Water",3,30,900],
-	["Fix the Light",1,10,800],
-	["Unclog the Sink",3,30,400]
-] # Add repeat rows for daily tasks
+	["Take Care of Plant",1,5,100,1],
+	["Sweep Floor",2,15,1000,1],
+	["Set Table",1,5,2200,2],
+	["Do Laundry",3,30,2600,2],
+	["Dust Bookshelf",2,20,600,1],
+	["Organize Cabinet",2,20,1800,2],
+	["Hang Clothes",3,30,1600,1],
+	["Do Summer Homework",5,55,3200,2],
+	["Replace Water",3,30,4900,1],
+	["Fix the Light",1,10,2800,2],
+	["Unclog the Sink",3,30,4000,1]
+]
 
 var day_0_chores = [0, 1, 2]
-var day_1_chores = [3, 4]
+var day_1_chores = [3, 4, 5]
 var day_2_chores = [5, 6, 7]
 var day_3_chores = [8, 9, 10]
 
@@ -47,6 +49,10 @@ func create_chore(number : int):
 	new_chore.point_value = chores_dict[number][2]
 	new_chore.position.x = chores_dict[number][3]
 	new_chore.initial_position = chores_dict[number][3]
+	new_chore.floor = chores_dict[number][4]
+	if new_chore.floor == 1:
+		new_chore.get_node("Sprite2D").visible = false
+		new_chore.get_node("Area2D").monitoring = false
 	add_child(new_chore,true)
 	chores_array.append(new_chore)
 

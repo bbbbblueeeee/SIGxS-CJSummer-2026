@@ -6,6 +6,8 @@ var new_position : int
 var background_offset : int
 var house : Node2D
 var i = 0
+var left_limit : int = 0
+var right_limit : int = 4350
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,10 +34,10 @@ func _process(delta: float) -> void:
 		else:
 			speed = 13.0
 		new_position = get_parent().position.x + direction*speed
-		if new_position > 4956:
-			new_position = 4956
-		elif new_position < 0:
-			new_position = 0
+		if new_position > right_limit:
+			new_position = right_limit
+		elif new_position < left_limit:
+			new_position = left_limit
 			if house.current_floor == 1:
 				Signals.floor_transition.emit(2)
 			elif house.current_floor == 2:

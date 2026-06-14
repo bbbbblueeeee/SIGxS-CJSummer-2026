@@ -4,6 +4,7 @@ class_name Chore
 @export var chore_name : String
 @export var time_taken : int
 @export var point_value : int
+var floor : int
 var initial_position : int
 var player_in_area : bool = false
 var is_selected : bool = false
@@ -38,7 +39,7 @@ func deselect():
 func chore_completed():
 	Signals.chore_completed.emit(self)
 	completed = true
-	$Sprite2D.set_texture(null)
+	$Sprite2D.visible = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	player_in_area = true
