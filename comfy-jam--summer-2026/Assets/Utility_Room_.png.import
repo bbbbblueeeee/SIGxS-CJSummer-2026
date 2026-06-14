@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbip7773r0qjd"
-path="res://.godot/imported/Stairs_going_up_(for_pau).png-eced1f55f8ec8906adeb56e7d808fa47.ctex"
+uid="uid://da2w4t6sc0wdw"
+path="res://.godot/imported/Utility_Room_.png-f07be472b4ebda423665e83c0a3341ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Temporary/Stairs_going_up_(for_pau).png"
-dest_files=["res://.godot/imported/Stairs_going_up_(for_pau).png-eced1f55f8ec8906adeb56e7d808fa47.ctex"]
+source_file="res://Assets/Utility_Room_.png"
+dest_files=["res://.godot/imported/Utility_Room_.png-f07be472b4ebda423665e83c0a3341ff.ctex"]
 
 [params]
 

@@ -18,14 +18,14 @@ func change_floor(floor):
 	await fade.fade(1,0.5).finished
 	current_floor = floor
 	if floor == 1:
-		$Room1.texture=load("res://Assets/Temporary/Stairs_going_up_(for_pau).png")
-		$Room2.texture=load("res://Assets/Temporary/Kitchen_Room_(for_pau).png")
+		$Room1.texture=load("res://Assets/Stairs_going_up.png")
+		$Room2.texture=load("res://Assets/Kitchen_Room.png")
 		$Room3.texture=load("res://Assets/Living_Room.png")
 		$Room4.texture=load("res://Assets/Door_Leading_Outside.png")
 		move_component.right_limit = 4956
 	elif floor == 2:
-		$Room1.texture=load("res://Assets/Temporary/Stairs_going_down_(for_pau).png")
-		$Room2.texture=load("res://Assets/Temporary/Utility_Room_(for_pau).png")
+		$Room1.texture=load("res://Assets/Stairs_going_down.png")
+		$Room2.texture=load("res://Assets/Utility_Room_.png")
 		$Room3.texture=load("res://Assets/Bedroom.png")
 		$Room4.texture=load("res://Assets/Balcony.png")
 		move_component.right_limit = 4350

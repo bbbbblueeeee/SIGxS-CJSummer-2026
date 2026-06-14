@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm6x05ti84yoh"
-path="res://.godot/imported/Stairs_going_down_(for_pau).png-34f7ce6cd21169bb7ed10c133748b945.ctex"
+uid="uid://dej73fog5gqrc"
+path="res://.godot/imported/Stairs_going_up.png-63ae3aa8c4be4e71f8b7b023db6e4177.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Temporary/Stairs_going_down_(for_pau).png"
-dest_files=["res://.godot/imported/Stairs_going_down_(for_pau).png-34f7ce6cd21169bb7ed10c133748b945.ctex"]
+source_file="res://Assets/Stairs_going_up.png"
+dest_files=["res://.godot/imported/Stairs_going_up.png-63ae3aa8c4be4e71f8b7b023db6e4177.ctex"]
 
 [params]
 

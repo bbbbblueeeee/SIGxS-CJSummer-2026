@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cys7ch83tu8bq"
-path="res://.godot/imported/TEMP_PlayerSprite.png-63fdf8b728ca23a4d90dfdcadfb83833.ctex"
+uid="uid://d0vhnhesrm80b"
+path="res://.godot/imported/Stairs_going_down.png-d0eb4d13066e9049061eaf9e77a03bcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Temporary/TEMP_PlayerSprite.png"
-dest_files=["res://.godot/imported/TEMP_PlayerSprite.png-63fdf8b728ca23a4d90dfdcadfb83833.ctex"]
+source_file="res://Assets/Stairs_going_down.png"
+dest_files=["res://.godot/imported/Stairs_going_down.png-d0eb4d13066e9049061eaf9e77a03bcc.ctex"]
 
 [params]
 

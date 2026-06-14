@@ -6,7 +6,7 @@ var new_position : int
 var background_offset : int
 var house : Node2D
 var i = 0
-var left_limit : int = 0
+var left_limit : int = 580
 var right_limit : int = 4350
 
 

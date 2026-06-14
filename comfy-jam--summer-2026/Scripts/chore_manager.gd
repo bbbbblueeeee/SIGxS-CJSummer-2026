@@ -1,7 +1,5 @@
 extends Node2D
 
-var chores_1f = []
-var chores_2f = []
 var chores_array = []
 var chores_dict = [
 	["Take Care of Plant",1,5,100,1],
@@ -55,7 +53,3 @@ func create_chore(number : int):
 		new_chore.get_node("Area2D").monitoring = false
 	add_child(new_chore,true)
 	chores_array.append(new_chore)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
