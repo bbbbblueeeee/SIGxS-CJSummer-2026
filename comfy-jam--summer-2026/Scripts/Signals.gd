@@ -1,8 +1,10 @@
 extends Node
 signal chore_completed(chore)
 signal time_updated(time)
-signal move_background(position)
 signal change_floor(floor)
+signal floor_transition(floor)
+signal faded_out()
+signal faded_in()
 
 
 # Called when the node enters the scene tree for the first time.

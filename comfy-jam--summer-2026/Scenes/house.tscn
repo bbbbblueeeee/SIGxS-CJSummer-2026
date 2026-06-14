@@ -14,34 +14,34 @@ script = ExtResource("1_okrnj")
 
 [node name="Pillar1" type="Sprite2D" parent="Pillars" unique_id=707596952]
 z_index = 20
-position = Vector2(-1280, 360)
+position = Vector2(1280, 360)
 texture = ExtResource("2_bu6dc")
 
 [node name="Pillar2" type="Sprite2D" parent="Pillars" unique_id=1170896928]
 z_index = 20
-position = Vector2(0, 360)
+position = Vector2(2560, 360)
 texture = ExtResource("2_bu6dc")
 
 [node name="Pillar3" type="Sprite2D" parent="Pillars" unique_id=1358275856]
 z_index = 20
-position = Vector2(1280, 360)
+position = Vector2(3840, 360)
 texture = ExtResource("2_bu6dc")
 
 [node name="Room1" type="Sprite2D" parent="." unique_id=513121100]
-position = Vector2(-2560, 0)
 texture = ExtResource("3_l3jqw")
 centered = false
 
 [node name="Room2" type="Sprite2D" parent="." unique_id=1354367211]
-position = Vector2(-1280, 0)
+position = Vector2(1280, 0)
 texture = ExtResource("4_gau5j")
 centered = false
 
 [node name="Room3" type="Sprite2D" parent="." unique_id=964746825]
+position = Vector2(2560, 0)
 texture = ExtResource("5_7ug6d")
 centered = false
 
 [node name="Room4" type="Sprite2D" parent="." unique_id=921950226]
-position = Vector2(1280, 0)
+position = Vector2(3840, 0)
 texture = ExtResource("6_lmwq5")
 centered = false
