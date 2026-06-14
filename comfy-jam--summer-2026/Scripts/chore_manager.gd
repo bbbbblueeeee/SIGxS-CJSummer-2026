@@ -2,9 +2,8 @@ extends Node2D
 
 var chores_array = []
 var chores_dict = [
-	["Sweep Floor",2,20,400],
 	["Take Care of Plant",1,5,700],
-	["Fix Bed",1,5,1000],
+	["Sweep Floor",2,15,1000],
 	["Set Table",1,5,200],
 	["Do Laundry",3,30,500],
 	["Dust Bookshelf",2,20,-600],
@@ -14,12 +13,12 @@ var chores_dict = [
 	["Replace Water",3,30,900],
 	["Fix the Light",1,10,800],
 	["Unclog the Sink",3,30,400]
-]
+] # Add repeat rows for daily tasks
 
 var day_0_chores = [0, 1, 2]
-var day_1_chores = [3, 4, 5]
-var day_2_chores = [6, 7, 8]
-var day_3_chores = [9, 10, 11]
+var day_1_chores = [3, 4]
+var day_2_chores = [5, 6, 7]
+var day_3_chores = [8, 9, 10]
 
 
 # Called when the node enters the scene tree for the first time.
