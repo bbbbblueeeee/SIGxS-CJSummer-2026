@@ -7,6 +7,7 @@ signal faded_out()
 signal faded_in()
 signal day_end()
 signal play_cutscene(day)
+signal end_day_screen()
 
 
 # Called when the node enters the scene tree for the first time.

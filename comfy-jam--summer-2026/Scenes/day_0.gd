@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func show_cutscene(day):
+	# Add a fade, either by signals or ask Krystal to make Fade a global node
 	show()
 	scene_2.hide()
 	show_dialogue_box()
@@ -31,3 +32,7 @@ func show_dialogue_box():
 func change_scene(sceneA, sceneB):
 	sceneB.show()
 	sceneA.hide()
+
+func end_scene():
+	hide()
+	Signals.end_day_screen.emit()

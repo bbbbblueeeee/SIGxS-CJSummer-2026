@@ -2,7 +2,7 @@
 #Mae is shown lying in bed using their phone. The shot is angled such that the player’s 
 #facial expression is seen, but the content of the phone’s screen is not.
 Mae: …Let’s see what everyone is up to.
-Mae: !! [wait=2] This is…
+Mae: ... [wait=1] !! [wait=1] This is…
 #The graphic switches to one where the screen’s content is the focus. The player’s 
 #face is not seen.
 do get_parent().change_scene(get_parent().scene_1, get_parent().scene_2)
@@ -20,11 +20,5 @@ Mae: …
 Mae: …
 Mae: Ah, I can’t decide!
 Mae: I’ll just sleep on it. I can make my decision tomorrow.
-#The screen fades into black, after which it shows the day end screen.
-#After the player chooses to proceed to the next day, the scene fades in to the 
-#bedroom, with the character standing near the foot of the bed.
-Mae: Okay, I have to make my choice today.
-Mae: Leaving the house will definitely make me lose Obedience Points… but my brother only reports to my parents at the end of the day, so I still have time in the evening to make up for that.
-Mae: As long as I end the day with more than 0 Obedience Points, I don’t think I’ll get grounded.
-#The text above will be emphasized. But that’s more or less the end of scene.
+do get_parent().end_scene()
 => END

@@ -5,6 +5,7 @@ var day : int
 func _ready() -> void:
 	day = 0
 	Signals.day_end.connect(change_day)
+	Signals.end_day_screen.connect(display_day_end_screen)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,8 +15,11 @@ func _process(delta: float) -> void:
 func change_day() -> void:
 	if day == 0:
 		play_day_0_scene()
-	day += 1
-	print("It is now Day " + str(day)) # For testing
 	
 func play_day_0_scene():
 	Signals.play_cutscene.emit(day)
+
+func display_day_end_screen():
+	print("End of Day " + str(day)) # For testing
+	day += 1
+	print("It is now Day " + str(day)) # For testing
