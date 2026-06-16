@@ -5,7 +5,7 @@ class_name Chore
 @export var time_taken : int
 @export var point_value : int
 var floor : int
-var initial_position : int
+#var initial_position : int useless sht
 var player_in_area : bool = false
 var is_selected : bool = false
 var completed : bool = false
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/chore.dialogue")
-	var dialogue_box : Node = load("res://Scenes/dialogue_chore.tscn").instantiate()
+	var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
 	add_child(dialogue_box, true)
 	dialogue_box.start(dialogue,"start")
 

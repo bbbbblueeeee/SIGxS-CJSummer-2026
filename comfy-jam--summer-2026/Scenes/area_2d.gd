@@ -1,12 +1,4 @@
-extends Node
-signal chore_completed(chore)
-signal time_updated(time)
-signal change_floor(floor)
-signal floor_transition(floor)
-signal faded_out()
-signal faded_in()
-signal day_end()
-signal play_cutscene(day)
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.

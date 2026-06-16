@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bwipbfce36eug"]
 
-[ext_resource type="Script" uid="uid://dw0p4opjkgkjx" path="res://Scripts/dialogue_chore.gd" id="1_g406w"]
-[ext_resource type="Texture2D" uid="uid://dnanmitdwxhql" path="res://Assets/icon.svg" id="2_ig6vh"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_juolu"]
-[ext_resource type="Texture2D" uid="uid://c0eavocyafuoe" path="res://Assets/Temporary/TEMP_choicebox.png" id="2_r8xkh"]
-[ext_resource type="Texture2D" uid="uid://kmixfyedpevt" path="res://Assets/Temporary/TEMP_dialoguebox.png" id="3_4dl0n"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ig6vh"]
-[ext_resource type="AudioStream" uid="uid://ldhbforak0pt" path="res://Assets/Temporary/freesound-community-type-ui-38782_SDCZliLj.mp3" id="4_juolu"]
+[ext_resource type="Script" uid="uid://dw0p4opjkgkjx" path="res://Scripts/dialogue_chore.gd" id="1_shd1d"]
+[ext_resource type="Texture2D" uid="uid://c0eavocyafuoe" path="res://Assets/Temporary/TEMP_choicebox.png" id="2_j1ns2"]
+[ext_resource type="Texture2D" uid="uid://kmixfyedpevt" path="res://Assets/Temporary/TEMP_dialoguebox.png" id="3_n2qm0"]
+[ext_resource type="Texture2D" uid="uid://dnanmitdwxhql" path="res://Assets/icon.svg" id="4_2et6r"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="5_4dels"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="6_tsnyp"]
+[ext_resource type="AudioStream" uid="uid://ldhbforak0pt" path="res://Assets/Temporary/freesound-community-type-ui-38782_SDCZliLj.mp3" id="7_b3kk1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -54,7 +54,7 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("2_r8xkh")
+texture = ExtResource("2_j1ns2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psnvo"]
 
@@ -63,7 +63,7 @@ content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("3_4dl0n")
+texture = ExtResource("3_n2qm0")
 expand_margin_left = 20.0
 expand_margin_top = 20.0
 expand_margin_right = 20.0
@@ -122,7 +122,7 @@ _data = {
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
 layer = 100
-script = ExtResource("1_g406w")
+script = ExtResource("1_shd1d")
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
@@ -164,7 +164,7 @@ layout_mode = 0
 offset_top = 12.5
 offset_right = 128.0
 offset_bottom = 140.5
-texture = ExtResource("2_ig6vh")
+texture = ExtResource("4_2et6r")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1624289611]
 layout_mode = 2
@@ -187,7 +187,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1225160028 instance=ExtResource("2_juolu")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1225160028 instance=ExtResource("5_4dels")]
 unique_name_in_owner = true
 layout_mode = 0
 anchors_preset = 0
@@ -230,7 +230,7 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_ig6vh")
+script = ExtResource("6_tsnyp")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
@@ -239,7 +239,7 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
-stream = ExtResource("4_juolu")
+stream = ExtResource("7_b3kk1")
 volume_db = 5.0
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

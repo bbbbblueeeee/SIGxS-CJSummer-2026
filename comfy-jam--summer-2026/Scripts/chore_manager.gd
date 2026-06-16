@@ -46,7 +46,6 @@ func create_chore(number : int):
 	new_chore.time_taken = chores_dict[number][1]
 	new_chore.point_value = chores_dict[number][2]
 	new_chore.position.x = chores_dict[number][3]
-	new_chore.initial_position = chores_dict[number][3]
 	new_chore.floor = chores_dict[number][4]
 	if new_chore.floor == 1:
 		new_chore.get_node("Sprite2D").visible = false
