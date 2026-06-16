@@ -6,9 +6,10 @@
 script = ExtResource("1_uv3t7")
 
 [node name="time_display" type="Label" parent="." unique_id=1791625785]
-offset_left = 230.0
-offset_top = 141.0
-offset_right = 539.0
-offset_bottom = 281.0
-theme_override_font_sizes/font_size = 102
+offset_left = 102.0
+offset_top = 31.0
+offset_right = 248.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 40
 text = "xx : 00"
+horizontal_alignment = 1

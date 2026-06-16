@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cys7ch83tu8bq"
-path="res://.godot/imported/TEMP_PlayerSprite.png-63fdf8b728ca23a4d90dfdcadfb83833.ctex"
+uid="uid://bkiprl2okp074"
+path="res://.godot/imported/Door_Leading_Outside.png-7476d336cb6eb658a05fb96da6137c2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Temporary/TEMP_PlayerSprite.png"
-dest_files=["res://.godot/imported/TEMP_PlayerSprite.png-63fdf8b728ca23a4d90dfdcadfb83833.ctex"]
+source_file="res://Assets/Door_Leading_Outside.png"
+dest_files=["res://.godot/imported/Door_Leading_Outside.png-7476d336cb6eb658a05fb96da6137c2b.ctex"]
 
 [params]
 
