@@ -20,6 +20,7 @@ config/icon="res://Assets/icon.svg"
 Global="*uid://bj6i2oh5bior"
 Signals="*uid://duxseru2jav44"
 DialogueManager="*uid://c3rodes2l3gxb"
+Fade="*uid://gh15sskgxr67"
 
 [dialogue_manager]
 

@@ -1,6 +1,5 @@
 extends Node2D
 var current_floor : int = 2
-@onready var fade : CanvasLayer = $"../../GUI/Fade"
 @onready var move_component : Node2D = $"../Player/MoveComponent"
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +14,7 @@ func _process(delta: float) -> void:
 
 func change_floor(floor):
 	move_component.process_mode = PROCESS_MODE_DISABLED
-	await fade.fade(1,0.5).finished
+	await Fade.fade(1,0.5).finished
 	current_floor = floor
 	if floor == 1:
 		$Room1.texture=load("res://Assets/Stairs_going_up.png")
@@ -38,5 +37,5 @@ func change_floor(floor):
 			chore.get_node("Area2D").monitoring = false
 			
 	move_component.direction = 1
-	await fade.fade(0,0.5).finished
+	await Fade.fade(0,0.5).finished
 	move_component.process_mode = PROCESS_MODE_INHERIT
