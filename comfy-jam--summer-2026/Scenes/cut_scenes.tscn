@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cud8frc313pvs" path="res://Scenes/day_0.gd" id="1_kem0g"]
 [ext_resource type="Texture2D" uid="uid://fum8tqxlk72p" path="res://Assets/Temporary/TEMP_day0.png" id="2_2x821"]
 [ext_resource type="Texture2D" uid="uid://fpjeehydlqip" path="res://Assets/Temporary/TEMP_day0-2.png" id="3_2x821"]
+[ext_resource type="Script" uid="uid://b7rtlmxtr0spn" path="res://Scenes/tutorial.gd" id="4_wj8qb"]
 
 [node name="CutScenes" type="CanvasLayer" unique_id=1998586076]
 
@@ -15,6 +16,19 @@ offset_bottom = 40.0
 texture = ExtResource("2_2x821")
 
 [node name="scene2" type="TextureRect" parent="Day0" unique_id=1671522037]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_2x821")
+
+[node name="Tutorial" type="Node2D" parent="." unique_id=860203346]
+script = ExtResource("4_wj8qb")
+
+[node name="scene1" type="TextureRect" parent="Tutorial" unique_id=1193025487]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2x821")
+
+[node name="scene2" type="TextureRect" parent="Tutorial" unique_id=1471148284]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_2x821")
