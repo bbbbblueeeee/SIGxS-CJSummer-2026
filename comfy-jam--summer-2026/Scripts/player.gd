@@ -27,4 +27,5 @@ func calculate_animation() -> void:
 		play("walk")
 	else:
 		play("idle")
+
 		

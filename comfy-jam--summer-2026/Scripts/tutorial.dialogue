@@ -1,6 +1,6 @@
 ~ start
+$> hide_scene(get_parent().scene_2)
 Mae: Bye, Mom and Dad! Safe travels!
-do get_parent().hide_scene(get_parent().scene_1)
 Mae: Looks like it’ll just be me and my brother at home for the next few days. I know Mom and Dad said he would be watching over me, but…
 Mae: He’s not that much older than me, and all he’s done this summer is sit on the sofa and watch TV. Why is he the one in charge?
 Mae: He’ll probably want to lay out some ground rules now that Mom and Dad are gone. Oh well, best to hear what he has to say.
@@ -11,5 +11,5 @@ Jun: My job is just to let Mom and Dad know what you get up to while they’re g
 Mae: That’s… more lenient than I was expecting.
 Jun: Yeah, yeah. Anyway, Mom and Dad left their instructions on the fridge. You should probably go read them.
 
-do get_parent().end_scene()
+$> end_scene()
 => END

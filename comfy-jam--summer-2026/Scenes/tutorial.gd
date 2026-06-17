@@ -1,6 +1,7 @@
 extends Node2D
 @onready var scene_1: TextureRect = $scene1
 @onready var scene_2: TextureRect = $scene2
+@onready var move_component : Node = get_node("../../Player/MoveComponent")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,17 +19,18 @@ func _process(delta: float) -> void:
 	pass
 	
 func show_cutscene(day):
-	await Fade.fade(1,0.5).finished
-	show()
+	#await Fade.fade(1,0.5).finished
+	#show()
 	scene_2.hide()
-	await Fade.fade(0,0.5).finished
+	#await Fade.fade(0,0.5).finished
 	show_dialogue_box()
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/tutorial.dialogue")
-	var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
-	add_child(dialogue_box, true)
-	dialogue_box.start(dialogue,"start")
+	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
+	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
+	#add_child(dialogue_box, true)
+	#dialogue_box.start(dialogue,"start")
 	pass
 	
 func change_scene(sceneA, sceneB):
@@ -37,9 +39,10 @@ func change_scene(sceneA, sceneB):
 	
 func hide_scene(s):
 	await Fade.fade(1,0.5).finished
-	s.hide()
+	#s.hide()
 
 func end_scene():
 	await Fade.fade(1,0.5).finished
 	hide()
 	await Fade.fade(0,0.5).finished
+	
