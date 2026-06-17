@@ -23,12 +23,13 @@ texture = ExtResource("3_2x821")
 [node name="Tutorial" type="Node2D" parent="." unique_id=860203346]
 script = ExtResource("4_wj8qb")
 
-[node name="scene1" type="TextureRect" parent="Tutorial" unique_id=1193025487]
+[node name="scene1" type="TextureRect" parent="Tutorial" unique_id=989560462]
+modulate = Color(0, 0, 0, 1)
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_2x821")
 
 [node name="scene2" type="TextureRect" parent="Tutorial" unique_id=1471148284]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_2x821")
+visible = false
+offset_right = 1919.0
+offset_bottom = 1079.0
+texture = ExtResource("2_2x821")

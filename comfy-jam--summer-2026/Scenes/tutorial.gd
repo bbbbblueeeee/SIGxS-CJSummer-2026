@@ -6,7 +6,6 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
-	#Signals.play_cutscene.connect(show_cutscene)
 	show_cutscene(0)
 	scene_1.position.y = 0
 	scene_1.position.x = 0
@@ -19,9 +18,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func show_cutscene(day):
-	#await Fade.fade(1,0.5).finished
-	#show()
-	scene_2.hide()
+	show()
 	#await Fade.fade(0,0.5).finished
 	show_dialogue_box()
 

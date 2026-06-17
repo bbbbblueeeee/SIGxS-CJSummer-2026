@@ -1,7 +1,6 @@
 extends Node2D
 @onready var scene_1: TextureRect = $scene1
 @onready var scene_2: TextureRect = $scene2
-@onready var move_component : Node = get_node("../../Player/MoveComponent")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,12 +25,13 @@ func show_cutscene(day):
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/day0.dialogue")
-	var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
-	add_child(dialogue_box, true)
+	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
+	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
+	#add_child(dialogue_box, true)
 	
 	#move_component.process_mode = Node.PROCESS_MODE_DISABLED
 	#DialogueManager.dialogue_ended.connect(end_dialogue, CONNECT_ONE_SHOT)
-	dialogue_box.start(dialogue,"start")
+	#dialogue_box.start(dialogue,"start")
 	pass
 	
 func change_scene(sceneA, sceneB):
@@ -44,5 +44,3 @@ func end_scene():
 	Signals.end_day_screen.emit()
 	await Fade.fade(0,0.5).finished
 	
-func end_dialogue(_resource: DialogueResource) -> void:
-	move_component.process_mode = Node.PROCESS_MODE_INHERIT
