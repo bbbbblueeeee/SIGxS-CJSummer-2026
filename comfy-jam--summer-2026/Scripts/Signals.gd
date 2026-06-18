@@ -8,6 +8,8 @@ signal faded_in()
 signal day_end()
 signal play_cutscene(day)
 signal end_day_screen()
+signal update_points(point)
+signal next_day(day)
 signal movement_unlocked()
 signal movement_locked()
 

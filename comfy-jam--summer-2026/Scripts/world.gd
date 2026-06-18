@@ -1,16 +1,32 @@
 extends Node2D
+
 var day : int
+var points : int
+var is_next_day : bool
+@onready var end_day_screen: CanvasLayer = $"EndDay Screen"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	day = 0
+	points = 0
+	is_next_day = false
 	Signals.day_end.connect(change_day)
 	Signals.end_day_screen.connect(display_day_end_screen)
+	Signals.update_points.connect(update_point_tracker)
+	end_day_screen.update_next_day.connect(ready_for_next_day)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if is_next_day and Input.is_action_just_pressed("object interaction"):
+		Signals.next_day.emit(day)
+		print("It is now Day " + str(day)) # For testing
+		is_next_day = false
+		pass
+
+func update_point_tracker(updated):
+	points = updated
 
 func change_day() -> void:
 	if day == 0:
@@ -22,4 +38,7 @@ func play_day_0_scene():
 func display_day_end_screen():
 	print("End of Day " + str(day)) # For testing
 	day += 1
-	print("It is now Day " + str(day)) # For testing
+	end_day_screen.show_end_day_screen(points)
+
+func ready_for_next_day():
+	is_next_day = true

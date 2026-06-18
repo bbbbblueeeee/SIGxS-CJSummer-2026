@@ -4,7 +4,7 @@ var chores_array = []
 var chores_dict = [
 	["Take Care of Plant",1,5,100,1],
 	["Sweep Floor",2,15,1000,1],
-	["Set Table",1,5,2200,2],
+	["Set Table",1,-5,2200,2],
 	["Do Laundry",3,30,2600,2],
 	["Dust Bookshelf",2,20,600,1],
 	["Organize Cabinet",2,20,1800,2],

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bmhcsdo5il66p"]
+
+[ext_resource type="Script" uid="uid://b3ja2afalwgtc" path="res://end_day_screen.gd" id="1_twkvv"]
+[ext_resource type="Texture2D" uid="uid://b6c1200oce8gv" path="res://Assets/Temporary/TEMP-EndDayScreen.png" id="2_afi8f"]
+
+[node name="EndDay Screen" type="CanvasLayer" unique_id=1704616727]
+script = ExtResource("1_twkvv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=476379505]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_afi8f")
+
+[node name="Points Tally" type="Label" parent="." unique_id=473105230]
+offset_left = 265.0
+offset_top = 76.0
+offset_right = 1024.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 65
+text = "Total Obedience Points: "
+horizontal_alignment = 1
+
+[node name="Press Enter" type="Label" parent="." unique_id=738023664]
+offset_left = 261.0
+offset_top = 193.0
+offset_right = 1020.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 65
+text = "Press \"Enter\" to Continue"
+horizontal_alignment = 1
+
+[node name="Lose" type="Label" parent="." unique_id=196092951]
+offset_left = 125.0
+offset_top = 185.0
+offset_right = 1152.0
+offset_bottom = 461.0
+theme_override_font_sizes/font_size = 65
+text = "Uh oh! You have negative points!
+You're grounded!
+Game Over"
+horizontal_alignment = 1

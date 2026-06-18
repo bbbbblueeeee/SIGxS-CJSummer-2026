@@ -11,6 +11,7 @@ func _ready() -> void:
 
 func on_chore_completed(chore):
 	current_points += chore.point_value
+	Signals.update_points.emit(current_points)
 	points_total()
 
 func points_total():

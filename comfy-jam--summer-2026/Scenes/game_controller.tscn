@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cnflgbfa0lbmx"]
+[gd_scene format=3 uid="uid://b7j11ccis0ut5"]
 
 [ext_resource type="Script" uid="uid://bj6i2oh5bior" path="res://Scripts/global.gd" id="1_nqxm2"]
 [ext_resource type="Script" uid="uid://c3gchgxdu132l" path="res://Scripts/world.gd" id="2_27abl"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8d7830xpve0r" path="res://Scenes/cut_scenes.tscn" id="6_gruqv"]
 [ext_resource type="PackedScene" uid="uid://1qcno3gutt6f" path="res://Scenes/obedience_points.tscn" id="6_k0qbb"]
 [ext_resource type="PackedScene" uid="uid://gh15sskgxr67" path="res://Scenes/fade.tscn" id="7_gruqv"]
+[ext_resource type="PackedScene" path="res://Scenes/end_day_screen.tscn" id="8_h1rn0"]
 
 [node name="GameController" type="Node" unique_id=2020275606]
 script = ExtResource("1_nqxm2")
@@ -36,6 +37,8 @@ scale = Vector2(1.5, 1.5)
 visibility_layer = 2
 
 [node name="CutScenes" parent="World" unique_id=1128426716 instance=ExtResource("6_gruqv")]
+
+[node name="EndDay Screen" parent="World" unique_id=1704616727 instance=ExtResource("8_h1rn0")]
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1141565541]
 
