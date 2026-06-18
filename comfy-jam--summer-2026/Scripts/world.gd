@@ -15,15 +15,17 @@ func _ready() -> void:
 	Signals.end_day_screen.connect(display_day_end_screen)
 	Signals.update_points.connect(update_point_tracker)
 	end_day_screen.update_next_day.connect(ready_for_next_day)
-	pass
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_next_day and Input.is_action_just_pressed("object interaction"):
+		await Fade.fade(1,0.5).finished
 		Signals.next_day.emit(day)
+		await get_tree().create_timer(2).timeout
 		print("It is now Day " + str(day)) # For testing
 		is_next_day = false
-		pass
+		await Fade.fade(0,0.5).finished
 
 func update_point_tracker(updated):
 	points = updated

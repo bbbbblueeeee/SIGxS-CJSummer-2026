@@ -4,11 +4,18 @@ extends AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position.x = 4500 #3168
+	Signals.next_day.connect(new_day)
 	position.y = 300
+	new_day(0)
 	scale = Vector2(1.25,1.25)
 	$Area2D.scale = Vector2(5,7)
 
+func new_day(day):
+	if day == 0:
+		position.x = 4500 #3168
+	else:
+		position.x = 3500
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

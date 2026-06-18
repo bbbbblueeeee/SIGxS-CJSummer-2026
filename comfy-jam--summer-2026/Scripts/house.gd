@@ -1,12 +1,22 @@
 extends Node2D
-var current_floor : int = 1
+var current_floor : int
 @onready var move_component : Node2D = $"../Player/MoveComponent"
+@onready var chore_manager: Node2D = $ChoreManager
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$ChoreManager.create_chores_list(get_parent().day)
 	Signals.floor_transition.connect(change_floor)
+	Signals.next_day.connect(new_day)
+	new_day(0)
 
+func new_day(day):
+	chore_manager.create_chores_list(day)
+	if day == 0:
+		current_floor = 1
+	else:
+		current_floor = 2
+	change_floor(current_floor)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,18 +1,24 @@
 extends Node2D
-var is_selected : bool = false
-var player_in_area : bool = false
+var is_selected : bool
+var player_in_area : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Signals.next_day.connect(new_day)
+	new_day(0)
 
+func new_day(day):
+	is_selected = false
+	player_in_area = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if player_in_area and !is_selected and Input.is_action_just_pressed("object interaction"):
 		is_selected = true
 		show_dialogue_box()
-	pass
+	# else:
+		# print("is_selected: " + str(is_selected))
+		# print("player_in_area: " + str(player_in_area))
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/bed.dialogue")

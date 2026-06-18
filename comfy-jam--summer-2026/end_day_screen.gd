@@ -7,11 +7,15 @@ extends CanvasLayer
 signal update_next_day()
 
 func _ready() -> void:
+	background.position.y = 0
+	background.position.x = 0
+	new_day(0)
+	Signals.next_day.connect(new_day)
+
+func new_day(day):
 	lose.hide()
 	press_enter.hide()
 	hide()
-	background.position.y = 0
-	background.position.x = 0
 
 func show_end_day_screen(points: int) -> void:
 	points_tally.text = "Total Obedience Points: "

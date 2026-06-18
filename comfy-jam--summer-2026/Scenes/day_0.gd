@@ -42,5 +42,5 @@ func end_scene():
 	await Fade.fade(1,0.5).finished
 	hide()
 	Signals.end_day_screen.emit()
-	await Fade.fade(0,0.5).finished
+
 	
