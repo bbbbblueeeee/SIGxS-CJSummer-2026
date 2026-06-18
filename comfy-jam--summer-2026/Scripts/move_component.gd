@@ -7,7 +7,7 @@ var background_offset : int
 var house : Node2D
 var i = 0
 var left_limit : int = 580
-var right_limit : int = 4350
+var right_limit : int = 4956
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,10 +17,13 @@ func _ready() -> void:
 	#Handles movement of player during dialogue
 	DialogueManager.dialogue_started.connect(start_dialogue)
 	DialogueManager.dialogue_ended.connect(end_dialogue)
+	
+	Signals.movement_unlocked.connect(unlock_movement)
+	Signals.movement_locked.connect(lock_movement)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("move left"):
 			direction = -1
 		if Input.is_action_just_pressed("move right"):
@@ -49,10 +52,16 @@ func _process(delta: float) -> void:
 			get_parent().position.x = new_position
 	
 func end_dialogue(_resource: DialogueResource) -> void:
-	print("end")
 	process_mode = Node.PROCESS_MODE_INHERIT
 	
 func start_dialogue(_resource: DialogueResource) -> void:
-	print("start")
+	process_mode = Node.PROCESS_MODE_DISABLED
+	
+func unlock_movement() -> void:
+	direction = 0
+	process_mode = Node.PROCESS_MODE_INHERIT
+	
+func lock_movement() -> void:
+	direction = 0
 	process_mode = Node.PROCESS_MODE_DISABLED
 		

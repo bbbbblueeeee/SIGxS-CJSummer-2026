@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://fum8tqxlk72p" path="res://Assets/Temporary/TEMP_day0.png" id="2_2x821"]
 [ext_resource type="Texture2D" uid="uid://fpjeehydlqip" path="res://Assets/Temporary/TEMP_day0-2.png" id="3_2x821"]
 [ext_resource type="Script" uid="uid://b7rtlmxtr0spn" path="res://Scenes/tutorial.gd" id="4_wj8qb"]
+[ext_resource type="Texture2D" uid="uid://cuiwbl7q8g8js" path="res://Assets/Black.png" id="5_lpi84"]
 
 [node name="CutScenes" type="CanvasLayer" unique_id=1998586076]
 
@@ -21,15 +22,15 @@ offset_bottom = 40.0
 texture = ExtResource("3_2x821")
 
 [node name="Tutorial" type="Node2D" parent="." unique_id=860203346]
+visible = false
 script = ExtResource("4_wj8qb")
 
-[node name="scene1" type="TextureRect" parent="Tutorial" unique_id=989560462]
+[node name="scene3" type="TextureRect" parent="Tutorial" unique_id=989560462]
 modulate = Color(0, 0, 0, 1)
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="scene2" type="TextureRect" parent="Tutorial" unique_id=1471148284]
-visible = false
+[node name="scene4" type="TextureRect" parent="Tutorial" unique_id=1471148284]
 offset_right = 1919.0
 offset_bottom = 1079.0
-texture = ExtResource("2_2x821")
+texture = ExtResource("5_lpi84")

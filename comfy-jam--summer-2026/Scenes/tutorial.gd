@@ -1,7 +1,7 @@
 extends Node2D
-@onready var scene_1: TextureRect = $scene1
-@onready var scene_2: TextureRect = $scene2
-@onready var move_component : Node = get_node("../../Player/MoveComponent")
+@onready var scene_1: TextureRect = $scene3
+@onready var scene_2: TextureRect = $scene4
+@onready var player : Node = get_node("../../Player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,12 +34,23 @@ func change_scene(sceneA, sceneB):
 	sceneB.show()
 	sceneA.hide()
 	
-func hide_scene(s):
-	await Fade.fade(1,0.5).finished
-	#s.hide()
+func hide_scene(s, tr):
+	if tr == 'fade':
+		await Fade.fade(1,0.5).finished
+	s.hide()
 
+func show_scene(s):
+	s.show()
+	
 func end_scene():
 	await Fade.fade(1,0.5).finished
 	hide()
 	await Fade.fade(0,0.5).finished
+	
+func await_brother():
+	print("hi", player.position.x)
+	while player.position.x > 3200:
+		await get_tree().process_frame
+		
+		
 	

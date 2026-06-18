@@ -1,15 +1,27 @@
 ~ start
-$> hide_scene(get_parent().scene_2)
 Mae: Bye, Mom and Dad! Safe travels!
+do end_scene()
 Mae: Looks like it’ll just be me and my brother at home for the next few days. I know Mom and Dad said he would be watching over me, but…
 Mae: He’s not that much older than me, and all he’s done this summer is sit on the sofa and watch TV. Why is he the one in charge?
 Mae: He’ll probably want to lay out some ground rules now that Mom and Dad are gone. Oh well, best to hear what he has to say.
+$> Signals.movement_unlocked.emit()
+$> await_brother()
+$> Signals.movement_locked.emit()
 Jun: Hey.
 Mae: …
 Jun: I know I’m the one in charge for now, but I’m not really going to stop you from doing whatever you want.
 Jun: My job is just to let Mom and Dad know what you get up to while they’re gone. But if you get into trouble or disobey too many of their rules, I’ll have to ground you.
 Mae: That’s… more lenient than I was expecting.
 Jun: Yeah, yeah. Anyway, Mom and Dad left their instructions on the fridge. You should probably go read them.
-
+Mae: Well, those are simple enough.
+Mae: These negative Obedience Points are my estimate of how upset my parents will be if I disobey a rule. As long as I keep my total Obedience Points above 0, I should be able to avoid getting grounded.
+Mae: I should probably get started with a chore or two before I go to bed. The list of chores to be done for the day is usually beside the stairs to the left.
+Mae: I should have a look at my options before getting started.
+Mae: Okay, there’s not a lot to do tonight.
+Mae: The Obedience Points are my estimate of how satisfied my parents will be if I complete this chore. It’s best to keep my Obedience Points as high as possible.
+Mae: I think I can start with sweeping the floor in the living room. I can always check this list again if I decide to do other chores later.
+Mae: Okay, all done!
+Mae: I could do a few more chores, or I could just go to bed early.
+Mae: As long as I go to sleep by 10:00 PM, I shouldn’t have any problems the following day.
 $> end_scene()
 => END

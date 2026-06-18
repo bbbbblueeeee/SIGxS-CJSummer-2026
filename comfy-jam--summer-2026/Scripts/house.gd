@@ -1,5 +1,5 @@
 extends Node2D
-var current_floor : int = 2
+var current_floor : int = 1
 @onready var move_component : Node2D = $"../Player/MoveComponent"
 
 # Called when the node enters the scene tree for the first time.

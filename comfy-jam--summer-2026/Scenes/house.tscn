@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d03vy1pde42f6" path="res://Scripts/house.gd" id="1_okrnj"]
 [ext_resource type="Texture2D" uid="uid://u3bkkh6gatfi" path="res://Assets/Pillar_Separation.png" id="2_bu6dc"]
-[ext_resource type="Texture2D" uid="uid://d0vhnhesrm80b" path="res://Assets/Stairs_going_down.png" id="3_bu6dc"]
-[ext_resource type="Texture2D" uid="uid://da2w4t6sc0wdw" path="res://Assets/Utility_Room_.png" id="4_l3jqw"]
-[ext_resource type="Texture2D" uid="uid://t1applxs6gy1" path="res://Assets/Bedroom.png" id="5_7ug6d"]
-[ext_resource type="Texture2D" uid="uid://2iypi5s6rbl6" path="res://Assets/Balcony.png" id="6_lmwq5"]
+[ext_resource type="Texture2D" uid="uid://dej73fog5gqrc" path="res://Assets/Stairs_going_up.png" id="3_bu6dc"]
+[ext_resource type="Texture2D" uid="uid://gyq8mo8snmo2" path="res://Assets/Kitchen_Room.png" id="4_l3jqw"]
+[ext_resource type="Texture2D" uid="uid://dcm5spw3bf7wx" path="res://Assets/Living_Room.png" id="5_gau5j"]
+[ext_resource type="Texture2D" uid="uid://bkiprl2okp074" path="res://Assets/Door_Leading_Outside.png" id="6_7ug6d"]
 
 [node name="House" type="Node2D" unique_id=831075696]
 script = ExtResource("1_okrnj")
@@ -38,10 +38,10 @@ centered = false
 
 [node name="Room3" type="Sprite2D" parent="." unique_id=964746825]
 position = Vector2(2560, 0)
-texture = ExtResource("5_7ug6d")
+texture = ExtResource("5_gau5j")
 centered = false
 
 [node name="Room4" type="Sprite2D" parent="." unique_id=921950226]
 position = Vector2(3840, 0)
-texture = ExtResource("6_lmwq5")
+texture = ExtResource("6_7ug6d")
 centered = false
