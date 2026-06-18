@@ -4,11 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://fum8tqxlk72p" path="res://Assets/Temporary/TEMP_day0.png" id="2_2x821"]
 [ext_resource type="Texture2D" uid="uid://fpjeehydlqip" path="res://Assets/Temporary/TEMP_day0-2.png" id="3_2x821"]
 [ext_resource type="Script" uid="uid://b7rtlmxtr0spn" path="res://Scenes/tutorial.gd" id="4_wj8qb"]
+[ext_resource type="Texture2D" uid="uid://b6c1200oce8gv" path="res://Assets/Temporary/TEMP-EndDayScreen.png" id="5_g0lsk"]
 [ext_resource type="Texture2D" uid="uid://cuiwbl7q8g8js" path="res://Assets/Black.png" id="5_lpi84"]
+[ext_resource type="Texture2D" uid="uid://b8hj574to2ndn" path="res://Assets/list_chores.png" id="6_0ups5"]
+[ext_resource type="Texture2D" uid="uid://bsg131od2fnpe" path="res://Assets/list_rules.png" id="6_g0lsk"]
+[ext_resource type="Texture2D" uid="uid://c2awktbwl25rj" path="res://Assets/deductions.png" id="8_ihvin"]
+[ext_resource type="Texture2D" uid="uid://cknra73w67p4s" path="res://Assets/dochores.png" id="9_0ups5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
+font_size = 26
 
 [node name="CutScenes" type="CanvasLayer" unique_id=1998586076]
 
 [node name="Day0" type="Node2D" parent="." unique_id=716870536]
+visible = false
 script = ExtResource("1_kem0g")
 
 [node name="scene1" type="TextureRect" parent="Day0" unique_id=1317578561]
@@ -22,15 +31,53 @@ offset_bottom = 40.0
 texture = ExtResource("3_2x821")
 
 [node name="Tutorial" type="Node2D" parent="." unique_id=860203346]
-visible = false
 script = ExtResource("4_wj8qb")
 
-[node name="scene3" type="TextureRect" parent="Tutorial" unique_id=989560462]
-modulate = Color(0, 0, 0, 1)
+[node name="rules" type="TextureRect" parent="Tutorial" unique_id=1361652187]
+offset_right = 595.0
+offset_bottom = 720.0
+texture = ExtResource("6_g0lsk")
+stretch_mode = 3
+
+[node name="chores" type="TextureRect" parent="Tutorial" unique_id=1233302966]
+offset_right = 595.0
+offset_bottom = 720.0
+texture = ExtResource("6_0ups5")
+stretch_mode = 3
+
+[node name="black screen" type="TextureRect" parent="Tutorial" unique_id=674239021]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_lpi84")
+
+[node name="ph" type="TextureRect" parent="Tutorial" unique_id=1280361473]
+modulate = Color(1, 1, 1, 0.4627451)
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("5_g0lsk")
+
+[node name="ad" type="Label" parent="Tutorial" unique_id=987773571]
+offset_left = 32.0
+offset_top = 658.0
+offset_right = 300.0
+offset_bottom = 715.0
+text = "Press A or D to move."
+label_settings = SubResource("LabelSettings_g0lsk")
+
+[node name="ent" type="Label" parent="Tutorial" unique_id=972195156]
+offset_left = 32.0
+offset_top = 658.0
+offset_right = 300.0
+offset_bottom = 715.0
+text = "Press ENTER to interact."
+label_settings = SubResource("LabelSettings_g0lsk")
+
+[node name="deductions" type="TextureRect" parent="Tutorial" unique_id=607362294]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("8_ihvin")
 
-[node name="scene4" type="TextureRect" parent="Tutorial" unique_id=1471148284]
-offset_right = 1919.0
-offset_bottom = 1079.0
-texture = ExtResource("5_lpi84")
+[node name="do chores" type="TextureRect" parent="Tutorial" unique_id=91539620]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_0ups5")
