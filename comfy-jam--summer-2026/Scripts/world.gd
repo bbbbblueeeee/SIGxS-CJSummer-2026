@@ -12,7 +12,7 @@ var textbox: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	day = 1
+	day = 0
 	points = 0
 	is_next_day = false
 	went_out = false
@@ -72,10 +72,8 @@ func play_day_0_scene():
 
 func display_day_end_screen():
 	print("End of Day " + str(day)) # For testing
-	await Fade.fade(1,0.5).finished
 	end_day_screen.show_end_day_screen(points)
 	day += 1
-	await Fade.fade(0,0.5).finished
 
 func ready_for_next_day():
 	print("ready_for_next_day called")

@@ -25,7 +25,8 @@ func show_end_day_screen(points: int) -> void:
 	print("Stop Move") # For Testing
 	points_tally.text = "Total Obedience Points: "
 	show()
-	await get_tree().create_timer(2).timeout
+	await Fade.fade(0,0.5).finished
+	await get_tree().create_timer(1).timeout
 	points_tally.text = "Total Obedience Points: " + str(points)
 	await get_tree().create_timer(1).timeout
 	if points < 0:
