@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://o84k6jcvsg41"
+path="res://.godot/imported/rooftop_proper.dialogue-d7e60b3b792246d8e77b464e5e3d8b04.tres"
+
+[deps]
+
+source_file="res://Scripts/rooftop_proper.dialogue"
+dest_files=["res://.godot/imported/rooftop_proper.dialogue-d7e60b3b792246d8e77b464e5e3d8b04.tres"]
+
+[params]
+
+defaults=true
