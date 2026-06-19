@@ -22,6 +22,7 @@ script = ExtResource("2_27abl")
 
 [node name="Camera2D" type="Camera2D" parent="World/Player" unique_id=1933069141]
 offset = Vector2(0, 60)
+zoom = Vector2(0.25, 0.25)
 limit_left = 0
 limit_right = 5120
 

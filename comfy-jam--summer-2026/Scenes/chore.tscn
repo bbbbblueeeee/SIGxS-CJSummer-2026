@@ -20,6 +20,7 @@ script = ExtResource("4_23t8f")
 shape = SubResource("RectangleShape2D_23t8f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078621858]
+visible = false
 texture = ExtResource("3_32aft")
 centered = false
 

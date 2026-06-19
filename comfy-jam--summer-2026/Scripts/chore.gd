@@ -14,8 +14,7 @@ var will_end_past_midnight : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	scale = Vector2(4,4)
-	position.y = 530
+	position.y = 450
 	Signals.time_updated.connect(calculate_end_time)
 
 
@@ -39,14 +38,16 @@ func deselect():
 func chore_completed():
 	Signals.chore_completed.emit(self)
 	completed = true
-	$Sprite2D.visible = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	player_in_area = true
+	$Sprite2D.visible = true
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	player_in_area = false
+	$Sprite2D.visible = false
+	
 
 func calculate_end_time(time: int) -> void:
 	var end_time = time_taken + time

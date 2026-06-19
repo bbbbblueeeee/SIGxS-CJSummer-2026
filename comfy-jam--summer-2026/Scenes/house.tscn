@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d03vy1pde42f6" path="res://Scripts/house.gd" id="1_okrnj"]
 [ext_resource type="Texture2D" uid="uid://u3bkkh6gatfi" path="res://Assets/Pillar_Separation.png" id="2_bu6dc"]
-[ext_resource type="Texture2D" uid="uid://d0vhnhesrm80b" path="res://Assets/Stairs_going_down.png" id="3_bu6dc"]
-[ext_resource type="Texture2D" uid="uid://da2w4t6sc0wdw" path="res://Assets/Utility_Room_.png" id="4_l3jqw"]
-[ext_resource type="Texture2D" uid="uid://t1applxs6gy1" path="res://Assets/Bedroom.png" id="5_7ug6d"]
-[ext_resource type="Texture2D" uid="uid://2iypi5s6rbl6" path="res://Assets/Balcony.png" id="6_lmwq5"]
+[ext_resource type="Texture2D" uid="uid://c2uvmycik80qi" path="res://Assets/Stairs_going_down.png" id="3_bu6dc"]
+[ext_resource type="Texture2D" uid="uid://bqh17hca6csfw" path="res://Assets/Utility_Room_.png" id="4_l3jqw"]
+[ext_resource type="Texture2D" uid="uid://bchga6em7ut6j" path="res://Assets/Bedroom.png" id="5_7ug6d"]
+[ext_resource type="Texture2D" uid="uid://bugo2a6xp0tvn" path="res://Assets/Balcony.png" id="6_lmwq5"]
 
 [node name="House" type="Node2D" unique_id=831075696]
 script = ExtResource("1_okrnj")

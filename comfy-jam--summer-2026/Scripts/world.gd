@@ -1,9 +1,8 @@
 extends Node2D
-var day : int
+var day : int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	day = 0
 	Signals.day_end.connect(change_day)
 	Signals.end_day_screen.connect(display_day_end_screen)
 	pass
