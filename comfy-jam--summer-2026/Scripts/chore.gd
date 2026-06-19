@@ -17,6 +17,7 @@ var will_end_past_midnight : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	position.y = 450
+	$Area2D.monitorable = false
 	Signals.time_updated.connect(calculate_end_time)
 
 
@@ -25,7 +26,8 @@ func _process(delta: float) -> void:
 	if !completed and player_in_area and !is_selected and Input.is_action_just_pressed("object interaction"):
 		is_selected = true
 		show_dialogue_box()
-	pass
+	elif !player_in_area:
+		$Sprite2D.visible = false
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/chore.dialogue")

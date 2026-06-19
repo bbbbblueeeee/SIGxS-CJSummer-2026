@@ -25,8 +25,14 @@ var day_3_chores = [0, 1, 2, 8, 9, 10]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Signals.clear_chores.connect(new_day)
 	pass
 
+func new_day(day):
+	for chore in chores_array:
+		chore.queue_free()
+	chores_array.clear()
+	print(chores_array)
 
 func create_chores_list(day):
 	if day==0:
@@ -54,7 +60,6 @@ func create_chore(number : int):
 	new_chore.get_node("Area2D").scale = Vector2(chores_dict[number][7],chores_dict[number][8])
 	new_chore.floor = chores_dict[number][9]
 	if new_chore.floor == 2:
-		new_chore.get_node("Sprite2D").visible = false
 		new_chore.get_node("Area2D").monitoring = false
 	add_child(new_chore,true)
 	chores_array.append(new_chore)

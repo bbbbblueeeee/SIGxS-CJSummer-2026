@@ -21,6 +21,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if is_next_day and Input.is_action_just_pressed("object interaction"):
 		await Fade.fade(1,0.5).finished
+		Signals.clear_chores.emit()
 		Signals.next_day.emit(day)
 		print("It is now Day " + str(day)) # For testing
 		is_next_day = false

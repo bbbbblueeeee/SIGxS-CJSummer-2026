@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bmhcsdo5il66p"]
+[gd_scene format=3 uid="uid://ojjfeh5laowx"]
 
 [ext_resource type="Script" uid="uid://b3ja2afalwgtc" path="res://end_day_screen.gd" id="1_twkvv"]
 [ext_resource type="Texture2D" uid="uid://b6c1200oce8gv" path="res://Assets/Temporary/TEMP-EndDayScreen.png" id="2_afi8f"]
