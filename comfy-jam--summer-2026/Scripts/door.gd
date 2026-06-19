@@ -86,6 +86,7 @@ func send_time(added_time):
 
 func trigger_cutscene(d) -> void:
 	print("trigger_cutscene called with: ", d)
+	did_meet_friend = true
 	Signals.play_cutscene.emit(d)
 	
 	
