@@ -6,6 +6,7 @@ var player_in_area : bool = false
 func _ready() -> void:
 	$Sprite2D.visible = false
 	$Area2D.monitoring = true
+	Signals.next_day.connect(deselect)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,10 +33,9 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	$Sprite2D.texture = load("res://Assets/Bedroom_bed.png")
 	
 
-func deselect():
+func deselect(day):
 	await (get_tree().create_timer(0.2).timeout)
 	is_selected = false
 
 func end_day() -> void:
 	Signals.day_end.emit()
-	

@@ -10,9 +10,15 @@ const END_OF_DAY: int = 22
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.chore_completed.connect(on_chore_completed)
-	current_time = 8
-	calculate_time()
+	Signals.next_day.connect(new_day)
+	new_day(0)
 
+func new_day(day):
+	if day == 0:
+		current_time = 20
+	else:
+		current_time = 8
+	calculate_time()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
