@@ -1,12 +1,14 @@
 ~ start
-Player: Do I leave home?
+Mae: If I leave now, I should be able to see Julie at the mall.
+Mae: But my parents would be a bit disappointed. I'll lose 70 Obedience Points.
+Mae: Though I can still do chores to make up for it when I come back.
+Mae: Ugh, should I go?
 - Yes.
-	if day == 0:
-		Player: I shouldn't go out today.
-	else:
-		Player: Bye!
-		do trigger_cutscene(day)
+	Mae: Alright... let's go see Julie.
+	do send_minus(70)
+	do send_time(4)
+	do trigger_cutscene(1)
 - No.
-	Player: Oh, alright then.
+	Mae: Let me rethink this.
 	do deselect()
 => END

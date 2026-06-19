@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://byhypyu5smym1"
+path="res://.godot/imported/door_defeat.dialogue-2a5b1def272d0fe17e55bd78de4ac51d.tres"
+
+[deps]
+
+source_file="res://Scripts/door_defeat.dialogue"
+dest_files=["res://.godot/imported/door_defeat.dialogue-2a5b1def272d0fe17e55bd78de4ac51d.tres"]
+
+[params]
+
+defaults=true

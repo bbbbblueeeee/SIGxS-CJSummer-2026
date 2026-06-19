@@ -1,19 +1,33 @@
 extends Node2D
 var is_selected : bool = false
 var player_in_area : bool = false
-var can_leave : bool = false
-var day : int = 0
+var recorded_day : int
+var recorded_time : int
+var did_meet_friend : bool
+var can_still_meet_friend : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Signals.time_updated.connect(update_recorded_time)
+	Signals.next_day.connect(new_day)
 	position.x = 4832
 	position.y = 412
+	recorded_day = 0
+	recorded_time = 20
+	did_meet_friend = false
+	can_still_meet_friend = true
 	
 
-func new_day(current_day):
-	day = current_day
-	can_leave = false
+func new_day(day):
+	if not did_meet_friend and day > 1:
+		can_still_meet_friend = false
+	did_meet_friend = false
+	recorded_day = day
+	recorded_time = 8
 	deselect()
+
+func update_recorded_time(new_time):
+	recorded_time = new_time
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,8 +36,30 @@ func _process(delta: float) -> void:
 		show_dialogue_box()
 	pass
 
+func can_leave() -> bool:
+	if recorded_day == 1 and 12 <= recorded_time and recorded_time <= 14:
+		return true
+	elif recorded_day == 2 and 8 <= recorded_time and recorded_time <= 11:
+		return true
+	elif recorded_day == 3 and 20 <= recorded_time and recorded_time <= 23:
+		return true
+	else:
+		return false
+
 func show_dialogue_box():
-	var dialogue = load("res://Scripts/door_default.dialogue")
+	var dialogue
+	if can_still_meet_friend:
+		if can_leave():
+			if recorded_day == 1:
+				dialogue = load("res://Scripts/door_day1.dialogue")
+			elif recorded_day == 2:
+				dialogue = load("res://Scripts/door_day2.dialogue")
+			else:
+				dialogue = load("res://Scripts/door_day3.dialogue")
+		else:
+			dialogue = load("res://Scripts/door_default.dialogue")
+	else:
+		dialogue = load("res://Scripts/door_defeat.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self, get_node("../../")])
 	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
 	#add_child(dialogue_box, true)
@@ -42,8 +78,15 @@ func deselect():
 	await (get_tree().create_timer(0.2).timeout)
 	is_selected = false
 
+func send_minus(minus_op):
+	Signals.op_deduct.emit(minus_op)
+	
+func send_time(added_time):
+	Signals.time_skip.emit(added_time)
+
 func trigger_cutscene(d) -> void:
 	print("trigger_cutscene called with: ", d)
+	did_meet_friend = true
 	var loc = ''
 	if d == 1: loc = 'mall'
 	if d == 2: loc = 'beach_proper'

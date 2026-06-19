@@ -11,6 +11,7 @@ const END_OF_DAY: int = 22
 func _ready() -> void:
 	Signals.chore_completed.connect(on_chore_completed)
 	Signals.next_day.connect(new_day)
+	Signals.time_skip.connect(add_time)
 	new_day(0)
 
 func new_day(day):
@@ -26,6 +27,11 @@ func _process(delta: float) -> void:
 
 func on_chore_completed(chore):
 	current_time += chore.time_taken
+	calculate_time()
+	Signals.time_updated.emit(current_time)
+
+func add_time(t):
+	current_time += t
 	calculate_time()
 	Signals.time_updated.emit(current_time)
 

@@ -6,11 +6,17 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.chore_completed.connect(on_chore_completed)
+	Signals.op_deduct.connect(deduct_points)
 	current_points = 0
 	points_total()
 
 func on_chore_completed(chore):
 	current_points += chore.point_value
+	Signals.update_points.emit(current_points)
+	points_total()
+
+func deduct_points(minus_op):
+	current_points = current_points - minus_op
 	Signals.update_points.emit(current_points)
 	points_total()
 

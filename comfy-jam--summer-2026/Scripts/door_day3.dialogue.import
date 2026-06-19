@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dxlsnla0n31v8"
+path="res://.godot/imported/door_day3.dialogue-ac41a4acf804071a30e7a61ce2247254.tres"
+
+[deps]
+
+source_file="res://Scripts/door_day3.dialogue"
+dest_files=["res://.godot/imported/door_day3.dialogue-ac41a4acf804071a30e7a61ce2247254.tres"]
+
+[params]
+
+defaults=true
