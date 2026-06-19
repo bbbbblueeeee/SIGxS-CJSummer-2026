@@ -87,7 +87,14 @@ func send_minus(minus_op):
 	Signals.op_deduct.emit(minus_op)
 	
 func send_time(added_time):
-	Signals.time_skip.emit(added_time)
+	if recorded_day == 3:
+		Signals.midnight.emit()
+	else:
+		Signals.time_skip.emit(added_time)
+
+func send_friend_visited(day):
+	print("Sent Friend Visited: "+str(day)) # Testing
+	Signals.update_friend_visited.emit(day)
 
 func trigger_cutscene(d) -> void:
 	print("trigger_cutscene called with: ", d)

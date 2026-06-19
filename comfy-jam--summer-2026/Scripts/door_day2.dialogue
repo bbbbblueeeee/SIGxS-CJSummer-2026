@@ -8,6 +8,7 @@ Mae: Should I look for her at the beach?
 	Mae: Hopefully I can clear things up with her.
 	do send_minus(70)
 	do send_time(4)
+	do send_friend_visited(2)
 	do trigger_cutscene(2)
 - No.
 	$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")

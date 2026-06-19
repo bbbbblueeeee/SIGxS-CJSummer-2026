@@ -10,6 +10,7 @@ Mae: Ugh, should I go?
 	Mae: Alright... let's go see Julie.
 	do send_minus(70)
 	do send_time(4)
+	do send_friend_visited(1)
 	do trigger_cutscene(1)
 - No.
 	$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")

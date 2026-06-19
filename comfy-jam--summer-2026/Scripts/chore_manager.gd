@@ -4,21 +4,21 @@ var chores_array = []
 var chores_dict = [
 	#format:
 	#["name",time,points,position.x,offset.x,offset.y,"filepath",scale.x,scale.y,floor]
-	["take care of the plants",1,5,1000,-100,-220,"Stairs_going_up_plant",6,6,1],
+	["take care of the plants",2,15,1000,-100,-220,"Stairs_going_up_plant",6,6,1],
 	["sweep the floor",2,15,3600,-100,-90,"broom",6,6,1],
 	["set the table",1,5,2200,-210,-40,"Kitchen_table",14,6,1],
-	["do laundry",3,30,1725,-200,-140,"Utility_laundry",16,6,2],
-	["dust the bookshelf",2,20,2150,-175,-370,"Utility_bookshelf",12,6,2],
+	["do laundry",4,45,1725,-200,-140,"Utility_laundry",16,6,2],
+	["dust the bookshelf",3,30,2150,-175,-370,"Utility_bookshelf",12,6,2],
 	["organize the cabinet",2,20,4260,-180,-140,"entrance_desk",14,6,1],
 	["fix my clothes",3,30,4150,-255,-350,"Balcony_clothes",20,6,2],
 	["do my summer homework",5,55,820,-50,-155,"Stairs_going_down_books",4,6,2],
 	["refill the water",3,30,1385,-105,-260,"Utility_Room_watercooler",6,6,2],
-	["fix my bedroom light",1,10,3580,-80,-450,"Bedroom_light",6,6,2],
-	["unclog the sink",3,30,1720,-170,-110,"Kitchen_sink",12,6,1]
+	["fix my bedroom light",2,15,3580,-80,-450,"Bedroom_light",6,6,2],
+	["unclog the sink",4,45,1720,-170,-110,"Kitchen_sink",12,6,1]
 ]
 
 var day_0_chores = [1]
-var day_1_chores = [0, 1, 2, 3, 4]
+var day_1_chores = [0, 1, 2, 3, 4, 9]
 var day_2_chores = [0, 1, 2, 5, 6, 7]
 var day_3_chores = [0, 1, 2, 8, 9, 10]
 
