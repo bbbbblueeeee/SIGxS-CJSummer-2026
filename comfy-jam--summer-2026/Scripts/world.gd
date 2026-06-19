@@ -12,7 +12,7 @@ var textbox: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	day = 1
+	day = 0
 	points = 0
 	is_next_day = false
 	went_out = false
@@ -37,11 +37,6 @@ func _process(delta: float) -> void:
 		#is_processing_next_day = false
 		await Fade.fade(0,0.5).finished
 		calculate_morning_dialogue()
-		# if went_out:
-			# show_morning_dialogue(day_left)
-			# await DialogueManager.dialogue_started
-			# await DialogueManager.dialogue_ended
-			# went_out = false
 		day_left = 0
 		pass
 
