@@ -61,3 +61,6 @@ func show_fade(s):
 	s.show()
 	await Fade.fade(0,0.5).finished
 	
+func change_music(s):
+	pass
+	

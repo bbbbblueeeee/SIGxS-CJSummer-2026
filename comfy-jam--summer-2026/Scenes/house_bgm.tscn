@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dmwmmsconfbhs"]
+
+[ext_resource type="AudioStream" uid="uid://m0ydeawbkqhl" path="res://Assets/Music/TSWMA_MainHouse_Final.mp3" id="1_lr8u3"]
+
+[node name="HouseBgm" type="AudioStreamPlayer" unique_id=1231198727]
+stream = ExtResource("1_lr8u3")
+autoplay = true
