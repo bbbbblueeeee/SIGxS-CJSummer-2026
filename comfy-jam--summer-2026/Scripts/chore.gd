@@ -71,4 +71,7 @@ func calculate_end_time(time: int) -> void:
 	else:
 		will_end_past_midnight = false
 		will_end_past_ten = false
+	print(chore_name + ": End Time = " + str(end_time))
+	print(chore_name + ": Past Midnight? = " + str(will_end_past_midnight))
+	print("-")
 		
