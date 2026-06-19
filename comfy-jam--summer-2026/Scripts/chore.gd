@@ -10,7 +10,9 @@ var player_in_area : bool = false
 var is_selected : bool = false
 var completed : bool = false
 var will_end_past_ten : bool = false
-var will_end_past_midnight : bool = false
+var will_end_past_midnight : bool = false 
+#@onready var move_component: Node = %MoveComponent
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,9 +29,13 @@ func _process(delta: float) -> void:
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/chore.dialogue")
-	var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
-	add_child(dialogue_box, true)
-	dialogue_box.start(dialogue,"start")
+	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
+	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
+	#add_child(dialogue_box, true)
+	
+	#move_component.process_mode = Node.PROCESS_MODE_DISABLED
+	#DialogueManager.dialogue_ended.connect(end_dialogue, CONNECT_ONE_SHOT)
+	#dialogue_box.start(dialogue,"start")
 
 func deselect():
 	await (get_tree().create_timer(0.2).timeout)
@@ -60,3 +66,6 @@ func calculate_end_time(time: int) -> void:
 	else:
 		will_end_past_midnight = false
 		will_end_past_ten = false
+		
+func end_dialogue(_resource: DialogueResource) -> void:
+	pass#move_component.process_mode = Node.PROCESS_MODE_INHERIT

@@ -4,7 +4,7 @@ extends AnimatedSprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position.x = 3168
+	position.x = 4500 #3168
 	position.y = 300
 	scale = Vector2(1.25,1.25)
 	$Area2D.scale = Vector2(5,7)
@@ -27,4 +27,5 @@ func calculate_animation() -> void:
 		play("walk")
 	else:
 		play("idle")
+
 		

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bnavehrbdu4ui"
+path="res://.godot/imported/rooftop_morning.dialogue-b8dd73e0b4cd6e66eeeeb2dcf7b5d11b.tres"
+
+[deps]
+
+source_file="res://Scripts/rooftop_morning.dialogue"
+dest_files=["res://.godot/imported/rooftop_morning.dialogue-b8dd73e0b4cd6e66eeeeb2dcf7b5d11b.tres"]
+
+[params]
+
+defaults=true

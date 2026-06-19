@@ -2,11 +2,12 @@
 #Mae is shown lying in bed using their phone. The shot is angled such that the player’s 
 #facial expression is seen, but the content of the phone’s screen is not.
 Mae: …Let’s see what everyone is up to.
+do change_scene(scene_1, scene_2)
 Mae: ... [wait=1] !! 
 Mae: This is…
 #The graphic switches to one where the screen’s content is the focus. The player’s 
 #face is not seen.
-do get_parent().change_scene(get_parent().scene_1, get_parent().scene_2)
+do change_scene_with_fade(scene_2, scene_3)
 Mae: I know that place. That’s the corner store just down the street!
 #The graphic is zoomed in to focus on the friend in the picture.
 Mae: And that’s… Julie? Her hair’s so much longer now…
@@ -21,5 +22,5 @@ Mae: …
 Mae: …
 Mae: Ah, I can’t decide!
 Mae: I’ll just sleep on it. I can make my decision tomorrow.
-do get_parent().end_scene()
+do end_scene()
 => END

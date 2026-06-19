@@ -38,10 +38,10 @@ centered = false
 
 [node name="Room3" type="Sprite2D" parent="." unique_id=964746825]
 position = Vector2(2560, 0)
-texture = ExtResource("5_7ug6d")
+texture = ExtResource("5_gau5j")
 centered = false
 
 [node name="Room4" type="Sprite2D" parent="." unique_id=921950226]
 position = Vector2(3840, 0)
-texture = ExtResource("6_lmwq5")
+texture = ExtResource("6_7ug6d")
 centered = false

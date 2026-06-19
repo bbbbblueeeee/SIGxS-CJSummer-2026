@@ -16,9 +16,10 @@ func _process(delta: float) -> void:
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/bed.dialogue")
-	var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
-	add_child(dialogue_box, true)
-	dialogue_box.start(dialogue,"start")
+	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
+	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
+	#add_child(dialogue_box, true)
+	#dialogue_box.start(dialogue,"start")
 	pass
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
