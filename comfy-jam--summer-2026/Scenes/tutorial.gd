@@ -13,7 +13,8 @@ var sweepDone = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	show_cutscene.call_deferred(0)
+	#show_cutscene.call_deferred(0)
+	hide()
 	scene_1.position.y = 0
 	scene_1.position.x = 0
 	scene_2.position.y = 0
