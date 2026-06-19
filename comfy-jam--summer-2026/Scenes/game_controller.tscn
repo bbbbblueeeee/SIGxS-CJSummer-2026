@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8d7830xpve0r" path="res://Scenes/cut_scenes.tscn" id="6_gruqv"]
 [ext_resource type="PackedScene" uid="uid://1qcno3gutt6f" path="res://Scenes/obedience_points.tscn" id="6_k0qbb"]
 [ext_resource type="PackedScene" uid="uid://gh15sskgxr67" path="res://Scenes/fade.tscn" id="7_gruqv"]
+[ext_resource type="PackedScene" uid="uid://mlmt7sriqda2" path="res://Scenes/door.tscn" id="7_u4s5x"]
 [ext_resource type="PackedScene" uid="uid://bmhcsdo5il66p" path="res://Scenes/end_day_screen.tscn" id="8_h1rn0"]
 
 [node name="GameController" type="Node" unique_id=2020275606]
@@ -36,6 +37,8 @@ scale = Vector2(1.5, 1.5)
 
 [node name="ChoreManager" parent="World/House" unique_id=956873693 instance=ExtResource("4_27abl")]
 visibility_layer = 2
+
+[node name="Door" parent="World/House" unique_id=221451178 instance=ExtResource("7_u4s5x")]
 
 [node name="CutScenes" parent="World" unique_id=1128426716 instance=ExtResource("6_gruqv")]
 

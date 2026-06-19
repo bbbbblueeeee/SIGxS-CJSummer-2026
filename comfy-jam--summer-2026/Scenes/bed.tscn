@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bb3131qie0llf" path="res://Scenes/bed.gd" id="1_ki1gv"]
 [ext_resource type="Script" uid="uid://c1257vcfpe7s1" path="res://Scenes/area_2d.gd" id="2_l6is3"]
+[ext_resource type="Texture2D" uid="uid://d12v2fw4vywxv" path="res://Assets/Bedroom_bed.png" id="3_ki1gv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m81k0"]
 size = Vector2(275.5, 178)
@@ -17,7 +18,9 @@ position = Vector2(236.25, 435)
 shape = SubResource("RectangleShape2D_m81k0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=80018455]
-position = Vector2(235, 434)
+position = Vector2(240, 420)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_ki1gv")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -1,0 +1,8 @@
+~ start
+Player: Do I leave home?
+- Yes.
+	Player: Bye!
+- No.
+	Player: Oh, alright then.
+	do deselect()
+=> END

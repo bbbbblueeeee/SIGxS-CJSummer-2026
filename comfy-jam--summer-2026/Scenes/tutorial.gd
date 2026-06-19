@@ -38,9 +38,7 @@ func show_cutscene(day):
 	show_dialogue_box()
 
 func show_dialogue_box():
-	print("mamma")
 	var dialogue = load("res://Scripts/tutorial.dialogue")
-	print("mia")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
 	

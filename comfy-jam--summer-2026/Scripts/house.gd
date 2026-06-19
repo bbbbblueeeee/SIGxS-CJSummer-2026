@@ -62,7 +62,10 @@ func change_floor(floor):
 			object.visible = true
 		for object in floor_2_objects:
 			object.visible = false
-			print(object)
+		$Bed/Sprite2D.visible = false
+		$Bed/Area2D.monitoring = false
+		$Door/Sprite2D.visible = true
+		$Door/Area2D.monitoring = true
 	elif floor == 2:
 		$Room1.texture=load("res://Assets/Stairs_going_down.png")
 		$Room2.texture=load("res://Assets/Utility_Room_.png")
@@ -73,6 +76,10 @@ func change_floor(floor):
 			object.visible = false
 		for object in floor_2_objects:
 			object.visible = true
+		$Bed/Sprite2D.visible = true
+		$Bed/Area2D.monitoring = true
+		$Door/Sprite2D.visible = false
+		$Door/Area2D.monitoring = false
 			
 	for chore in $ChoreManager.chores_array:
 		if chore.floor == floor and !chore.completed:

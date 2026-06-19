@@ -1,15 +1,16 @@
 ~ start
-Player: You've just selected the {{chore_name}} chore.
 if get_parent().will_end_past_midnight:
-	Player: You do not have enough time left in the day to complete this chore.
+	Player: I don't have enough time left in the day to {{chore_name}}.
 else:
-	Player: Completing this chore will take {{time_taken}} hours and award {{point_value}} obedience points.
+	Player: Hmm... I could {{chore_name}}.
+	Player: It'll take me {{time_taken}} hours and earn me {{point_value}} Obedience Points.
 	if will_end_past_ten:
-		Player: Completing this chore will make you stay up late.
-	Player: Would you like to proceed with this chore?
+		Player: But I'd be staying up past 10PM.
+	Player: Should I {{chore_name}}?
 	- Yes.
 		do chore_completed()
 		Player: All done!
 	- No.
+		Player: Maybe later.
 		do deselect()
 => END

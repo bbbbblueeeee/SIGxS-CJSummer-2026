@@ -4,8 +4,8 @@ var player_in_area : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Sprite2D.visible = false
-	$Area2D.monitoring = true
+	position.x = 4832
+	position.y = 412
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	pass
 
 func show_dialogue_box():
-	var dialogue = load("res://Scripts/bed.dialogue")
+	var dialogue = load("res://Scripts/door.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
 	#add_child(dialogue_box, true)
@@ -25,17 +25,18 @@ func show_dialogue_box():
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	player_in_area = true
-	$Sprite2D.texture = load("res://Assets/Bedroom_bed_outline.png")
+	$Sprite2D.texture = load("res://Assets/entrance_door_outline.png")
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	player_in_area = false
-	$Sprite2D.texture = load("res://Assets/Bedroom_bed.png")
+	$Sprite2D.texture = load("res://Assets/entrance_door.png")
 	
 
 func deselect():
 	await (get_tree().create_timer(0.2).timeout)
 	is_selected = false
 
-func end_day() -> void:
-	Signals.day_end.emit()
+func trigger_cutscene() -> void:
+	#put code here
+	pass
 	
