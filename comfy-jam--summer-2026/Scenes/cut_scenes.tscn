@@ -17,9 +17,11 @@
 [ext_resource type="Texture2D" uid="uid://culxcwomiem3k" path="res://Assets/Spritesheets/julie.png" id="15_l6kp3"]
 [ext_resource type="Texture2D" uid="uid://b615yr0p043w6" path="res://Assets/Spritesheets/mae.png" id="16_gpril"]
 [ext_resource type="Script" uid="uid://cq06inu6qe5ea" path="res://Scripts/day_2.gd" id="17_fsvdl"]
-[ext_resource type="Texture2D" uid="uid://d2gjvn5tchakh" path="res://Assets/broom.png" id="17_gm73n"]
-[ext_resource type="Texture2D" uid="uid://fum8tqxlk72p" path="res://Assets/Temporary/TEMP_day0.png" id="18_fsvdl"]
+[ext_resource type="Texture2D" uid="uid://cjgqxmhvhg0o3" path="res://Assets/Outside/Beach.PNG" id="18_o41vd"]
+[ext_resource type="Texture2D" uid="uid://bu85snnpgdbo3" path="res://Assets/CGs/Day 2.png" id="19_hlyin"]
 [ext_resource type="Script" uid="uid://b4xjoaq8en3jq" path="res://Scripts/day_3.gd" id="20_mvexy"]
+[ext_resource type="Texture2D" uid="uid://i2i5xew5s7me" path="res://Assets/Outside/Rooftop.PNG" id="21_lx4pu"]
+[ext_resource type="Texture2D" uid="uid://c0obm1gbwbepn" path="res://Assets/CGs/Day 3_First.png" id="21_nwrbp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -356,7 +358,7 @@ script = ExtResource("17_fsvdl")
 [node name="TEMP_beach" type="TextureRect" parent="Day2" unique_id=829860204]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("17_gm73n")
+texture = ExtResource("18_o41vd")
 
 [node name="JulieSprite" type="AnimatedSprite2D" parent="Day2" unique_id=1276228588]
 position = Vector2(300, 400)
@@ -374,7 +376,7 @@ animation = &"walk"
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("18_fsvdl")
+texture = ExtResource("19_hlyin")
 
 [node name="Day3" type="Node2D" parent="." unique_id=1462886147]
 script = ExtResource("20_mvexy")
@@ -382,7 +384,7 @@ script = ExtResource("20_mvexy")
 [node name="TEMP_rooftop" type="TextureRect" parent="Day3" unique_id=1445321973]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("17_gm73n")
+texture = ExtResource("21_lx4pu")
 
 [node name="JulieSprite" type="AnimatedSprite2D" parent="Day3" unique_id=178808228]
 position = Vector2(300, 400)
@@ -400,7 +402,7 @@ animation = &"idle"
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("18_fsvdl")
+texture = ExtResource("21_nwrbp")
 
 [node name="blackscreen" type="TextureRect" parent="Day3" unique_id=1187602609]
 offset_right = 40.0

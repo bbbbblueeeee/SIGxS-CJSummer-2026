@@ -60,6 +60,7 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: It is.
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 Mae: …
+$> cg.texture = load("res://Assets/CGs/Day 3_Second.png")
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Hey.
 $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
@@ -76,11 +77,13 @@ $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: And, you know what? Even if we end up drifting apart and losing touch with each other...
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: I’m okay with it hurting. Because that means it mattered.
+$> cg.texture = load("res://Assets/CGs/Day 3_Third.png")
 $> textbox.texture = load("res://Assets/Portraits/cheerful_mae.png")
 Mae: So let’s try this again. And let’s not make the same mistakes we made last time. Okay?
 $> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
 Julie: Yeah.
 $> textbox.texture = load("res://Assets/Portraits/cheerful_julie.png")
+$> cg.texture = load("res://Assets/CGs/Day 3_Fourth.png")
 Julie: Okay!
 $> change_scene_with_fade(cg, blackscreen)
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")

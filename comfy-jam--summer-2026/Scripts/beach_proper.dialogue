@@ -19,7 +19,6 @@ Julie: !
 $> change_scene_with_fade(TEMP, cg)
 $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
 Mae: You keep acting like nothing happened. Like we’re still friends.
-$> change_scene_with_fade(TEMP, cg)
 Mae: I thought maybe you were finally going to bring it up today.
 Mae: But all this time, you’ve only talked about your life in the city. There’s no way you’ve forgotten about what happened three years ago.
 Mae: Was this your plan? To keep playing this game of pretend? To act like nothing’s wrong?
@@ -41,7 +40,6 @@ $> mae.flip_h = true
 $> change_scene_with_fade(cg, TEMP)
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
 Julie: …
-$> change_scene_with_fade(cg, TEMP)
 $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
 Mae: I was hoping to work this out today, but I guess you have nothing to say to me.
 $> mae_walk_away()
