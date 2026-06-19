@@ -3,6 +3,7 @@ Player: Do I leave home?
 - Yes.
 	if day == 0:
 		Player: I shouldn't go out today.
+		do deselect()
 	else:
 		Player: Bye!
 		do trigger_cutscene(day)
