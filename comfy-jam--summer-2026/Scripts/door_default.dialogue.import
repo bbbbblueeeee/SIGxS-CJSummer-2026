@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c1gkligumip78"
+path="res://.godot/imported/door_default.dialogue-970aa2a5b4ace6989422499ff8a64a37.tres"
+
+[deps]
+
+source_file="res://Scripts/door_default.dialogue"
+dest_files=["res://.godot/imported/door_default.dialogue-970aa2a5b4ace6989422499ff8a64a37.tres"]
+
+[params]
+
+defaults=true

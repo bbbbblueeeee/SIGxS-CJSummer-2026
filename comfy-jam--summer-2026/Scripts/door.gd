@@ -1,12 +1,19 @@
 extends Node2D
 var is_selected : bool = false
 var player_in_area : bool = false
+var can_leave : bool = false
+var day : int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	position.x = 4832
 	position.y = 412
+	
 
+func new_day(current_day):
+	day = current_day
+	can_leave = false
+	deselect()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,7 +23,7 @@ func _process(delta: float) -> void:
 	pass
 
 func show_dialogue_box():
-	var dialogue = load("res://Scripts/door.dialogue")
+	var dialogue = load("res://Scripts/door_default.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self, get_node("../../")])
 	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
 	#add_child(dialogue_box, true)
