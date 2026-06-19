@@ -20,9 +20,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_next_day and Input.is_action_just_pressed("object interaction"):
+		await Fade.fade(1,0.5).finished
 		Signals.next_day.emit(day)
 		print("It is now Day " + str(day)) # For testing
 		is_next_day = false
+		await Fade.fade(0,0.5).finished
 		pass
 
 func update_point_tracker(updated):
@@ -37,8 +39,10 @@ func play_day_0_scene():
 
 func display_day_end_screen():
 	print("End of Day " + str(day)) # For testing
-	day += 1
+	await Fade.fade(1,0.5).finished
 	end_day_screen.show_end_day_screen(points)
+	day += 1
+	await Fade.fade(0,0.5).finished
 
 func ready_for_next_day():
 	is_next_day = true

@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8d7830xpve0r" path="res://Scenes/cut_scenes.tscn" id="6_gruqv"]
 [ext_resource type="PackedScene" uid="uid://1qcno3gutt6f" path="res://Scenes/obedience_points.tscn" id="6_k0qbb"]
 [ext_resource type="PackedScene" uid="uid://gh15sskgxr67" path="res://Scenes/fade.tscn" id="7_gruqv"]
-[ext_resource type="PackedScene" uid="uid://bmhcsdo5il66p" path="res://Scenes/end_day_screen.tscn" id="8_h1rn0"]
+[ext_resource type="PackedScene" uid="uid://ojjfeh5laowx" path="res://Scenes/end_day_screen.tscn" id="8_h1rn0"]
 
 [node name="GameController" type="Node" unique_id=2020275606]
 script = ExtResource("1_nqxm2")
