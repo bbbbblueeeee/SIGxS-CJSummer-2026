@@ -15,7 +15,7 @@ func _ready() -> void:
 	position.x = 4832
 	position.y = 412
 	recorded_day = 0
-	recorded_time = 18
+	recorded_time = 18 #18
 	did_meet_friend = false
 	can_still_meet_friend = true
 	
@@ -26,6 +26,7 @@ func on_send_balloon(balloon):
 func new_day(day):
 	if not did_meet_friend and day > 1:
 		can_still_meet_friend = false
+		Signals.cannot_meet_friend.emit()
 	did_meet_friend = false
 	recorded_day = day
 	recorded_time = 8
