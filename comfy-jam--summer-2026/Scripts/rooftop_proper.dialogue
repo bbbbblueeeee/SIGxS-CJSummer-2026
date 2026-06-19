@@ -48,9 +48,9 @@ Thoughtful_Mae: I’m okay with it hurting. Because that means it mattered.
 Thoughtful_Mae: So let’s try this again. And let’s not make the same mistakes we made last time. Okay?
 Smiling_Julie: Yeah.
 Cheerful_Julie: Okay!
-$> change_scene_with_fade(cg, black)
-The fireworks show lasts until well past 11 o’clock. I barely make it home before midnight.
-But I don’t regret going to see her.
-And, just like that, my summer break is over.
+$> change_scene_with_fade(cg, blackscreen)
+Mae: (The fireworks show lasts until well past 11 o’clock. I barely make it home before midnight.)
+Mae: (But I don’t regret going to see her.)
+Mae: (And, just like that, my summer break is over.)
 $> end_scene()
 => END

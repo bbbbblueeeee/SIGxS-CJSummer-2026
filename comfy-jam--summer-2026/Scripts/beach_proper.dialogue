@@ -1,12 +1,14 @@
 ~ start
 Cheerful_Julie: You came!
-Mae: So she was inviting me when she mentioned the beach yesterday.
+Mae: (So she was inviting me when she mentioned the beach yesterday.)
 Uneasy_Mae: …Yeah.
-Mae: I don’t want to bring it up just yet. Maybe she really called me here to talk about that… I want to believe that she feels bad about what happened.
+Mae: (I don’t want to bring it up just yet. Maybe she really called me here to talk about that… I want to believe that she feels bad about what happened.)
 Cheerful_Julie: Anyway, I managed to get so many shells today! I’m not sure how i’ll turn them into necklaces or keychains, but I'll figure something out!
 Cheerful_Julie: My friends will looove these. You know, one of them really likes tropical stuff, so i told her that I’d-
 Upset_Mae: Are you serious right now?
+$> julie.play("idle_sad")
 Uneasy_Julie: !
+$> change_scene_with_fade(TEMP, cg)
 Upset_Mae: You keep acting like nothing happened. Like we’re still friends.
 $> change_scene_with_fade(TEMP, cg)
 Upset_Mae: I thought maybe you were finally going to bring it up today.
@@ -21,9 +23,12 @@ Upset_Mae: You ignored all my calls and all my texts, you never reached out once
 Upset_Mae: And now that you’re here on vacation, you decide to go back to the good old days, is that it?
 Upset_Mae: I was so lonely! I spent three years wondering why you did that. And then you waltz back into my life and decide to pretend you didn’t leave me behind!
 Upset_Mae: What did you think was going to happen? That I would just let you indulge in your fantasy? Do you think I don’t have enough of a backbone to stand up for myself?
+$> mae.flip_h = true
+$> change_scene_with_fade(cg, TEMP)
 Uneasy_Julie: …
 $> change_scene_with_fade(cg, TEMP)
 Upset_Mae: I was hoping to work this out today, but I guess you have nothing to say to me.
+$> mae_walk_away()
 Upset_Mae: Enjoy your vacation.
 $> Signals.morning_after.emit(2)
 $> end_scene()

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d12v2fw4vywxv" path="res://Assets/Bedroom_bed.png" id="3_ki1gv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m81k0"]
-size = Vector2(275.5, 178)
+size = Vector2(335.5, 178)
 
 [node name="Bed" type="Node2D" unique_id=1845696154]
 script = ExtResource("1_ki1gv")
@@ -14,11 +14,11 @@ script = ExtResource("1_ki1gv")
 script = ExtResource("2_l6is3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1373155949]
-position = Vector2(236.25, 435)
+position = Vector2(266.25, 435)
 shape = SubResource("RectangleShape2D_m81k0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=80018455]
-position = Vector2(240, 420)
+position = Vector2(260, 400)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("3_ki1gv")
 

@@ -1,6 +1,6 @@
 extends Node2D
 @onready var cg: TextureRect = $cg
-@onready var TEMP: TextureRect = $TEMP_mall
+@onready var TEMP: TextureRect = $TEMP_beach
 @onready var julie: AnimatedSprite2D = $JulieSprite
 @onready var mae: AnimatedSprite2D = $MaeSprite
 var moving_mae: bool = false
@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 func show_cutscene(day):
 	print(day)
-	if int(day) == 1:
+	if int(day) == 2:
 		await Fade.fade(1,0.5).finished
 		show()
 		cg.hide()
@@ -32,9 +32,14 @@ func show_cutscene(day):
 		show_dialogue_box()
 
 func show_dialogue_box():
-	var dialogue = load("res://Scripts/mall.dialogue")
+	var dialogue = load("res://Scripts/beach_proper.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
+
+func mae_walk_away():
+	var tween_2 = create_tween()
+	tween_2.tween_property(mae,"position",Vector2(1500,400),1.0)
+		
 	
 func change_scene(sceneA, sceneB):
 	sceneB.show()
