@@ -1,0 +1,25 @@
+~ start
+#Mae is shown lying in bed using their phone. The shot is angled such that the player’s 
+#facial expression is seen, but the content of the phone’s screen is not.
+Mae: …Let’s see what everyone is up to.
+Mae: ... [wait=1] !! 
+Mae: This is…
+#The graphic switches to one where the screen’s content is the focus. The player’s 
+#face is not seen.
+do get_parent().change_scene(get_parent().scene_1, get_parent().scene_2)
+Mae: I know that place. That’s the corner store just down the street!
+#The graphic is zoomed in to focus on the friend in the picture.
+Mae: And that’s… Julie? Her hair’s so much longer now…
+Mae: She’s in town again… I can’t believe it. It’s been three years since we last talked to each other. Three years since she just… left.
+#The graphic is zoomed in to focus on the caption accompanying the picture.
+Mae: Shopping and lunch… they’re probably going to the mall.
+Mae: I wish I could talk to her again… I wonder how she’s doing now. She never replied to my texts.
+Mae: But… I know she’ll be in the mall around lunchtime tomorrow. I could go and see her.
+Mae: But then I’ll be breaking that rule to not leave the house… Mom and Dad won’t be happy to hear about that.
+Mae: Should I go see her?
+Mae: …
+Mae: …
+Mae: Ah, I can’t decide!
+Mae: I’ll just sleep on it. I can make my decision tomorrow.
+do get_parent().end_scene()
+=> END

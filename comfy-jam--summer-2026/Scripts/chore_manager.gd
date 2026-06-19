@@ -2,17 +2,19 @@ extends Node2D
 
 var chores_array = []
 var chores_dict = [
-	["Take Care of Plant",1,5,100,1],
-	["Sweep Floor",2,15,1000,1],
-	["Set Table",1,5,2200,2],
-	["Do Laundry",3,30,2600,2],
-	["Dust Bookshelf",2,20,600,1],
-	["Organize Cabinet",2,20,1800,2],
-	["Hang Clothes",3,30,1600,1],
-	["Do Summer Homework",5,55,3200,2],
-	["Replace Water",3,30,4900,1],
-	["Fix the Light",1,10,2800,2],
-	["Unclog the Sink",3,30,4000,1]
+	#format:
+	#["name",time,points,position.x,offset.x,offset.y,"filepath",scale.x,scale.y,floor]
+	["Take Care of Plant",1,5,1000,-100,-220,"Stairs_going_up_plant",6,6,1],
+	["Sweep Floor",2,15,3600,-100,-90,"broom",6,6,1],
+	["Set Table",1,5,2200,-210,-40,"Kitchen_table",14,6,1],
+	["Do Laundry",3,30,1725,-200,-140,"Utility_laundry",16,6,2],
+	["Dust Bookshelf",2,20,2150,-175,-370,"Utility_bookshelf",12,6,2],
+	["Organize Cabinet",2,20,4260,-180,-140,"entrance_desk",14,6,1],
+	["Hang Clothes",3,30,4150,-255,-350,"Balcony_clothes",20,6,2],
+	["Do Summer Homework",5,55,820,-50,-155,"Stairs_going_down_books",4,6,2],
+	["Replace Water",3,30,1385,-105,-260,"Utility_Room_watercooler",6,6,2],
+	["Fix the Light",1,10,3580,-80,-450,"Bedroom_light",6,6,2],
+	["Unclog the Sink",3,30,1720,-170,-110,"Kitchen_sink",12,6,1]
 ]
 
 var day_0_chores = [0, 1, 2]
@@ -46,8 +48,11 @@ func create_chore(number : int):
 	new_chore.time_taken = chores_dict[number][1]
 	new_chore.point_value = chores_dict[number][2]
 	new_chore.position.x = chores_dict[number][3]
-	new_chore.initial_position = chores_dict[number][3]
-	new_chore.floor = chores_dict[number][4]
+	new_chore.get_node("Sprite2D").offset.x = chores_dict[number][4]
+	new_chore.get_node("Sprite2D").offset.y = chores_dict[number][5]
+	new_chore.get_node("Sprite2D").texture = load("res://Assets/"+chores_dict[number][6]+"_outline.png")
+	new_chore.get_node("Area2D").scale = Vector2(chores_dict[number][7],chores_dict[number][8])
+	new_chore.floor = chores_dict[number][9]
 	if new_chore.floor == 1:
 		new_chore.get_node("Sprite2D").visible = false
 		new_chore.get_node("Area2D").monitoring = false

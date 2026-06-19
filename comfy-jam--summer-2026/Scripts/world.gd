@@ -1,13 +1,24 @@
 extends Node2D
-var day : int = 1
-
+var day : int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Signals.day_end.connect(change_day)
+	Signals.end_day_screen.connect(display_day_end_screen)
 	pass
-
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func change_day() -> void:
+	if day == 0:
+		play_day_0_scene()
+	
+func play_day_0_scene():
+	Signals.play_cutscene.emit(day)
+
+func display_day_end_screen():
+	print("End of Day " + str(day)) # For testing
+	day += 1
+	print("It is now Day " + str(day)) # For testing

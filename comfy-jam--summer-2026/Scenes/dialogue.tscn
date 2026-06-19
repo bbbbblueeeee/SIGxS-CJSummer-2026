@@ -54,7 +54,7 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-texture = ExtResource("2_r8xkh")
+texture = ExtResource("2_j1ns2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psnvo"]
 
@@ -122,7 +122,7 @@ _data = {
 
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
 layer = 100
-script = ExtResource("1_g406w")
+script = ExtResource("1_shd1d")
 
 [node name="Balloon" type="Control" parent="." unique_id=359403728]
 unique_name_in_owner = true
@@ -188,7 +188,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1225160028 instance=ExtResource("2_juolu")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Control" unique_id=1225160028 instance=ExtResource("5_4dels")]
 unique_name_in_owner = true
 layout_mode = 0
 anchors_preset = 0
@@ -231,7 +231,7 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_ig6vh")
+script = ExtResource("6_tsnyp")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
@@ -240,7 +240,7 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
-stream = ExtResource("4_juolu")
+stream = ExtResource("7_b3kk1")
 volume_db = 5.0
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

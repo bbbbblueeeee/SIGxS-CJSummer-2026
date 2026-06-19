@@ -1,0 +1,9 @@
+~ start
+Player: Should I sleep?
+- Yes.
+	Player: All done!
+	do get_parent().end_day()
+- No.
+	Player: Alright let's doomscroll!
+	do get_parent().deselect()
+=> END

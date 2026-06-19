@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d1kkcwedjrxsi"]
+
+[ext_resource type="Script" uid="uid://bb3131qie0llf" path="res://Scenes/bed.gd" id="1_ki1gv"]
+[ext_resource type="Script" uid="uid://c1257vcfpe7s1" path="res://Scenes/area_2d.gd" id="2_l6is3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m81k0"]
+size = Vector2(275.5, 178)
+
+[node name="Bed" type="Node2D" unique_id=1845696154]
+script = ExtResource("1_ki1gv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2114143868]
+script = ExtResource("2_l6is3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1373155949]
+position = Vector2(236.25, 435)
+shape = SubResource("RectangleShape2D_m81k0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=80018455]
+position = Vector2(235, 434)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
