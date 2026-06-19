@@ -12,6 +12,7 @@ func _ready() -> void:
 	Signals.chore_completed.connect(on_chore_completed)
 	Signals.next_day.connect(new_day)
 	Signals.time_skip.connect(add_time)
+	Signals.midnight.connect(set_midnight)
 	new_day(0)
 
 func new_day(day):
@@ -35,6 +36,10 @@ func add_time(t):
 	calculate_time()
 	Signals.time_updated.emit(current_time)
 
+func set_midnight():
+	current_time = 24
+	calculate_time()
+
 func calculate_time():
 	if current_time == 24:
 		displayed_time = 12
@@ -50,3 +55,4 @@ func calculate_time():
 		time_marker = "AM"
 		
 	time_display.text = str(displayed_time) + ":00 " + time_marker
+	
