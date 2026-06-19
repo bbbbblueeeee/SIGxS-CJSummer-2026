@@ -8,6 +8,7 @@ var day_left: int
 var was_friend_visited_1: bool
 var was_friend_visited_2: bool
 @onready var end_day_screen: CanvasLayer = $"EndDay Screen"
+var textbox: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +24,7 @@ func _ready() -> void:
 	end_day_screen.update_next_day.connect(ready_for_next_day)
 	Signals.morning_after.connect(went_to_friend)
 	Signals.update_friend_visited.connect(update_visit)
-	pass
+	Signals.send_balloon.connect(on_send_balloon)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -43,6 +44,9 @@ func _process(delta: float) -> void:
 			# went_out = false
 		day_left = 0
 		pass
+
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
 func update_point_tracker(updated):
 	points = updated

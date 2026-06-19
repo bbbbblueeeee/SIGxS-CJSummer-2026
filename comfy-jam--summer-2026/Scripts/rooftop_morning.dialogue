@@ -1,13 +1,21 @@
 ~ start
-Uneasy_Mae: …I’ve just opened my phone to find a new message from Julie.
-Uneasy_Mae: Ugh, I’m still upset over our conversation from yesterday.
-Uneasy_Mae: Fine. Let’s see what she has to say.
-The message reads: “Hey, Mae. I’m really sorry about what happened yesterday. If you’re still willing to hear me out, I’ll be on the clubhouse rooftop after 8:00 PM tonight. I promise I’ll explain everything there.”
-Uneasy_Mae: …
-Uneasy_Mae: If I go see Julie, I’ll probably get home way past curfew. That’s another rule I’ll be breaking.
-Uneasy_Mae: I’ll have to make sure I have enough Obedience Points to stay above 0 at the end of the day.
-Uneasy_Mae: Or, I could just stay home.
-Uneasy_Mae: …
-Uneasy_Mae: Well, I have the rest of the day to decide whether or not I’ll go.
-Uneasy_Mae: Let’s do some chores for now.
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
+Mae: …I’ve just opened my phone to find a new message from Julie.
+$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+Mae: Ugh, I’m still upset over our conversation from yesterday.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Fine. Let’s see what she has to say.
+$> textbox.texture = null
+Julie: “Hey, Mae. I’m really sorry about what happened yesterday. If you’re still willing to hear me out, I’ll be on the clubhouse rooftop after 8:00 PM tonight. I promise I’ll explain everything there.”
+$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+Mae: …
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
+Mae: If I go see Julie, I’ll probably get home way past curfew. That’s another rule I’ll be breaking.
+Mae: I’ll have to make sure I have enough Obedience Points to stay above 0 at the end of the day.
+$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+Mae: Or, I could just stay home.
+Mae: …
+Mae: Well, I have the rest of the day to decide whether or not I’ll go.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Let’s do some chores for now.
 => END
