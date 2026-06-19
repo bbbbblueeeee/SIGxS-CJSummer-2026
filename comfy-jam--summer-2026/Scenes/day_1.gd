@@ -26,7 +26,9 @@ func show_cutscene(day):
 		var tween = create_tween()
 		await tween.tween_property(mae,"position",Vector2(1000,400),1.0).finished
 		mae.play("idle")
+		await (get_tree().create_timer(1).timeout)
 		julie.flip_h = true
+		await (get_tree().create_timer(1).timeout)
 		show_dialogue_box()
 
 

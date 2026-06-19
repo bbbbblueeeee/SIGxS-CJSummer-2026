@@ -86,55 +86,55 @@ animations = [{
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hlyin"]
 atlas = ExtResource("16_gpril")
-region = Rect2(0, 576, 128, 288)
+region = Rect2(0, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwrbp"]
 atlas = ExtResource("16_gpril")
-region = Rect2(128, 576, 128, 288)
+region = Rect2(128, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1u0tc"]
 atlas = ExtResource("16_gpril")
-region = Rect2(256, 576, 128, 288)
+region = Rect2(256, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5ryn"]
 atlas = ExtResource("16_gpril")
-region = Rect2(384, 576, 128, 288)
+region = Rect2(384, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ni8bi"]
 atlas = ExtResource("16_gpril")
-region = Rect2(512, 576, 128, 288)
+region = Rect2(512, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r378f"]
 atlas = ExtResource("16_gpril")
-region = Rect2(640, 576, 128, 288)
+region = Rect2(640, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trtld"]
 atlas = ExtResource("16_gpril")
-region = Rect2(768, 576, 128, 288)
+region = Rect2(768, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pqj42"]
 atlas = ExtResource("16_gpril")
-region = Rect2(896, 576, 128, 288)
+region = Rect2(896, 288, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ife2a"]
 atlas = ExtResource("16_gpril")
-region = Rect2(0, 288, 128, 288)
+region = Rect2(0, 864, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4v5kb"]
 atlas = ExtResource("16_gpril")
-region = Rect2(128, 288, 128, 288)
+region = Rect2(128, 864, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrufs"]
 atlas = ExtResource("16_gpril")
-region = Rect2(256, 288, 128, 288)
+region = Rect2(256, 864, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4x3ei"]
 atlas = ExtResource("16_gpril")
-region = Rect2(384, 288, 128, 288)
+region = Rect2(384, 864, 128, 288)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v0cyj"]
 atlas = ExtResource("16_gpril")
-region = Rect2(512, 288, 128, 288)
+region = Rect2(512, 864, 128, 288)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vtqaf"]
 animations = [{
@@ -280,7 +280,7 @@ frame_progress = 0.88920254
 position = Vector2(1400, 400)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vtqaf")
-animation = &"idle"
+animation = &"walk"
 
 [node name="cg" type="TextureRect" parent="Day1" unique_id=905391919]
 visible = false
