@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bsg131od2fnpe" path="res://Assets/list_rules.png" id="6_g0lsk"]
 [ext_resource type="Texture2D" uid="uid://c2awktbwl25rj" path="res://Assets/deductions.png" id="8_ihvin"]
 [ext_resource type="Texture2D" uid="uid://cknra73w67p4s" path="res://Assets/dochores.png" id="9_0ups5"]
+[ext_resource type="Script" uid="uid://b4dyyv4pnsry8" path="res://Scenes/day_1.gd" id="12_8cf0c"]
+[ext_resource type="Texture2D" uid="uid://bbl5auhpikk2b" path="res://Assets/CGs/Day 1.PNG" id="13_vfkul"]
+[ext_resource type="Texture2D" uid="uid://cc5u5w7cjnm02" path="res://Assets/Outside/Mall.PNG" id="14_vfkul"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -87,3 +90,17 @@ texture = ExtResource("8_ihvin")
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("9_0ups5")
+
+[node name="Day1" type="Node2D" parent="." unique_id=1464920332]
+script = ExtResource("12_8cf0c")
+
+[node name="TEMP_mall" type="TextureRect" parent="Day1" unique_id=1811644747]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("14_vfkul")
+
+[node name="cg" type="TextureRect" parent="Day1" unique_id=905391919]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("13_vfkul")
