@@ -85,8 +85,8 @@ func change_floor(floor):
 	elif floor == 2:
 		$Room1.texture=load("res://Assets/Stairs_going_down.png")
 		$Room2.texture=load("res://Assets/Utility_Room_.png")
-		$Room3.texture=load("res://Assets/Bedroom.png")
-		$Room4.texture=load("res://Assets/Balcony.png")
+		$Room3.texture=load("res://Assets/Bedroom_day.png")
+		$Room4.texture=load("res://Assets/Balcony_day.png")
 		move_component.right_limit = 4350
 		for object in floor_1_objects:
 			object.visible = false
