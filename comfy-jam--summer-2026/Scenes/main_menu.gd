@@ -1,9 +1,15 @@
-extends Node
-var window_size : Vector2 = Vector2(1280,720)
+extends Node2D
+
+@onready var bg: TextureRect = $"main menu"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_window().size = window_size
-	get_viewport().size = window_size
+	show()
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("click_button"):
+		print("button")
+		Signals.start_tutorial.emit()
+		bg.hide()

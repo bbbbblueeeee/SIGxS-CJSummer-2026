@@ -54,3 +54,7 @@ func end_scene():
 	Signals.end_day_screen.emit()
 	# await Fade.fade(0,0.5).finished
 	
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
