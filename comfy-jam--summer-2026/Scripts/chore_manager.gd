@@ -18,9 +18,9 @@ var chores_dict = [
 ]
 
 var day_0_chores = [0, 1, 2]
-var day_1_chores = [3, 4, 5]
-var day_2_chores = [5, 6, 7]
-var day_3_chores = [8, 9, 10]
+var day_1_chores = [0, 1, 2, 3, 4]
+var day_2_chores = [0, 1, 2, 5, 6, 7]
+var day_3_chores = [0, 1, 2, 8, 9, 10]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -53,7 +53,7 @@ func create_chore(number : int):
 	new_chore.get_node("Sprite2D").texture = load("res://Assets/"+chores_dict[number][6]+"_outline.png")
 	new_chore.get_node("Area2D").scale = Vector2(chores_dict[number][7],chores_dict[number][8])
 	new_chore.floor = chores_dict[number][9]
-	if new_chore.floor == 1:
+	if new_chore.floor == 2:
 		new_chore.get_node("Sprite2D").visible = false
 		new_chore.get_node("Area2D").monitoring = false
 	add_child(new_chore,true)

@@ -13,15 +13,13 @@ var sweepDone = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#hide()
-	show_cutscene(0)
+	show_cutscene.call_deferred(0)
 	scene_1.position.y = 0
 	scene_1.position.x = 0
 	scene_2.position.y = 0
 	scene_2.position.x = 0
 	scene_3.position.y = 0
 	scene_3.position.x = 0
-#	Signals.chore_completed.connect(check_chore)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,7 +38,9 @@ func show_cutscene(day):
 	show_dialogue_box()
 
 func show_dialogue_box():
+	print("mamma")
 	var dialogue = load("res://Scripts/tutorial.dialogue")
+	print("mia")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
 	
@@ -82,8 +82,5 @@ func hide_after_while(l):
 	l.hide()
 	l.modulate.a = 1.0
 	
-#func check_chore(chore):
-#	while chore.chore_name != "Sweep Floor":
-#		await get_tree().process_frame
 		
 	

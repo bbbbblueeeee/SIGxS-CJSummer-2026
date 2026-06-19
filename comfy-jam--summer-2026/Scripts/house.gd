@@ -32,7 +32,7 @@ func _ready() -> void:
 	Signals.floor_transition.connect(change_floor)
 	create_objects(floor_1_dict,floor_1_objects)
 	create_objects(floor_2_dict,floor_2_objects)
-	for object in floor_1_objects:
+	for object in floor_2_objects:
 		object.visible = false
 
 
