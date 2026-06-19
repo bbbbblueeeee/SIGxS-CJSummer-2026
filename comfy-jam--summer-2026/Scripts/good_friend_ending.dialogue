@@ -11,4 +11,5 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: I just hope that...
 $> textbox.texture = load("res://Assets/Portraits/cheerful_mae.png")
 Mae: We can see each other again next summer.
+Game: ENDING: Friends Reunited
 => END

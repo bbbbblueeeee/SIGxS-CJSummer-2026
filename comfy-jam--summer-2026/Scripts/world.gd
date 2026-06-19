@@ -7,6 +7,7 @@ var went_out : bool
 var day_left: int
 var was_friend_visited_1: bool
 var was_friend_visited_2: bool
+var can_friend_ending: bool
 @onready var end_day_screen: CanvasLayer = $"EndDay Screen"
 var textbox: TextureRect
 
@@ -18,6 +19,7 @@ func _ready() -> void:
 	went_out = false
 	was_friend_visited_1 = false
 	was_friend_visited_2 = false
+	can_friend_ending = true
 	Signals.day_end.connect(change_day)
 	Signals.end_day_screen.connect(display_day_end_screen)
 	Signals.update_points.connect(update_point_tracker)
@@ -25,6 +27,7 @@ func _ready() -> void:
 	Signals.morning_after.connect(went_to_friend)
 	Signals.update_friend_visited.connect(update_visit)
 	Signals.send_balloon.connect(on_send_balloon)
+	Signals.cannot_meet_friend.connect(update_friend_ending)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -34,11 +37,12 @@ func _process(delta: float) -> void:
 		#print("It is now Day " + str(day)) # For testing
 		Signals.next_day.emit(day)
 		is_next_day = false
-		#is_processing_next_day = false
 		await Fade.fade(0,0.5).finished
-		calculate_morning_dialogue()
-		day_left = 0
-		pass
+		if day == 4:
+			show_ending()
+		else:
+			calculate_morning_dialogue()
+			day_left = 0
 
 func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
@@ -98,4 +102,12 @@ func update_visit(d):
 		was_friend_visited_1 = true
 	if d == 2:
 		was_friend_visited_2 = true
-		
+
+func update_friend_ending():
+	can_friend_ending = false
+
+func show_ending():
+	if can_friend_ending:
+		end_day_screen.display_friend_ending()
+	else:
+		end_day_screen.display_kid_ending()

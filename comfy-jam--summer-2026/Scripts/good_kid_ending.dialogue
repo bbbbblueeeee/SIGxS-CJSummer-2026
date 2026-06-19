@@ -9,4 +9,5 @@ Mae: And... it's been three years.
 Mae: She's probably already let go of me.
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Maybe it's time for me to do the same.
+Game: ENDING: Good Child
 => END

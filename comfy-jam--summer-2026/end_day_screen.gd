@@ -6,6 +6,8 @@ extends CanvasLayer
 @onready var move_component : Node2D = $"../Player/MoveComponent"
 @onready var lose: Label = $Lose
 @onready var bad_ending: TextureRect = $"Bad Ending"
+@onready var kid_ending: TextureRect = $"Kid Ending"
+@onready var friend_ending: TextureRect = $"Friend Ending"
 signal update_next_day()
 
 func _ready() -> void:
@@ -14,10 +16,16 @@ func _ready() -> void:
 	background.position.x = 0
 	bad_ending.position.x = 0
 	bad_ending.position.y = 0
+	kid_ending.position.x = 0
+	kid_ending.position.y = 0
+	friend_ending.position.x = 0
+	friend_ending.position.y = 0
 	new_day(0)
 
 func new_day(day):
 	bad_ending.hide()
+	kid_ending.hide()
+	friend_ending.hide()
 	lose.hide()
 	press_enter.hide()
 	hide()
@@ -46,4 +54,21 @@ func display_bad_ending():
 	var dialogue = load("res://Scripts/bad_ending.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	
+func display_kid_ending():
+	show()
+	kid_ending.show()
+	background.hide()
+	points_tally.hide()
+	await get_tree().create_timer(2).timeout
+	var dialogue = load("res://Scripts/good_kid_ending.dialogue")
+	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
+	
+func display_friend_ending():
+	show()
+	friend_ending.show()
+	background.hide()
+	points_tally.hide()
+	await get_tree().create_timer(2).timeout
+	var dialogue = load("res://Scripts/good_friend_ending.dialogue")
+	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	
