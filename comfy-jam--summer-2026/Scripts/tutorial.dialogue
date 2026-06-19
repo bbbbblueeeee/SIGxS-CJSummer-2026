@@ -2,7 +2,7 @@
 Mae: Bye, Mom and Dad! Safe travels!
 $> hide_scene(scene_1)
 Mae: Looks like it’ll just be me and my brother at home for the next few days. I know Mom and Dad said he would be watching over me, but…
-=> skip
+#=> skip
 Mae: He’s not that much older than me, and all he’s done this summer is sit on the sofa and watch TV. Why is he the one in charge?
 Mae: He’ll probably want to lay out some ground rules now that Mom and Dad are gone. Oh well, best to hear what he has to say.
 $> Signals.movement_unlocked.emit()
@@ -33,9 +33,9 @@ $> dc.show()
 Mae: I should probably get started with a chore or two before I go to bed. The list of chores to be done for the day is usually beside the stairs to the left.
 Mae: I should have a look at my options before getting started.
 $> scene_2.hide()
-$> hide_scene(dc)
+$> dc.hide()
 $> Signals.movement_unlocked.emit()
-$> move_freely(1000, "left")
+$> move_freely(750, "left")
 $> Signals.movement_locked.emit()
 $> wait(0.5)
 $> ent.show()
@@ -55,5 +55,5 @@ Mae: I could do a few more chores, or I could just go to bed early.
 Mae: As long as I go to sleep by 10:00 PM, I shouldn’t have any problems the following day.
 $> Signals.movement_unlocked.emit()
 $> end_scene()
-~ skip
+#~ skip
 => END
