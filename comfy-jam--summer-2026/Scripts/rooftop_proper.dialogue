@@ -29,4 +29,28 @@ Anxious_Julie: There’s a fireworks show starting soon. I’d love to watch it 
 Uneasy_Mae: …
 Uneasy_Mae: Alright then. Just for tonight.
 Smiling_Julie: Thanks.
+$> change_scene_with_fade(TEMP, cg)
+Smiling_Julie: Oh, it’s starting!
+Happy_Mae: …
+Smiling_Julie: …
+Happy_Mae: It’s beautiful.
+Smiling Julie: It is.
+Thoughtful_Mae: …
+Thoughtful_Mae: Hey.
+Uneasy_Julie: Yeah?
+Thoughtful_Mae: Text me back next time, okay?
+Uneasy_Julie: !! 
+Uneasy_Julie: You mean…
+Thoughtful_Mae: Yeah. I still don’t agree with what you did, and I’m still a little mad at you.
+Thoughtful_Mae: But you still mean a lot to me, and I want to try rebuilding our old friendship.
+Thoughtful_Mae: And, you know what? Even if we end up drifting apart and losing touch with each other? 
+Thoughtful_Mae: I’m okay with it hurting. Because that means it mattered.
+Thoughtful_Mae: So let’s try this again. And let’s not make the same mistakes we made last time. Okay?
+Smiling_Julie: Yeah.
+Cheerful_Julie: Okay!
+$> change_scene_with_fade(cg, blackscreen)
+Mae: (The fireworks show lasts until well past 11 o’clock. I barely make it home before midnight.)
+Mae: (But I don’t regret going to see her.)
+Mae: (And, just like that, my summer break is over.)
+$> end_scene()
 => END

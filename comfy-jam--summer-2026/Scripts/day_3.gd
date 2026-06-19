@@ -1,8 +1,9 @@
 extends Node2D
 @onready var cg: TextureRect = $cg
-@onready var TEMP: TextureRect = $TEMP_mall
+@onready var TEMP: TextureRect = $TEMP_rooftop
 @onready var julie: AnimatedSprite2D = $JulieSprite
 @onready var mae: AnimatedSprite2D = $MaeSprite
+@onready var blackscreen : TextureRect = $blackscreen
 var moving_mae: bool = false
 var mae_speed: float
 
@@ -16,23 +17,23 @@ func _ready() -> void:
 	
 func show_cutscene(day):
 	print(day)
-	if int(day) == 1:
+	if int(day) == 3:
 		await Fade.fade(1,0.5).finished
 		show()
 		cg.hide()
-		julie.play("idle_happy")
+		blackscreen.hide()
+		julie.play("idle")
+		julie.flip_h = true
 		mae.play("walk")
 		await Fade.fade(0,0.5).finished
 		var tween = create_tween()
 		await tween.tween_property(mae,"position",Vector2(1000,400),1.0).finished
 		mae.play("idle")
 		await (get_tree().create_timer(1).timeout)
-		julie.flip_h = true
-		await (get_tree().create_timer(1).timeout)
 		show_dialogue_box()
 
 func show_dialogue_box():
-	var dialogue = load("res://Scripts/mall.dialogue")
+	var dialogue = load("res://Scripts/rooftop_proper.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
 	
