@@ -1,11 +1,26 @@
 ~ start
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
-Mae: Should I sleep?
-- Yes.
-	$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
-	Mae: Alright then, time for bed!
-	do end_day()
-- No.
-	Mae: Maybe later.
+if is_penalized()
+	Mae: It's quite late... I'm definitely getting penalized.
+	Mae: Am I ready to sleep?
+	- Yes.
+		$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
+		Mae: Hopefully mom and dad won't be too mad...
+		do send_minus(30)
+		do end_day()
+	- No.
+		Mae: Maybe I can still do some chores...
+		do deselect(0)
+elif can_sleep()
+	Mae: I'm decently tired. Shall I call it a day?
+	- Yes.
+		$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
+		Mae: Time to relax!
+		do end_day()
+	- No.
+		Mae: Maybe I can squeeze one last chore in.
+		do deselect(0)
+else
+	Mae: It's too early to sleep. I'm not tired yet.
 	do deselect(0)
 => END

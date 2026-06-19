@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func new_day(day):
 	if day == 0:
-		current_time = 20
+		current_time = 18
 	else:
 		current_time = 8
 	calculate_time()

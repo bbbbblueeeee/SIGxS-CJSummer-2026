@@ -1,14 +1,17 @@
 extends Node2D
 var is_selected : bool = false
 var player_in_area : bool = false
+var recorded_time : int
 var textbox : TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Sprite2D.visible = false
-	$Area2D.monitoring = false
 	Signals.next_day.connect(deselect)
 	Signals.send_balloon.connect(on_send_balloon)
+	Signals.time_updated.connect(update_recorded_time)
+	$Sprite2D.visible = false
+	$Area2D.monitoring = false
+	recorded_time = 18
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -40,3 +43,22 @@ func deselect(day):
 func end_day() -> void:
 	await Fade.fade(1,0.5).finished
 	Signals.day_end.emit()
+	recorded_time = 8
+
+func update_recorded_time(new_time):
+	recorded_time = new_time
+
+func can_sleep() -> bool:
+	if 20 <= recorded_time:
+		return true
+	else:
+		return false
+
+func is_penalized() -> bool:
+	if 23 <= recorded_time:
+		return true
+	else:
+		return false
+
+func send_minus(minus_op):
+	Signals.op_deduct.emit(minus_op)
