@@ -42,6 +42,7 @@ visibility_layer = 2
 [node name="CutScenes" parent="World" unique_id=1128426716 instance=ExtResource("6_gruqv")]
 
 [node name="EndDay Screen" parent="World" unique_id=1704616727 instance=ExtResource("8_h1rn0")]
+layer = 2
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1141565541]
 

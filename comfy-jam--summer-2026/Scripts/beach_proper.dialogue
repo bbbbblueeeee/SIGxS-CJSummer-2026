@@ -25,5 +25,6 @@ Uneasy_Julie: …
 $> change_scene_with_fade(cg, TEMP)
 Upset_Mae: I was hoping to work this out today, but I guess you have nothing to say to me.
 Upset_Mae: Enjoy your vacation.
+$> Signals.morning_after.emit(2)
 $> end_scene()
 => END

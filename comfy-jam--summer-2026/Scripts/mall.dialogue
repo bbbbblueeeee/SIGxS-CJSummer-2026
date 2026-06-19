@@ -1,5 +1,6 @@
 ~ start
 Cheerful_Julie: Oh, it’s you! Long time no see!
+=> skip
 Cheerful_Julie: I just had lunch with another friend– you remember April, right? I didn’t think I’d run into another old classmate so soon!
 Uneasy_Mae: I, uh… yeah. It’s been a while.
 Uneasy_Mae: …
@@ -24,7 +25,6 @@ Curious_Julie: …?
 Uneasy_Mae: Just, you know… doing chores at home.
 Uneasy_Mae: Sometimes my friends ask me to hang out. And… yeah.
 Uneasy_Julie: Oh! That’s, well…
-=> END
 Cheerful_Julie: It’s fine. You’re already here, right? C’mon, let’s go shopping.
 Cheerful_Julie: I gotta buy souvenirs for my friends, and I need someone to help me pick out the good stuff!
 $> change_scene_with_fade(TEMP, mall)
@@ -41,6 +41,8 @@ $> change_scene_with_fade(mall, TEMP)
 Cheerful_Julie: Thanks for the help, Mae. This was so much fun!
 Mae: I didn’t help at all, though… You just kept talking about your life and friends in the city while I followed you around.
 Cheerful_Julie: Anyway, I gotta go now, but it was nice seeing you!
+~ skip
 Uneasy_Julie: Yeah… you too.
+$> Signals.morning_after.emit(1)
 $> end_scene()
 => END

@@ -1,4 +1,5 @@
 ~ start
+do Signals.movement_locked.emit()
 Upset_Player: Now that I think about it… our talk yesterday was hardly even a conversation.
 Upset_Player: She kept telling me all about herself, but she hardly asked anything about me.
 Upset_Player: And, the way she acted…
@@ -11,4 +12,5 @@ Uneasy_Player: …
 Uneasy_Player: Well, I guess the decision is up to me.
 Uneasy_Player: I’ll be able to find her as long as I leave home any time from 8:00 AM to 12:00 PM.
 Uneasy_Player: As long as I get my Obedience Points above 0 before the day ends, my parents shouldn’t ground me.
+do Signals.movement_unlocked.emit()
 => END

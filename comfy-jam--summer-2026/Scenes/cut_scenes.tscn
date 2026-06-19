@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c5qc8o1phfbvu" path="res://Assets/Temporary/TEMP_bed.png" id="16_gpril"]
 [ext_resource type="Script" uid="uid://b87gh8e4igxpk" path="res://Scenes/day_3.gd" id="17_gm73n"]
 [ext_resource type="Texture2D" uid="uid://fum8tqxlk72p" path="res://Assets/Temporary/TEMP_day0.png" id="18_fsvdl"]
+[ext_resource type="Script" uid="uid://cuhrrrsj6257n" path="res://Scenes/morning.gd" id="19_fsvdl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -137,3 +138,6 @@ texture = ExtResource("13_vfkul")
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_lpi84")
+
+[node name="morning" type="Node2D" parent="." unique_id=445636649]
+script = ExtResource("19_fsvdl")
