@@ -5,7 +5,7 @@ var player_in_area : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Sprite2D.visible = false
-	$Area2D.monitoring = true
+	$Area2D.monitoring = false
 	Signals.next_day.connect(deselect)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
