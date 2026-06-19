@@ -1,14 +1,18 @@
 ~ start
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Julie's waiting for me around now...
+$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: ...
-Mae: I could either go see her or just go to bed. I'm losing 100 Obedience Points for this.
+Mae: I could either go see her or just go to bed. I'd be losing 100 Obedience Points for this.
 Mae: Is it worth it?
 - Yes.
+	$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 	Mae: Ok... let's see what she has to say.
 	do send_minus(100)
 	do send_time(4)
 	do trigger_cutscene(3)
 - No.
+	$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
 	Mae: It's getting late anyway...
 	do deselect()
 => END

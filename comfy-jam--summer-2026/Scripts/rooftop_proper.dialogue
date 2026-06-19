@@ -1,54 +1,89 @@
 ~ start
-Uneasy_Julie: !
-Uneasy_Julie: Mae…
-Upset_Mae: …
-Uneasy_Julie: I promised you an explanation, and I’ll give you one.
-Uneasy_Julie: But… to be honest, I was just afraid.
-Uneasy_Julie: I was afraid of the pain that would come with losing you.
-Uneasy_Mae: What do you mean?
-Uneasy_Julie: My family kept telling me I had more potential… that I should be in one of the big schools in the city.
-Uneasy_Julie: They told me I was wasting my time here, and… I don’t think they were entirely wrong.
-Uneasy_Julie: I accomplished a lot after leaving this place. I don’t think I could have done all those if I was stuck here.
-Uneasy_Julie: My family knew I had it in me, but I wasn’t sure…
-Uneasy_Julie: So they told me we were moving out, and that their decision was final
-Uneasy_Julie: I didn’t really know what to do about that. What I did know was that I would be losing all the friends I made here— you, most of all.
-Uneasy_Julie: So I thought that maybe, if I put some distance between us and broke off our friendship, it wouldn’t hurt as much. Losing you.
-Upset_Mae: Are you kidding me? That’s why you did all of that?
-Upset_Mae: I thought I had done something! That I’d made some kind of horrible mistake!
-Uneasy_Julie: I know! I know I was wrong. I know now that was a mistake. But, three years ago, that’s what I thought had to be done.
-Uneasy_Julie: I thought it would make things hurt less for you too. But… I guess I was wrong.
-Upset_Mae: Yes, you were!
-Upset_Mae: And what about those three years? Did you keep ignoring me because you thought you were doing it for my sake? Even though I clearly wanted to make things right between us?
-Uneasy_Julie: Well… for a while, yeah. I thought it was for the better.
-Uneasy_Julie: But, eventually, after I realized I was wrong, I mostly just felt guilty.
-Uneasy_Julie: I didn’t really know how I was going to explain myself to you. I was sur you would hate me for it, and then it would all be for nothing.
-Uneasy_Julie: I mean, the conversation we’re having now is exactly the one I wanted to avoid.
-Uneasy_Julie: I know you’re mad at me, and you have every right to be.
-Anxious_Julie: But… could we go back to what we used to be? Just for tonight?
-Anxious_Julie: There’s a fireworks show starting soon. I’d love to watch it with you before I leave tomorrow.
-Uneasy_Mae: …
-Uneasy_Mae: Alright then. Just for tonight.
-Smiling_Julie: Thanks.
+$> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
+Julie: !
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: Mae…
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
+Mae: …
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: I promised you an explanation, and I’ll give you one.
+$> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
+Julie: But… to be honest, I was just afraid.
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: I was afraid of the pain that would come with losing you.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: What do you mean?
+$> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
+Julie: My family kept telling me I had more potential… that I should be in one of the big schools in the city.
+Julie: They told me I was wasting my time here, and… I don’t think they were entirely wrong.
+Julie: I accomplished a lot after leaving this place. I don’t think I could have done all those if I was stuck here.
+Julie: My family knew I had it in me, but I wasn’t sure…
+Julie: So they told me we were moving out, and that their decision was final.
+Julie: I didn’t really know what to do about that. What I did know was that I would be losing all the friends I made here— you, most of all.
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: So I thought that maybe, if I put some distance between us and broke off our friendship, it wouldn’t hurt as much. Losing you.
+$> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
+Mae: Are you kidding me? That’s why you did all of that?
+Mae: I thought I had done something! That I’d made some kind of horrible mistake!
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: I know! I know I was wrong. I know now that was a mistake. But, three years ago, that’s what I thought had to be done.
+Julie: I thought it would make things hurt less for you too. But… I guess I was wrong.
+$> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
+Mae: Yes, you were!
+Mae: And what about those three years? Did you keep ignoring me because you thought you were doing it for my sake? Even though I clearly wanted to make things right between us?
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: Well… for a while, yeah. I thought it was for the better.
+Julie: But, eventually, after I realized I was wrong, I mostly just felt guilty.
+Julie: I didn’t really know how I was going to explain myself to you. I was sure you would hate me for it, and then it would all be for nothing.
+$> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
+Julie: I mean, the conversation we’re having now is exactly the one I wanted to avoid.
+Julie: I know you’re mad at me, and you have every right to be.
+$> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+Julie: But… could we go back to what we used to be? Just for tonight?
+Julie: There’s a fireworks show starting soon. I’d love to watch it with you before I leave tomorrow.
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
+Mae: …
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Alright then. Just for tonight.
+$> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
+Julie: Thanks.
 $> change_scene_with_fade(TEMP, cg)
-Smiling_Julie: Oh, it’s starting!
-Happy_Mae: …
-Smiling_Julie: …
-Happy_Mae: It’s beautiful.
-Smiling Julie: It is.
-Thoughtful_Mae: …
-Thoughtful_Mae: Hey.
-Uneasy_Julie: Yeah?
-Thoughtful_Mae: Text me back next time, okay?
-Uneasy_Julie: !! 
-Uneasy_Julie: You mean…
-Thoughtful_Mae: Yeah. I still don’t agree with what you did, and I’m still a little mad at you.
-Thoughtful_Mae: But you still mean a lot to me, and I want to try rebuilding our old friendship.
-Thoughtful_Mae: And, you know what? Even if we end up drifting apart and losing touch with each other? 
-Thoughtful_Mae: I’m okay with it hurting. Because that means it mattered.
-Thoughtful_Mae: So let’s try this again. And let’s not make the same mistakes we made last time. Okay?
-Smiling_Julie: Yeah.
-Cheerful_Julie: Okay!
+$> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
+Julie: Oh, it’s starting!
+$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
+Mae: …
+$> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
+Julie: …
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: It’s beautiful.
+$> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
+Julie: It is.
+$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
+Mae: …
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Hey.
+$> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
+Julie: Yeah?
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Text me back next time, okay?
+$> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
+Julie: !! 
+Julie: You mean…
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Yeah. I still don’t agree with what you did, and I’m still a little mad at you.
+Mae: But you still mean a lot to me, and I want to try rebuilding our old friendship.
+$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+Mae: And, you know what? Even if we end up drifting apart and losing touch with each other...
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: I’m okay with it hurting. Because that means it mattered.
+$> textbox.texture = load("res://Assets/Portraits/cheerful_mae.png")
+Mae: So let’s try this again. And let’s not make the same mistakes we made last time. Okay?
+$> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
+Julie: Yeah.
+$> textbox.texture = load("res://Assets/Portraits/cheerful_julie.png")
+Julie: Okay!
 $> change_scene_with_fade(cg, blackscreen)
+$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 Mae: (The fireworks show lasts until well past 11 o’clock. I barely make it home before midnight.)
 Mae: (But I don’t regret going to see her.)
 Mae: (And, just like that, my summer break is over.)

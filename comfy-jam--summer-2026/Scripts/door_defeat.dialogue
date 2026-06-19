@@ -1,4 +1,5 @@
 ~ start
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
 Mae: I missed out on hanging out with Julie... maybe I should stay at home.
 do deselect()
 => END

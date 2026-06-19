@@ -1,9 +1,11 @@
 ~ start
-Player: Should I sleep?
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Should I sleep?
 - Yes.
-	Player: All done!
+	$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
+	Mae: Alright then, time for bed!
 	do end_day()
 - No.
-	Player: Alright let's doomscroll!
+	Mae: Maybe later.
 	do deselect(0)
 => END

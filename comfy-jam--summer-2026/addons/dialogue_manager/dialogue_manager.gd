@@ -536,6 +536,7 @@ func show_dialogue_balloon_scene(balloon_scene, resource: DialogueResource, titl
 
 	var balloon: Node = balloon_scene
 	_start_balloon.call_deferred(balloon, resource, title, extra_game_states)
+	Signals.send_balloon.emit(balloon)
 	return balloon
 
 
@@ -624,7 +625,6 @@ func show_error_for_missing_state_value(message: String, will_show: bool = true)
 		# If you're here then you're missing a method or property in your game state. The error
 		# message down in the debugger will give you some more information.
 		assert(false, message)
-
 
 # Translate a string
 func translate(data: Dictionary) -> String:

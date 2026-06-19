@@ -5,11 +5,13 @@ var recorded_day : int
 var recorded_time : int
 var did_meet_friend : bool
 var can_still_meet_friend : bool
+var textbox : TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.time_updated.connect(update_recorded_time)
 	Signals.next_day.connect(new_day)
+	Signals.send_balloon.connect(on_send_balloon)
 	position.x = 4832
 	position.y = 412
 	recorded_day = 0
@@ -17,6 +19,9 @@ func _ready() -> void:
 	did_meet_friend = false
 	can_still_meet_friend = true
 	
+
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
 func new_day(day):
 	if not did_meet_friend and day > 1:

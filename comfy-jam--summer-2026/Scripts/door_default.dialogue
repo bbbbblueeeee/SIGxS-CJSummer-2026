@@ -1,4 +1,5 @@
 ~ start
-Mae: I don't have a reason to go out right now... Better stay on mom and dad's good side.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: I don't have a reason to go out right now... Better stay on Mom and Dad's good side.
 do deselect()
 => END

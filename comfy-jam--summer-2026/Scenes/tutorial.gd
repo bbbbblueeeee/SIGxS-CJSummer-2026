@@ -8,11 +8,12 @@ extends Node2D
 @onready var ad_move: Label = $ad
 @onready var ent: Label = $ent
 @onready var player : Node = get_node("../../Player")
+var textbox : TextureRect
 
-var sweepDone = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Signals.send_balloon.connect(on_send_balloon)
 	show_cutscene.call_deferred(0)
 	hide()
 	scene_1.position.y = 0
@@ -22,10 +23,9 @@ func _ready() -> void:
 	scene_3.position.y = 0
 	scene_3.position.x = 0
 
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func show_cutscene(day):
 	show()

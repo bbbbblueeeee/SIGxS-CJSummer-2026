@@ -5,6 +5,7 @@ extends Node2D
 @onready var mae: AnimatedSprite2D = $MaeSprite
 var moving_mae: bool = false
 var mae_speed: float
+var textbox: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +13,11 @@ func _ready() -> void:
 	cg.position.y = 0
 	cg.position.x = 0
 	Signals.play_cutscene.connect(show_cutscene)
-	
-	
+	Signals.send_balloon.connect(on_send_balloon)
+
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
+
 func show_cutscene(day):
 	print(day)
 	if int(day) == 1:

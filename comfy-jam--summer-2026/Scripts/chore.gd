@@ -4,8 +4,9 @@ class_name Chore
 @export var chore_name : String
 @export var time_taken : int
 @export var point_value : int
+var textbox : TextureRect
 var floor : int
-#var initial_position : int useless sht
+
 var player_in_area : bool = false
 var is_selected : bool = false
 var completed : bool = false
@@ -19,25 +20,23 @@ func _ready() -> void:
 	position.y = 450
 	$Area2D.monitorable = false
 	Signals.time_updated.connect(calculate_end_time)
+	Signals.send_balloon.connect(on_send_balloon)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if !completed and player_in_area and !is_selected and Input.is_action_just_pressed("object interaction"):
 		is_selected = true
 		show_dialogue_box()
 	elif !player_in_area:
 		$Sprite2D.visible = false
 
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
+
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/chore.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
-	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
-	#add_child(dialogue_box, true)
-	
-	#move_component.process_mode = Node.PROCESS_MODE_DISABLED
-	#DialogueManager.dialogue_ended.connect(end_dialogue, CONNECT_ONE_SHOT)
-	#dialogue_box.start(dialogue,"start")
 
 func deselect():
 	await (get_tree().create_timer(0.2).timeout)
@@ -73,5 +72,3 @@ func calculate_end_time(time: int) -> void:
 		will_end_past_midnight = false
 		will_end_past_ten = false
 		
-func end_dialogue(_resource: DialogueResource) -> void:
-	pass#move_component.process_mode = Node.PROCESS_MODE_INHERIT

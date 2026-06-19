@@ -1,16 +1,21 @@
 ~ start
 if get_parent().will_end_past_midnight:
-	Player: I don't have enough time left in the day to {{chore_name}}.
+	$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+	Mae: I don't have enough time left in the day to {{chore_name}}.
 else:
-	Player: Hmm... I could {{chore_name}}.
-	Player: It'll take me {{time_taken}} hours and earn me {{point_value}} Obedience Points.
+	$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+	Mae: Hmm... I could {{chore_name}}.
+	Mae: It'll take me {{time_taken}} hours and earn me {{point_value}} Obedience Points.
 	if will_end_past_ten:
-		Player: But I'd be staying up past 10PM.
-	Player: Should I {{chore_name}}?
+		$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+		Mae: But I'd be staying up past 10PM.
+	$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+	Mae: Should I {{chore_name}}?
 	- Yes.
 		do chore_completed()
-		Player: All done!
+		$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
+		Mae: All done!
 	- No.
-		Player: Maybe later.
+		Mae: Maybe later.
 		do deselect()
 => END

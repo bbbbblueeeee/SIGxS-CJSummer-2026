@@ -1,12 +1,14 @@
 extends Node2D
 var is_selected : bool = false
 var player_in_area : bool = false
+var textbox : TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Sprite2D.visible = false
 	$Area2D.monitoring = false
 	Signals.next_day.connect(deselect)
+	Signals.send_balloon.connect(on_send_balloon)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -14,6 +16,9 @@ func _process(delta: float) -> void:
 		is_selected = true
 		show_dialogue_box()
 	pass
+
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/bed.dialogue")
