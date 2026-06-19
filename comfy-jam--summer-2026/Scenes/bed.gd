@@ -4,7 +4,7 @@ var player_in_area : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Signals.next_day.connect(deselect)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,10 +29,9 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	player_in_area = false
 	
 
-func deselect():
+func deselect(day):
 	await (get_tree().create_timer(0.2).timeout)
 	is_selected = false
 
 func end_day() -> void:
 	Signals.day_end.emit()
-	

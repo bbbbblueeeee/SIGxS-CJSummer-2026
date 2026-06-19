@@ -34,6 +34,8 @@ func update_point_tracker(updated):
 func change_day() -> void:
 	if day == 0:
 		play_day_0_scene()
+	else:
+		display_day_end_screen()
 	
 func play_day_0_scene():
 	Signals.play_cutscene.emit(day)
