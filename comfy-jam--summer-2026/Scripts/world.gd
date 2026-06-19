@@ -9,7 +9,7 @@ var day_left: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	day = 2
+	day = 0
 	points = 0
 	is_next_day = false
 	went_out = false

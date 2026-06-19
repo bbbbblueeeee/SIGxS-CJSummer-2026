@@ -47,10 +47,10 @@ func change_scene_with_fade(sceneA, sceneB):
 	await Fade.fade(0,0.5).finished
 
 func end_scene():
-	# await Fade.fade(1,0.5).finished
+	await Fade.fade(1,0.5).finished
 	hide()
-	Signals.end_day_screen.emit() #CHANGE THIS
-	# await Fade.fade(0,0.5).finished
+	# Signals.end_day_screen.emit() CHANGE THIS
+	await Fade.fade(0,0.5).finished
 	
 func show_fade(s):
 	await Fade.fade(1,0.5).finished

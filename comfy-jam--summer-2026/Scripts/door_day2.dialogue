@@ -6,7 +6,7 @@ Mae: Should I look for her at the beach?
 	Mae: Hopefully I can clear things up with her.
 	do send_minus(70)
 	do send_time(4)
-	do trigger_cutscene(1)
+	do trigger_cutscene(2)
 - No.
 	Mae: ...Maybe it's better to not go.
 	do deselect()

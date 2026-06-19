@@ -1,6 +1,5 @@
 ~ start
 Cheerful_Julie: Oh, it’s you! Long time no see!
-=> skip
 Cheerful_Julie: I just had lunch with another friend– you remember April, right? I didn’t think I’d run into another old classmate so soon!
 Uneasy_Mae: I, uh… yeah. It’s been a while.
 Uneasy_Mae: …
@@ -41,7 +40,6 @@ $> change_scene_with_fade(cg, TEMP)
 Cheerful_Julie: Thanks for the help, Mae. This was so much fun!
 Mae: I didn’t help at all, though… You just kept talking about your life and friends in the city while I followed you around.
 Cheerful_Julie: Anyway, I gotta go now, but it was nice seeing you!
-~ skip
 Uneasy_Julie: Yeah… you too.
 $> Signals.morning_after.emit(1)
 $> end_scene()

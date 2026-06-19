@@ -5,9 +5,9 @@ Mae: I could either go see her or just go to bed. I'm losing 100 Obedience Point
 Mae: Is it worth it?
 - Yes.
 	Mae: Ok... let's see what she has to say.
-	do send_minus(70)
+	do send_minus(100)
 	do send_time(4)
-	do trigger_cutscene(1)
+	do trigger_cutscene(3)
 - No.
 	Mae: It's getting late anyway...
 	do deselect()
