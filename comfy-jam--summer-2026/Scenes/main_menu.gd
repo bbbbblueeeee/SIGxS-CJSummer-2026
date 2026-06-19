@@ -1,15 +1,18 @@
 extends Node2D
 
-@onready var bg: TextureRect = $"main menu"
+var in_area : bool = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	show()
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and in_area:
+		if event.is_pressed():
+			$TextureRect.texture = load("res://Assets/UI/menu_button.png")
+		elif event.is_released():
+			Signals.start_tutorial.emit()
+			$TextureRect.hide()
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	in_area = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("click_button"):
-		print("button")
-		Signals.start_tutorial.emit()
-		bg.hide()
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	in_area = false
