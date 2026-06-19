@@ -8,9 +8,11 @@ extends CanvasLayer
 @onready var bad_ending: TextureRect = $"Bad Ending"
 @onready var kid_ending: TextureRect = $"Kid Ending"
 @onready var friend_ending: TextureRect = $"Friend Ending"
+var textbox: TextureRect
 signal update_next_day()
 
 func _ready() -> void:
+	Signals.send_balloon.connect(on_send_balloon)
 	Signals.next_day.connect(new_day)
 	background.position.y = 0
 	background.position.x = 0
@@ -21,6 +23,10 @@ func _ready() -> void:
 	friend_ending.position.x = 0
 	friend_ending.position.y = 0
 	new_day(0)
+
+func on_send_balloon(balloon):
+	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
+
 
 func new_day(day):
 	bad_ending.hide()
