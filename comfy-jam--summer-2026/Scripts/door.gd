@@ -15,7 +15,7 @@ func _ready() -> void:
 	position.x = 4832
 	position.y = 412
 	recorded_day = 0
-	recorded_time = 20
+	recorded_time = 18
 	did_meet_friend = false
 	can_still_meet_friend = true
 	
