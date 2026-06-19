@@ -1,28 +1,34 @@
 extends Node2D
-@onready var mall: TextureRect = $cg
+@onready var cg: TextureRect = $cg
 @onready var TEMP: TextureRect = $TEMP_mall
-
+@onready var julie: AnimatedSprite2D = $JulieSprite
+@onready var mae: AnimatedSprite2D = $MaeSprite
+var moving_mae: bool = false
+var mae_speed: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
-	mall.position.y = 0
-	mall.position.x = 0
+	cg.position.y = 0
+	cg.position.x = 0
 	Signals.play_cutscene.connect(show_cutscene)
 	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func show_cutscene(day):
 	print(day)
 	if int(day) == 1:
 		await Fade.fade(1,0.5).finished
 		show()
-		mall.hide()
+		cg.hide()
+		julie.play("idle")
+		mae.play("walk")
 		await Fade.fade(0,0.5).finished
+		var tween = create_tween()
+		await tween.tween_property(mae,"position",Vector2(1000,400),1.0).finished
+		mae.play("idle")
+		julie.flip_h = true
 		show_dialogue_box()
+
 
 func show_dialogue_box():
 	var dialogue = load("res://Scripts/mall.dialogue")
@@ -42,7 +48,7 @@ func change_scene_with_fade(sceneA, sceneB):
 func end_scene():
 	# await Fade.fade(1,0.5).finished
 	hide()
-	Signals.end_day_screen.emit()
+	Signals.end_day_screen.emit() #CHANGE THIS
 	# await Fade.fade(0,0.5).finished
 	
 func show_fade(s):

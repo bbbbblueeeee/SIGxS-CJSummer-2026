@@ -8,7 +8,7 @@ var is_next_day : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	day = 0
+	day = 1
 	points = 0
 	is_next_day = false
 	Signals.day_end.connect(change_day)

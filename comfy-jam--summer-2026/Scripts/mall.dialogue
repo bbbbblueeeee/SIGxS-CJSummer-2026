@@ -24,10 +24,9 @@ Curious_Julie: …?
 Uneasy_Mae: Just, you know… doing chores at home.
 Uneasy_Mae: Sometimes my friends ask me to hang out. And… yeah.
 Uneasy_Julie: Oh! That’s, well…
-=> END
 Cheerful_Julie: It’s fine. You’re already here, right? C’mon, let’s go shopping.
 Cheerful_Julie: I gotta buy souvenirs for my friends, and I need someone to help me pick out the good stuff!
-$> change_scene_with_fade(TEMP, mall)
+$> change_scene_with_fade(TEMP, cg)
 Cheerful_Julie: Ooh! This one’s nice. We don’t have much shell stuff back at home since it’s mostly landlocked. Do you think my friends would like this sorta stuff?
 Uneasy_Mae: ...Probably.
 Cheerful_Julie: Oh, wait! I’ll be dropping by the beach tomorrow morning anyway. I could just pick up some shells from there!
@@ -37,7 +36,7 @@ Cheerful_Julie: I have a friend who loves keychains, has them all over her bags.
 Mae: …
 Mae: It doesn’t look like she needs me here… She’s just buying whatever she wants.
 Uneasy_Mae: I’m not sure what she’s hoping for by doing this, but… I’ll go along with her for now.
-$> change_scene_with_fade(mall, TEMP)
+$> change_scene_with_fade(cg, TEMP)
 Cheerful_Julie: Thanks for the help, Mae. This was so much fun!
 Mae: I didn’t help at all, though… You just kept talking about your life and friends in the city while I followed you around.
 Cheerful_Julie: Anyway, I gotta go now, but it was nice seeing you!
