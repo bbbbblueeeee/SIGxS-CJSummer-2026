@@ -16,5 +16,5 @@ Mae: …
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: Well, I guess the decision is up to me.
 Mae: I’ll be able to find her as long as I leave home any time from 8:00 AM to 12:00 PM.
-Mae: As long as I get my Obedience Points above 0 before the day ends, my parents shouldn’t ground me.
+Mae: [b]As long as I get my Obedience Points above 0 before the day ends, my parents shouldn’t ground me.[/b]
 => END

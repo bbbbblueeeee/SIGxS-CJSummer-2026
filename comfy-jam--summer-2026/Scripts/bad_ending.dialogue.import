@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bh3br4r1rnwd0"
+path="res://.godot/imported/bad_ending.dialogue-be1c377209b2988d2dd0fafbe4822bc8.tres"
+
+[deps]
+
+source_file="res://Scripts/bad_ending.dialogue"
+dest_files=["res://.godot/imported/bad_ending.dialogue-be1c377209b2988d2dd0fafbe4822bc8.tres"]
+
+[params]
+
+defaults=true

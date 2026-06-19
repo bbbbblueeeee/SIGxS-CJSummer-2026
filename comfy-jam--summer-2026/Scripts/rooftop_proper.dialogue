@@ -1,4 +1,5 @@
 ~ start
+$> textbox.get_parent().get_parent().get_node("TextureRect").texture = load("res://Assets/UI/Dialogue Boxes/Textbox_Rooftop.png")
 $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
 Julie: !
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
@@ -19,18 +20,18 @@ Julie: They told me I was wasting my time here, and… I don’t think they were
 Julie: I accomplished a lot after leaving this place. I don’t think I could have done all those if I was stuck here.
 Julie: My family knew I had it in me, but I wasn’t sure…
 Julie: So they told me we were moving out, and that their decision was final.
-Julie: I didn’t really know what to do about that. What I did know was that I would be losing all the friends I made here— you, most of all.
+Julie: I didn’t really know what to do about that. What I [i]did[/i] know was that I would be losing all the friends I made here— you, most of all.
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
 Julie: So I thought that maybe, if I put some distance between us and broke off our friendship, it wouldn’t hurt as much. Losing you.
 $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
-Mae: Are you kidding me? That’s why you did all of that?
+Mae: Are you kidding me? [i]That’s[/i] why you did all of that?
 Mae: I thought I had done something! That I’d made some kind of horrible mistake!
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
 Julie: I know! I know I was wrong. I know now that was a mistake. But, three years ago, that’s what I thought had to be done.
 Julie: I thought it would make things hurt less for you too. But… I guess I was wrong.
 $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
 Mae: Yes, you were!
-Mae: And what about those three years? Did you keep ignoring me because you thought you were doing it for my sake? Even though I clearly wanted to make things right between us?
+Mae: And what about those three years? Did you keep ignoring me because you thought you were doing it for my sake? Even though I [i]clearly[/i] wanted to make things right between us?
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
 Julie: Well… for a while, yeah. I thought it was for the better.
 Julie: But, eventually, after I realized I was wrong, I mostly just felt guilty.

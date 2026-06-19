@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dqgdldphwxdfk"
+path="res://.godot/imported/good_kid_ending.dialogue-5a0f7bcf00eaa5eb5f0730d46b4e59b7.tres"
+
+[deps]
+
+source_file="res://Scripts/good_kid_ending.dialogue"
+dest_files=["res://.godot/imported/good_kid_ending.dialogue-5a0f7bcf00eaa5eb5f0730d46b4e59b7.tres"]
+
+[params]
+
+defaults=true

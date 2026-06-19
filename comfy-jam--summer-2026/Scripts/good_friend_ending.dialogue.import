@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://debe6vpgc2jux"
+path="res://.godot/imported/good_friend_ending.dialogue-13d42d91d28732a6f0a0232110513849.tres"
+
+[deps]
+
+source_file="res://Scripts/good_friend_ending.dialogue"
+dest_files=["res://.godot/imported/good_friend_ending.dialogue-13d42d91d28732a6f0a0232110513849.tres"]
+
+[params]
+
+defaults=true

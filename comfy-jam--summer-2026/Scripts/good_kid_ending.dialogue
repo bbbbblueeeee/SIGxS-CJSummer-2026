@@ -1,0 +1,12 @@
+~ start
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: For one reason or another, I ended up not meeting with Julie.
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
+Mae: I guess I could've talked things over with her, but...
+Mae: I don't really want to upset my parents.
+$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
+Mae: And... it's been three years.
+Mae: She's probably already let go of me.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Maybe it's time for me to do the same.
+=> END

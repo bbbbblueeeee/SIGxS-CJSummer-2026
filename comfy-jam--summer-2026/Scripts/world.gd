@@ -12,7 +12,7 @@ var textbox: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	day = 3
+	day = 1
 	points = 0
 	is_next_day = false
 	went_out = false

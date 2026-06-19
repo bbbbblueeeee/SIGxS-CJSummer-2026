@@ -1,0 +1,14 @@
+~ start
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: I barely managed to get away with it, but I was able to patch things up with Julie!
+$> textbox.texture = load("res://Assets/Portraits/smilinlg_mae.png")
+Mae: We've been keeping in touch lately, though it's a bit hard to talk to her since we're both busy with school now.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: Still, I'm grateful to have her in my life again.
+$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
+Mae: Mom and Dad were pretty disappointed in me when they got back, but I don't regret what I did.
+$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
+Mae: I just hope that...
+$> textbox.texture = load("res://Assets/Portraits/cheerful_mae.png")
+Mae: We can see each other again next summer.
+=> END
