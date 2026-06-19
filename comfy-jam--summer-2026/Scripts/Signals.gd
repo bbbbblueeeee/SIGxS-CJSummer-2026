@@ -15,6 +15,8 @@ signal movement_locked()
 signal clear_chores()
 signal op_deduct(minus_op)
 signal time_skip(time)
+signal morning_after(day)
+signal play_morning(day)
 
 
 # Called when the node enters the scene tree for the first time.

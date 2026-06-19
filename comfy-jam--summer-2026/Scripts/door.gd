@@ -86,11 +86,9 @@ func send_time(added_time):
 
 func trigger_cutscene(d) -> void:
 	print("trigger_cutscene called with: ", d)
-	did_meet_friend = true
-	var loc = ''
-	if d == 1: loc = 'mall'
-	if d == 2: loc = 'beach_proper'
-	if d == 3: loc = 'rooftop_proper'
-	var path = "res://Scripts/" + loc + ".dialogue"
-	var dialogue = load(path)
-	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
+	Signals.play_cutscene.emit(d)
+	
+	
+	#var path = "res://Scripts/" + loc + ".dialogue"
+	#var dialogue = load(path)
+	#DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
