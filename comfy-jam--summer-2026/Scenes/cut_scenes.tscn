@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://b4xjoaq8en3jq" path="res://Scripts/day_3.gd" id="20_mvexy"]
 [ext_resource type="Texture2D" uid="uid://i2i5xew5s7me" path="res://Assets/Outside/Rooftop.PNG" id="21_lx4pu"]
 [ext_resource type="Texture2D" uid="uid://c0obm1gbwbepn" path="res://Assets/CGs/Day 3_First.png" id="21_nwrbp"]
+[ext_resource type="Texture2D" uid="uid://bujvrmakq06sc" path="res://Assets/UI/menu.png" id="22_lx4pu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -327,7 +328,20 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("9_0ups5")
 
+[node name="main menu" type="TextureRect" parent="Tutorial" unique_id=410993261]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("22_lx4pu")
+
+[node name="Button" type="Button" parent="Tutorial/main menu" unique_id=1673836815]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 546.0
+offset_right = 1141.0
+offset_bottom = 636.0
+
 [node name="Day1" type="Node2D" parent="." unique_id=1464920332]
+visible = false
 script = ExtResource("12_8cf0c")
 
 [node name="TEMP_mall" type="TextureRect" parent="Day1" unique_id=1811644747]
@@ -353,6 +367,7 @@ offset_bottom = 40.0
 texture = ExtResource("13_vfkul")
 
 [node name="Day2" type="Node2D" parent="." unique_id=1063848927]
+visible = false
 script = ExtResource("17_fsvdl")
 
 [node name="TEMP_beach" type="TextureRect" parent="Day2" unique_id=829860204]
@@ -379,6 +394,7 @@ offset_bottom = 40.0
 texture = ExtResource("19_hlyin")
 
 [node name="Day3" type="Node2D" parent="." unique_id=1462886147]
+visible = false
 script = ExtResource("20_mvexy")
 
 [node name="TEMP_rooftop" type="TextureRect" parent="Day3" unique_id=1445321973]

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://gny0ay5kmdti"]
+
+[ext_resource type="Script" uid="uid://dyldys4y4kquj" path="res://Scenes/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://bcmmgwcveple6" path="res://Assets/UI/menu.png" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ehe0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48xlc"]
+size = Vector2(994, 70)
+
+[node name="MainMenu" type="Control" unique_id=2040924111]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_48xlc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=797144934]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource("2_1ehe0")
+
+[node name="Button" type="Button" parent="." unique_id=1393027576]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 72.0
+offset_right = 1148.0
+offset_bottom = 155.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1ehe0")
+action_mode = 0
+text = "Start"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=975907390]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=507701656]
+position = Vector2(639, 586)
+shape = SubResource("RectangleShape2D_48xlc")
+
+[connection signal="pressed" from="Button" to="." method="start_pressed"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

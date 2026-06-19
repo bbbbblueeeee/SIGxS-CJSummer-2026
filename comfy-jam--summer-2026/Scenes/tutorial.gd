@@ -5,6 +5,7 @@ extends Node2D
 @onready var chores: TextureRect = $chores
 @onready var ddct: TextureRect = $deductions
 @onready var dc: TextureRect = $"do chores"
+@onready var menu: TextureRect = $"main menu"
 @onready var ad_move: Label = $ad
 @onready var ent: Label = $ent
 @onready var player : Node = get_node("../../Player")
@@ -36,6 +37,8 @@ func show_cutscene(day):
 	ddct.hide()
 	dc.hide()
 	chores.hide()
+	await wait_for_click()
+	menu.hide()
 	show_dialogue_box()
 
 func show_dialogue_box():
@@ -80,6 +83,11 @@ func hide_after_while(l):
 	await tween.finished
 	l.hide()
 	l.modulate.a = 1.0
+	
+func wait_for_click():
+	await get_tree().create_timer(0.1).timeout  # small delay to avoid instant skip
+	while not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		await get_tree().process_frame
 	
 		
 	
