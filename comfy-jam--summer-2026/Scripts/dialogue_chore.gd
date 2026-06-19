@@ -218,8 +218,10 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 func _on_dialogue_label_started_typing() -> void:
-	%AudioStreamPlayer.play()
+	pass
+	#%AudioStreamPlayer.play()
 
 
 func _on_dialogue_label_finished_typing() -> void:
-	$%AudioStreamPlayer.stop()
+	pass
+	#$%AudioStreamPlayer.stop()

@@ -33,9 +33,9 @@ $> dc.show()
 Mae: I should probably get started with a chore or two before I go to bed. The list of chores to be done for the day is usually beside the stairs to the left.
 Mae: I should have a look at my options before getting started.
 $> scene_2.hide()
-$> hide_scene(dc)
+$> dc.hide()
 $> Signals.movement_unlocked.emit()
-$> move_freely(1000, "left")
+$> move_freely(750, "left")
 $> Signals.movement_locked.emit()
 $> wait(0.5)
 $> ent.show()

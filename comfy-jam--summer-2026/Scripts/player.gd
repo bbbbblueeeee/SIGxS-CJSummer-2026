@@ -8,6 +8,7 @@ func _ready() -> void:
 	position.y = 300
 	scale = Vector2(1.25,1.25)
 	$Area2D.scale = Vector2(5,7)
+	Signals.day_end.connect(move_on_day_end)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,4 +29,6 @@ func calculate_animation() -> void:
 	else:
 		play("idle")
 
+func move_on_day_end():
+	position.x = 3200
 		

@@ -1,6 +1,8 @@
 extends Node2D
 var current_floor : int = 1
 @onready var move_component : Node2D = $"../Player/MoveComponent"
+@onready var chore_manager: Node2D = $ChoreManager
+
 
 var floor_1_dict = [
 	#format:
@@ -28,13 +30,27 @@ var floor_2_objects = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$ChoreManager.create_chores_list(get_parent().day)
 	Signals.floor_transition.connect(change_floor)
+	Signals.next_day.connect(new_day)
 	create_objects(floor_1_dict,floor_1_objects)
 	create_objects(floor_2_dict,floor_2_objects)
-	for object in floor_2_objects:
-		object.visible = false
+	new_day(0)
 
+func new_day(day):
+	clear_chores_list()
+	chore_manager.create_chores_list(day)
+	if day == 0:
+		current_floor = 1
+		for object in floor_2_objects:
+			object.visible = false
+	else:
+		current_floor = 2
+	change_floor(current_floor)
+
+func clear_chores_list():
+	for chore in chore_manager.chores_array:
+		chore.queue_free()
+	chore_manager.chores_array.clear()
 
 func create_objects(object_dict, object_array):
 	for object in object_dict:

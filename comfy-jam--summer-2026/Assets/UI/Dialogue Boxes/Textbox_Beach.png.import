@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v3qsjeblifi7"
-path="res://.godot/imported/Textbox_House.png-ff8ef4aae63ca5b03949c8f9627246db.ctex"
+uid="uid://bx13iirrwvi8b"
+path="res://.godot/imported/Textbox_Beach.png-d9420cc543f6da27399a0fd25c4a2688.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textbox_House.png"
-dest_files=["res://.godot/imported/Textbox_House.png-ff8ef4aae63ca5b03949c8f9627246db.ctex"]
+source_file="res://Assets/UI/Dialogue Boxes/Textbox_Beach.png"
+dest_files=["res://.godot/imported/Textbox_Beach.png-d9420cc543f6da27399a0fd25c4a2688.ctex"]
 
 [params]
 

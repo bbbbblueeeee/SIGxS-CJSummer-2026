@@ -5,5 +5,5 @@ Player: Should I sleep?
 	do end_day()
 - No.
 	Player: Alright let's doomscroll!
-	do deselect()
+	do deselect(0)
 => END

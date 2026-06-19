@@ -12,6 +12,7 @@ signal update_points(point)
 signal next_day(day)
 signal movement_unlocked()
 signal movement_locked()
+signal clear_chores()
 
 
 # Called when the node enters the scene tree for the first time.
