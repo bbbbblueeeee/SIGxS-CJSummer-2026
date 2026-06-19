@@ -7,7 +7,6 @@
 script = ExtResource("1_twkvv")
 
 [node name="Background" type="TextureRect" parent="." unique_id=476379505]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_afi8f")
