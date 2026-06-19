@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:comfy-jam--summer-2026/Assets/Balcony_day.png.import
-uid="uid://bugo2a6xp0tvn"
+uid="uid://i78m3u8r13ua"
 path="res://.godot/imported/Balcony_day.png-247ba50aa36e85892816f27f10089a04.ctex"
-========
-uid="uid://bcmmgwcveple6"
-path="res://.godot/imported/menu.png-6d3059ab4691267eb6f21c7eae5ab847.ctex"
->>>>>>>> main_menu:comfy-jam--summer-2026/Assets/UI/menu.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:comfy-jam--summer-2026/Assets/Balcony_day.png.import
 source_file="res://Assets/Balcony_day.png"
 dest_files=["res://.godot/imported/Balcony_day.png-247ba50aa36e85892816f27f10089a04.ctex"]
-========
-source_file="res://Assets/UI/menu.png"
-dest_files=["res://.godot/imported/menu.png-6d3059ab4691267eb6f21c7eae5ab847.ctex"]
->>>>>>>> main_menu:comfy-jam--summer-2026/Assets/UI/menu.png.import
 
 [params]
 

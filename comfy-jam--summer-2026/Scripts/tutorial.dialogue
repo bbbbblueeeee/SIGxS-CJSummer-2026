@@ -4,7 +4,6 @@ Mae: Bye, Mom and Dad! Safe travels!
 $> hide_scene(scene_1)
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 Mae: Looks like it’ll just be me and my brother at home for the next few days. I know Mom and Dad said he would be watching over me, but…
-=> skip
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: He’s not that much older than me, and all he’s done this summer is sit on the sofa and watch TV. Why is he the one in charge?
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
@@ -52,5 +51,4 @@ $> scene_2.hide()
 $> dc.hide()
 $> Signals.movement_unlocked.emit()
 $> end_scene()
-~ skip
 => END
