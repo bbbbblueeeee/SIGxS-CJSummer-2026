@@ -6,5 +6,5 @@ Mae: I ended up not being able to see Julie again.
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: By the time I was allowed out of the house again, I'd heard that she already left.
 Mae: I hope she comes back next summer... maybe then we can talk.
-Game: ENDING: Grounded
+Mae: ENDING: Grounded
 => END
