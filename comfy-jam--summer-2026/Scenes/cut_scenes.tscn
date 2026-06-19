@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bjl7meb3rvsca" path="res://Assets/CGs/Day 0/Day 0_First_Relaxed.PNG" id="2_0ups5"]
 [ext_resource type="Texture2D" uid="uid://cf7ng57lfelet" path="res://Assets/CGs/Day 0/Day 0_First_Shocked.png" id="3_0ups5"]
 [ext_resource type="Texture2D" uid="uid://cbfi5muqbibkl" path="res://Assets/CGs/Day 0/Day 0_Second.png" id="4_6vgyh"]
-[ext_resource type="Script" path="res://Scenes/tutorial.gd" id="4_wj8qb"]
+[ext_resource type="Script" uid="uid://b7rtlmxtr0spn" path="res://Scenes/tutorial.gd" id="4_wj8qb"]
 [ext_resource type="Texture2D" uid="uid://b6c1200oce8gv" path="res://Assets/Temporary/TEMP-EndDayScreen.png" id="5_g0lsk"]
 [ext_resource type="Texture2D" uid="uid://cuiwbl7q8g8js" path="res://Assets/Black.png" id="5_lpi84"]
 [ext_resource type="Texture2D" uid="uid://b8hj574to2ndn" path="res://Assets/list_chores.png" id="6_0ups5"]

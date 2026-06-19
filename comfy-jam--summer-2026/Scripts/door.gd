@@ -44,4 +44,3 @@ func trigger_cutscene(d) -> void:
 	var path = "res://Scripts/" + loc + ".dialogue"
 	var dialogue = load(path)
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
-	

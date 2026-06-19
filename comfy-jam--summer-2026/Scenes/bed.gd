@@ -6,6 +6,7 @@ var player_in_area : bool = false
 func _ready() -> void:
 	$Sprite2D.visible = false
 	$Area2D.monitoring = true
+	Signals.next_day.connect(deselect)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
