@@ -46,6 +46,9 @@ func show_dialogue_box():
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
 	
+func tutorial_completed():
+	Signals.tutorial_done.emit()
+	
 func change_scene(sceneA, sceneB):
 	sceneB.show()
 	sceneA.hide()

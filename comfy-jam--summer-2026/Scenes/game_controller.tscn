@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c8d7830xpve0r" path="res://Scenes/cut_scenes.tscn" id="6_gruqv"]
 [ext_resource type="PackedScene" uid="uid://1qcno3gutt6f" path="res://Scenes/obedience_points.tscn" id="6_k0qbb"]
 [ext_resource type="PackedScene" uid="uid://gh15sskgxr67" path="res://Scenes/fade.tscn" id="7_gruqv"]
-[ext_resource type="PackedScene" path="res://Scenes/door.tscn" id="7_u4s5x"]
+[ext_resource type="PackedScene" uid="uid://mlmt7sriqda2" path="res://Scenes/door.tscn" id="7_u4s5x"]
 [ext_resource type="PackedScene" uid="uid://ojjfeh5laowx" path="res://Scenes/end_day_screen.tscn" id="8_h1rn0"]
-[ext_resource type="PackedScene" path="res://Scenes/house_bgm.tscn" id="14_yg1k2"]
+[ext_resource type="PackedScene" uid="uid://dmwmmsconfbhs" path="res://Scenes/house_bgm.tscn" id="14_yg1k2"]
 [ext_resource type="AudioStream" uid="uid://5air6x35ahy3" path="res://Assets/Music/TSWMA_Sentiments_FinalDemo1.mp3" id="15_dhp01"]
 [ext_resource type="AudioStream" uid="uid://bqlq6m1stj1dd" path="res://Assets/Music/TSWMA_Tense_Demo1.mp3" id="16_qvxum"]
 

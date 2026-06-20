@@ -28,17 +28,21 @@ var floor_2_dict = [
 var floor_1_objects = []
 var floor_2_objects = []
 
+var tutorial_done = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.floor_transition.connect(change_floor)
 	Signals.next_day.connect(new_day)
+	Signals.tutorial_done.connect(when_tutorial_done)
 	create_objects(floor_1_dict,floor_1_objects)
 	create_objects(floor_2_dict,floor_2_objects)
 	new_day(0)
 
 func new_day(day):
 	clear_chores_list()
-	chore_manager.create_chores_list(day)
+	if tutorial_done:
+		chore_manager.create_chores_list(day)
 	if day == 0:
 		current_floor = 1
 		for object in floor_2_objects:
@@ -46,6 +50,10 @@ func new_day(day):
 	else:
 		current_floor = 2
 	change_floor(current_floor)
+	
+func when_tutorial_done():
+	tutorial_done = true
+	chore_manager.create_chores_list(0)
 
 func clear_chores_list():
 	for chore in chore_manager.chores_array:
