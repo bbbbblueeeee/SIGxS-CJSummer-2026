@@ -2,6 +2,7 @@
 $> textbox.get_parent().get_parent().get_node("TextureRect").texture = load("res://Assets/UI/Dialogue Boxes/Textbox_Mall.png")
 $> textbox.texture = load("res://Assets/Portraits/cheerful_julie.png")
 Julie: Oh, it’s you! Long time no see!
+=> skip
 $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: I just had lunch with another friend– you remember April, right? I didn’t think I’d run into another old classmate so soon!
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
@@ -76,6 +77,7 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: Anyway, I gotta go now, but it was nice seeing you!
 $> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
 Mae: Yeah… you too.
+~ skip
 $> Signals.morning_after.emit(1)
 $> end_scene()
 $> door.deselect()

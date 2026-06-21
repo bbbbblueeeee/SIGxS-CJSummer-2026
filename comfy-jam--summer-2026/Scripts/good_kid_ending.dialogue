@@ -9,5 +9,6 @@ Mae: And... it's been three years.
 Mae: She's probably already let go of me.
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Maybe it's time for me to do the same.
-Mae: ENDING: Good Child
+$> textbox.texture = null
+: ENDING: Good Child
 => END

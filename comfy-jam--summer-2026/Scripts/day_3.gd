@@ -1,5 +1,8 @@
 extends Node2D
-@onready var cg: TextureRect = $cg
+@onready var cg1: TextureRect = $cg1
+@onready var cg2: TextureRect = $cg2
+@onready var cg3: TextureRect = $cg3
+@onready var cg4: TextureRect = $cg4
 @onready var TEMP: TextureRect = $TEMP_rooftop
 @onready var julie: AnimatedSprite2D = $JulieSprite
 @onready var mae: AnimatedSprite2D = $MaeSprite
@@ -8,12 +11,19 @@ extends Node2D
 var moving_mae: bool = false
 var mae_speed: float
 var textbox: TextureRect
+var new_cg: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
-	cg.position.y = 0
-	cg.position.x = 0
+	cg1.position.y = 0
+	cg1.position.x = 0
+	cg2.position.y = 0
+	cg2.position.x = 0
+	cg3.position.y = 0
+	cg3.position.x = 0
+	cg4.position.y = 0
+	cg4.position.x = 0
 	Signals.play_cutscene.connect(show_cutscene)
 	Signals.send_balloon.connect(on_send_balloon)
 	
@@ -24,9 +34,12 @@ func show_cutscene(day):
 	if int(day) == 3:
 		await Fade.fade(1,0.5).finished
 		show()
-		cg.hide()
+		cg1.hide()
+		cg2.modulate.a = 0
+		cg3.modulate.a = 0
+		cg4.modulate.a = 0
 		blackscreen.hide()
-		julie.play("idle")
+		julie.play("idle_sad")
 		julie.flip_h = true
 		mae.play("walk")
 		await Fade.fade(0,0.5).finished
@@ -41,6 +54,11 @@ func show_dialogue_box():
 	var dialogue = load("res://Scripts/rooftop_proper.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
+
+func show_cg(num):
+	new_cg = get_node("cg"+str(num))
+	var tween = create_tween()
+	tween.tween_property(new_cg,"modulate:a",1,0.7)
 
 func change_music(new_music,duration):
 	Signals.change_music.emit(new_music,duration)

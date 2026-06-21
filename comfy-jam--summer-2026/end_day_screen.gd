@@ -27,7 +27,6 @@ func _ready() -> void:
 func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
-
 func new_day(day):
 	bad_ending.hide()
 	kid_ending.hide()

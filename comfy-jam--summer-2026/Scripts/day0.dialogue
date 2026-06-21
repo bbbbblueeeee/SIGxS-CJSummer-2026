@@ -1,6 +1,7 @@
 ~ start
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: …Let’s see what everyone is up to.
+=> skip
 do change_scene(scene_1, scene_2)
 	$> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
 Mae: ... [wait=1] !! 
@@ -25,5 +26,6 @@ $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
 Mae: Ah, I can’t decide!
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: I’ll just sleep on it. I can make my decision tomorrow.
+~ skip
 do end_scene()
 => END

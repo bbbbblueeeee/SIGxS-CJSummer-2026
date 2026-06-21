@@ -1,9 +1,9 @@
 extends Node2D
 var is_selected : bool = false
 var player_in_area : bool = false
-var recorded_day : int = 0
+var recorded_day : int = 2
 var recorded_time : int = 18
-var did_meet_friend : bool = false
+var did_meet_friend : bool = true
 var can_still_meet_friend : bool = true
 var textbox : TextureRect
 signal change_rooms

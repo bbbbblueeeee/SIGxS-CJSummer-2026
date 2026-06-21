@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://i2i5xew5s7me" path="res://Assets/Outside/Rooftop.PNG" id="21_lx4pu"]
 [ext_resource type="Texture2D" uid="uid://c0obm1gbwbepn" path="res://Assets/CGs/Day 3_First.png" id="21_nwrbp"]
 [ext_resource type="Texture2D" uid="uid://dur0mxcog57wo" path="res://Assets/UI/menu.png" id="22_lx4pu"]
+[ext_resource type="Texture2D" uid="uid://cv7mkbjxbucer" path="res://Assets/CGs/Day 3_Second.png" id="24_1u0tc"]
+[ext_resource type="Texture2D" uid="uid://cyqsg2ye58wby" path="res://Assets/CGs/Day 3_Third.png" id="25_b5ryn"]
+[ext_resource type="Texture2D" uid="uid://bwo7bn8rhmurt" path="res://Assets/CGs/Day 3_Fourth.PNG" id="26_ni8bi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -414,11 +417,26 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vtqaf")
 animation = &"walk"
 
-[node name="cg" type="TextureRect" parent="Day3" unique_id=449666863]
+[node name="cg1" type="TextureRect" parent="Day3" unique_id=449666863]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("21_nwrbp")
+
+[node name="cg2" type="TextureRect" parent="Day3" unique_id=1321089506]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("24_1u0tc")
+
+[node name="cg3" type="TextureRect" parent="Day3" unique_id=650664077]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("25_b5ryn")
+
+[node name="cg4" type="TextureRect" parent="Day3" unique_id=144073508]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("26_ni8bi")
 
 [node name="blackscreen" type="TextureRect" parent="Day3" unique_id=1187602609]
 offset_right = 40.0

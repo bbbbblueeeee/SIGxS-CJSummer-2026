@@ -62,6 +62,8 @@ stream = ExtResource("12_dhp01")
 volume_db = -12.0
 parameters/looping = true
 
+[node name="Nothing" type="AudioStreamPlayer" parent="World" unique_id=332457683]
+
 [node name="GUI" type="CanvasLayer" parent="." unique_id=1141565541]
 
 [node name="UI" parent="GUI" unique_id=1805872978 instance=ExtResource("3_ppfu0")]

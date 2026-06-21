@@ -1,9 +1,9 @@
 extends Node2D
 
-var day : int = 0
+var day : int = 2
 var points : int = 0
 var is_next_day : bool = false
-var visit_count: int = 0
+var visit_count: int = 2
 var can_friend_ending: bool = true
 var triggered_morning_dialogue: bool = false
 @onready var end_day_screen: CanvasLayer = $"EndDay Screen"
@@ -44,15 +44,14 @@ func on_change_music(new_song,duration):
 	await tween.tween_property(music,"volume_db",-80,duration).finished
 	music.stop()
 	music=get_node(new_song)
-	if music.volume_db == -80:
-		if new_song == "Main_Music":
-			music.volume_db = -8
-		elif new_song == "Tense_Music":
-			music.volume_db = -12
-		elif new_song == "Sentimental_Music":
-			music.volume_db = -12
-	print(music)
-	music.play()
+	if new_song != "":
+		print(music)
+		if music.volume_db == -80:
+			if new_song == "Main_Music":
+				music.volume_db = -8
+			else:
+				music.volume_db = -12
+		music.play()
 
 func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")

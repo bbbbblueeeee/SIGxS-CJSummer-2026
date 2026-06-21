@@ -30,7 +30,7 @@ $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
 Julie: I know! I know I was wrong. I know now that was a mistake. But, three years ago, that’s what I thought had to be done.
 Julie: I thought it would make things hurt less for you too. But… I guess I was wrong.
 $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
-Mae: Yes, you were!
+Mae: [i]Yes, you were![/i]
 Mae: And what about those three years? Did you keep ignoring me because you thought you were doing it for my sake? Even though I [i]clearly[/i] wanted to make things right between us?
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
 Julie: Well… for a while, yeah. I thought it was for the better.
@@ -40,7 +40,7 @@ $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
 Julie: I mean, the conversation we’re having now is exactly the one I wanted to avoid.
 Julie: I know you’re mad at me, and you have every right to be.
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
-$> change_music("",1)
+$> change_music("Nothing",2)
 Julie: But… could we go back to what we used to be? Just for tonight?
 Julie: There’s a fireworks show starting soon. I’d love to watch it with you before I leave tomorrow.
 $> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
@@ -50,7 +50,7 @@ Mae: Alright then. Just for tonight.
 $> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
 Julie: Thanks.
 $> change_music("Sentimental_Music",1)
-$> change_scene_with_fade(TEMP, cg)
+$> change_scene_with_fade(TEMP, cg1)
 $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: Oh, it’s starting!
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
@@ -63,7 +63,7 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: It is.
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 Mae: …
-$> cg.texture = load("res://Assets/CGs/Day 3_Second.png")
+$> show_cg(2)
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Hey.
 $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
@@ -80,15 +80,15 @@ $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: And, you know what? Even if we end up drifting apart and losing touch with each other...
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: I’m okay with it hurting. Because that means it mattered.
-$> cg.texture = load("res://Assets/CGs/Day 3_Third.png")
+$> show_cg(3)
 $> textbox.texture = load("res://Assets/Portraits/cheerful_mae.png")
 Mae: So let’s try this again. And let’s not make the same mistakes we made last time. Okay?
 $> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
 Julie: Yeah.
+$> show_cg(4)
 $> textbox.texture = load("res://Assets/Portraits/cheerful_julie.png")
-$> cg.texture = load("res://Assets/CGs/Day 3_Fourth.png")
 Julie: Okay!
-$> change_scene_with_fade(cg, blackscreen)
+$> change_scene_with_fade(cg4, blackscreen)
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 Mae: (The fireworks show lasts until well past 11 o’clock. I barely make it home before midnight.)
 Mae: (But I don’t regret going to see her.)
