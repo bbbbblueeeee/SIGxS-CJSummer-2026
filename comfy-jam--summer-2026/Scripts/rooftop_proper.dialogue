@@ -63,13 +63,13 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: It is.
 $> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 Mae: …
-$> show_cg(2)
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Hey.
 $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
 Julie: Yeah?
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Text me back next time, okay?
+$> show_cg(2)
 $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: !! 
 Julie: You mean…

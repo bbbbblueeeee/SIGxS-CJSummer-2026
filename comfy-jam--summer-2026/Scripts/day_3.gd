@@ -42,11 +42,11 @@ func show_cutscene(day):
 		julie.play("idle_sad")
 		julie.flip_h = true
 		mae.play("walk")
+		change_music("Tense_Music",1)
 		await Fade.fade(0,0.5).finished
 		var tween = create_tween()
 		await tween.tween_property(mae,"position",Vector2(1000,400),1.0).finished
 		mae.play("idle")
-		change_music("Tense_Music",1)
 		await (get_tree().create_timer(1).timeout)
 		show_dialogue_box()
 

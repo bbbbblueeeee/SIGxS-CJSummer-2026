@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3ja2afalwgtc" path="res://end_day_screen.gd" id="1_twkvv"]
 [ext_resource type="Texture2D" uid="uid://3irptg16qxep" path="res://Assets/EndDayScreen.png" id="2_twkvv"]
+[ext_resource type="Texture2D" uid="uid://cuiwbl7q8g8js" path="res://Assets/Black.png" id="4_qkalc"]
 [ext_resource type="Texture2D" uid="uid://sv4t24k6y6ty" path="res://Assets/Endings/Ending_Good Kid.png" id="4_wm3ey"]
 [ext_resource type="Texture2D" uid="uid://f1gpyfrbmfee" path="res://Assets/Endings/Ending_Good Friend.png" id="5_ouyri"]
 
@@ -11,12 +12,14 @@ load_path = "res://.godot/imported/Ending_Grounded.png-2afe743617715e7a3a634f69e
 [node name="EndDay Screen" type="CanvasLayer" unique_id=1704616727]
 script = ExtResource("1_twkvv")
 
-[node name="Background" type="TextureRect" parent="." unique_id=476379505]
+[node name="background" type="TextureRect" parent="." unique_id=789519843]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_twkvv")
 
 [node name="Points Tally" type="Label" parent="." unique_id=473105230]
+visible = false
 offset_left = 518.0
 offset_top = 164.0
 offset_right = 1277.0
@@ -25,6 +28,7 @@ theme_override_font_sizes/font_size = 48
 text = "Total Obedience Points: "
 
 [node name="Press Enter" type="Label" parent="." unique_id=738023664]
+visible = false
 offset_left = 517.0
 offset_top = 259.0
 offset_right = 1276.0
@@ -33,6 +37,7 @@ theme_override_font_sizes/font_size = 48
 text = "Press \"Enter\" to Continue"
 
 [node name="Lose" type="Label" parent="." unique_id=196092951]
+visible = false
 offset_left = 518.0
 offset_top = 260.0
 offset_right = 1545.0
@@ -43,16 +48,25 @@ You're grounded!
 Game Over"
 
 [node name="Bad Ending" type="TextureRect" parent="." unique_id=427304204]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("CompressedTexture2D_qkalc")
 
 [node name="Kid Ending" type="TextureRect" parent="." unique_id=1492696926]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_wm3ey")
 
 [node name="Friend Ending" type="TextureRect" parent="." unique_id=1257867305]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_ouyri")
+
+[node name="blackscreen" type="TextureRect" parent="." unique_id=476379505]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_qkalc")

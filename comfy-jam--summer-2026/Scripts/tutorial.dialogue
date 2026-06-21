@@ -33,6 +33,7 @@ $> ent.show()
 $> wait_for_press("enter")
 $> scene_2.show()
 $> hide_after_while(ent)
+$> wait(2)
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Well, those are simple enough.
 $> ddct.show()

@@ -12,7 +12,7 @@ if is_penalized()
 		Mae: Maybe I can still do some chores...
 		do deselect(0)
 elif can_sleep()
-	Mae: I'm decently tired. Shall I call it a day?
+	Mae: I'm pretty tired. Shall I call it a day?
 	- Yes.
 		$> textbox.texture = load("res://Assets/Portraits/smiling_mae.png")
 		Mae: Time to relax!

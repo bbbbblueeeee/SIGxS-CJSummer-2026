@@ -1,4 +1,5 @@
 ~ start
+$> Signals.movement_locked.emit()
 $> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
 Mae: …I’ve just opened my phone to find a new message from Julie.
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
@@ -19,5 +20,6 @@ Mae: Well, I have the rest of the day to decide whether or not I’ll go.
 Mae: If I do decide to go, I'll have to leave home some time from [b]8:00 PM to 11:00 PM[/b].
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Let’s do some chores for now.
+$> Signals.movement_unlocked.emit()
 $> reset_morning_dialogue()
 => END

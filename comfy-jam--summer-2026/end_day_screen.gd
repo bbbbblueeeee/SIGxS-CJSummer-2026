@@ -1,6 +1,7 @@
 extends CanvasLayer
 
-@onready var background: TextureRect = $Background
+@onready var background: TextureRect = $background
+@onready var blackscreen: TextureRect=  $blackscreen
 @onready var points_tally: Label = $"Points Tally"
 @onready var press_enter: Label = $"Press Enter"
 @onready var move_component : Node2D = $"../Player/MoveComponent"
@@ -22,25 +23,39 @@ func _ready() -> void:
 	kid_ending.position.y = 0
 	friend_ending.position.x = 0
 	friend_ending.position.y = 0
+	blackscreen.modulate.a = 1
 	new_day(0)
 
 func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
 func new_day(day):
-	bad_ending.hide()
-	kid_ending.hide()
-	friend_ending.hide()
-	lose.hide()
-	press_enter.hide()
-	hide()
-	move_component.process_mode = PROCESS_MODE_INHERIT
+	if day != 4:
+		var tween = create_tween()
+		await tween.tween_property(blackscreen,"modulate:a",1,1).finished
+		background.hide()
+		points_tally.hide()
+		bad_ending.hide()
+		kid_ending.hide()
+		friend_ending.hide()
+		lose.hide()
+		press_enter.hide()
+		var tween2 = create_tween()
+		await tween2.tween_property(blackscreen,"modulate:a",0,1).finished
+		blackscreen.hide()
+		hide()
+	
 
 func show_end_day_screen(points: int) -> void:
 	move_component.process_mode = PROCESS_MODE_DISABLED
 	points_tally.text = "Total Obedience Points: "
+	blackscreen.modulate.a = 1
+	blackscreen.show()
+	background.show()
+	points_tally.show()
 	show()
-	await Fade.fade(0,0.5).finished
+	var tween = create_tween()
+	await tween.tween_property(blackscreen,"modulate:a",0,0.5).finished
 	await get_tree().create_timer(1).timeout
 	points_tally.text = "Total Obedience Points: " + str(points)
 	await get_tree().create_timer(1).timeout
@@ -51,28 +66,50 @@ func show_end_day_screen(points: int) -> void:
 		update_next_day.emit()
 
 func display_bad_ending():
-	bad_ending.show()
+	var tween = create_tween()
+	await tween.tween_property(blackscreen,"modulate:a",1,1).finished
 	background.hide()
-	lose.show()
-	await get_tree().create_timer(2).timeout
+	points_tally.hide()
+	kid_ending.hide()
+	friend_ending.hide()
+	lose.hide()
+	press_enter.hide()
+	show()
+	bad_ending.show()
+	var tween2 = create_tween()
+	await tween2.tween_property(blackscreen,"modulate:a",0,1).finished
 	var dialogue = load("res://Scripts/bad_ending.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	
 func display_kid_ending():
-	show()
-	kid_ending.show()
+	var tween = create_tween()
+	await tween.tween_property(blackscreen,"modulate:a",1,1).finished
 	background.hide()
 	points_tally.hide()
-	await get_tree().create_timer(2).timeout
+	bad_ending.hide()
+	friend_ending.hide()
+	lose.hide()
+	press_enter.hide()
+	show()
+	kid_ending.show()
+	var tween2 = create_tween()
+	await tween2.tween_property(blackscreen,"modulate:a",0,1).finished
 	var dialogue = load("res://Scripts/good_kid_ending.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	
 func display_friend_ending():
-	show()
-	friend_ending.show()
+	var tween = create_tween()
+	await tween.tween_property(blackscreen,"modulate:a",1,1).finished
 	background.hide()
 	points_tally.hide()
-	await get_tree().create_timer(2).timeout
+	bad_ending.hide()
+	kid_ending.hide()
+	lose.hide()
+	press_enter.hide()
+	show()
+	friend_ending.show()
+	var tween2 = create_tween()
+	await tween2.tween_property(blackscreen,"modulate:a",0,1).finished
 	var dialogue = load("res://Scripts/good_friend_ending.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	

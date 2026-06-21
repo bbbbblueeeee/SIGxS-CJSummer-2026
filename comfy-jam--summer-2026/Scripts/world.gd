@@ -1,14 +1,15 @@
 extends Node2D
 
-var day : int = 2
+var day : int = 0
 var points : int = 0
 var is_next_day : bool = false
-var visit_count: int = 2
-var can_friend_ending: bool = true
+var visit_count: int = 0
+var can_friend_ending: bool = false
 var triggered_morning_dialogue: bool = false
 @onready var end_day_screen: CanvasLayer = $"EndDay Screen"
 var textbox: TextureRect
 @onready var music: AudioStreamPlayer = $Main_Music
+@onready var move_component: Node2D = $Player/MoveComponent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,13 +27,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_next_day and Input.is_action_just_pressed("object interaction"):
-		await Fade.fade(1,0.5).finished
 		Signals.clear_chores.emit()
 		if is_next_day:
 			Signals.next_day.emit(day)
 		is_next_day = false
 		$House.on_change_rooms("day")
-		await Fade.fade(0,0.5).finished
 		if day == 4:
 			show_ending()
 		else:
@@ -45,7 +44,6 @@ func on_change_music(new_song,duration):
 	music.stop()
 	music=get_node(new_song)
 	if new_song != "":
-		print(music)
 		if music.volume_db == -80:
 			if new_song == "Main_Music":
 				music.volume_db = -8
@@ -69,12 +67,10 @@ func play_day_0_scene():
 	Signals.play_cutscene.emit(day)
 
 func display_day_end_screen():
-	print("End of Day " + str(day)) # For testing
-	end_day_screen.show_end_day_screen(points)
 	day += 1
+	end_day_screen.show_end_day_screen(points)
 
 func ready_for_next_day():
-	print("ready_for_next_day called")
 	is_next_day = true
 
 func reset_morning_dialogue():
@@ -82,17 +78,21 @@ func reset_morning_dialogue():
 
 func calculate_morning_dialogue():
 	if !triggered_morning_dialogue:
+		await Fade.fade(0,1).finished
 		triggered_morning_dialogue = true
 		if day == 1:
 			reset_morning_dialogue()
+			move_component.process_mode = PROCESS_MODE_INHERIT
 		elif day == 2 and visit_count == 1:
 			var path = "res://Scripts/beach_morning.dialogue"
 			var dialogue = load(path)
+			await get_tree().create_timer(1).timeout
 			DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", 
 				dialogue, "start", [self])
 		elif day == 3 and visit_count == 2:
 			var path = "res://Scripts/rooftop_morning.dialogue"
 			var dialogue = load(path)
+			await get_tree().create_timer(1).timeout
 			DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", 
 				dialogue, "start", [self])
 	

@@ -11,7 +11,7 @@ func _ready() -> void:
 	Signals.time_updated.connect(update_recorded_time)
 	$Sprite2D.visible = false
 	$Area2D.monitoring = false
-	recorded_time = 18 #18
+	recorded_time = 18
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,9 +1,9 @@
 extends Node2D
 var is_selected : bool = false
 var player_in_area : bool = false
-var recorded_day : int = 2
+var recorded_day : int = 0
 var recorded_time : int = 18
-var did_meet_friend : bool = true
+var did_meet_friend : bool = false
 var can_still_meet_friend : bool = true
 var textbox : TextureRect
 signal change_rooms
@@ -15,6 +15,7 @@ func _ready() -> void:
 	Signals.send_balloon.connect(on_send_balloon)
 	position.x = 4832
 	position.y = 412
+	is_selected = true
 
 func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
@@ -37,7 +38,6 @@ func update_recorded_time(new_time):
 	elif recorded_time > 17:
 		path = "sunset"
 		change_rooms.emit(path)
-	print("Recorded Time: "+str(recorded_time))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -94,7 +94,6 @@ func send_time(added_time):
 		Signals.time_skip.emit(added_time)
 
 func send_friend_visited(day):
-	print("Sent Friend Visited: "+str(day)) # Testing
 	Signals.update_friend_visited.emit(day)
 
 func trigger_cutscene(d) -> void:

@@ -25,7 +25,7 @@ var day_3_chores = [0, 1, 2, 8, 9, 10]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Signals.clear_chores.connect(new_day)
+	Signals.clear_chores.connect(new_day)
 	pass
 
 func new_day(day):

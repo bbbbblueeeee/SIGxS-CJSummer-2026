@@ -439,6 +439,7 @@ offset_bottom = 720.0
 texture = ExtResource("26_ni8bi")
 
 [node name="blackscreen" type="TextureRect" parent="Day3" unique_id=1187602609]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_lpi84")

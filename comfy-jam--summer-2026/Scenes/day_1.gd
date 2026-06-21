@@ -19,8 +19,7 @@ func _ready() -> void:
 func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
-func show_cutscene(day):
-	print("Day: "+str(day))
+func show_cutscene(day):	
 	if int(day) == 1:
 		await Fade.fade(1,0.5).finished
 		show()
