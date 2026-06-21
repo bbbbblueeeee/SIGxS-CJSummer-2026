@@ -15,7 +15,7 @@ func _ready() -> void:
 	cg.position.x = 0
 	Signals.play_cutscene.connect(show_cutscene)
 	Signals.send_balloon.connect(on_send_balloon)
-	
+
 func show_cutscene(day):
 	if int(day) == 2:
 		await Fade.fade(1,0.5).finished
@@ -40,6 +40,9 @@ func show_dialogue_box():
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
 
+func change_music(new_music,duration):
+	Signals.change_music.emit(new_music,duration)
+
 func mae_walk_away():
 	var tween_2 = create_tween()
 	tween_2.tween_property(mae,"position",Vector2(1500,400),1.0)
@@ -58,7 +61,7 @@ func change_scene_with_fade(sceneA, sceneB):
 func end_scene():
 	await Fade.fade(1,0.5).finished
 	hide()
-	# Signals.end_day_screen.emit() #CHANGE THIS
+	change_music("Main_Music",2)
 	await Fade.fade(0,0.5).finished
 	
 func show_fade(s):

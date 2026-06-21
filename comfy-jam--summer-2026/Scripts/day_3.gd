@@ -33,6 +33,7 @@ func show_cutscene(day):
 		var tween = create_tween()
 		await tween.tween_property(mae,"position",Vector2(1000,400),1.0).finished
 		mae.play("idle")
+		change_music("Tense_Music",1)
 		await (get_tree().create_timer(1).timeout)
 		show_dialogue_box()
 
@@ -40,6 +41,9 @@ func show_dialogue_box():
 	var dialogue = load("res://Scripts/rooftop_proper.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])
 	pass
+
+func change_music(new_music,duration):
+	Signals.change_music.emit(new_music,duration)
 	
 func change_scene(sceneA, sceneB):
 	sceneB.show()
@@ -54,7 +58,7 @@ func change_scene_with_fade(sceneA, sceneB):
 func end_scene():
 	await Fade.fade(1,0.5).finished
 	hide()
-	# Signals.end_day_screen.emit() #CHANGE THIS
+	change_music("Main_Music",2)
 	await Fade.fade(0,0.5).finished
 	
 func show_fade(s):

@@ -3,7 +3,7 @@ $> textbox.get_parent().get_parent().get_node("TextureRect").texture = load("res
 $> textbox.texture = load("res://Assets/Portraits/cheerful_julie.png")
 Julie: You came!
 $> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
-Mae: (So she was inviting me when she mentioned the beach yesterday.)
+Mae: (So she [i]was[/i] inviting me when she mentioned the beach yesterday.)
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: …Yeah.
 $> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
@@ -13,6 +13,7 @@ Julie: Anyway, I managed to get so many shells today! I’m not sure how I’ll 
 $> textbox.texture = load("res://Assets/Portraits/cheerful_julie.png")
 Julie: My friends will looove these. You know, one of them really likes tropical stuff, so I told her that I’d-
 $> textbox.texture = load("res://Assets/Portraits/upset_mae.png")
+$> change_music("Tense_Music",2)
 Mae: Are you serious right now?
 $> julie.play("idle_sad")
 $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")

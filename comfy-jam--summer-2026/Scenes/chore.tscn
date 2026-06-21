@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cr3ifwbq6cxph"]
 
 [ext_resource type="Script" uid="uid://bntsiimfq8d4c" path="res://Scripts/chore.gd" id="1_32aft"]
+[ext_resource type="Script" uid="uid://c1257vcfpe7s1" path="res://Scenes/area_2d.gd" id="2_32aft"]
 [ext_resource type="Texture2D" uid="uid://c845sf0oyt51" path="res://Assets/Temporary/TEMP_ChoreSprite.png" id="3_32aft"]
-[ext_resource type="Script" uid="uid://4arneyj82xd0" path="res://Scripts/area_2d.gd" id="4_23t8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_23t8f"]
 
@@ -14,7 +14,7 @@ point_value = 15
 
 [node name="Area2D" type="Area2D" parent="." unique_id=724769985]
 position = Vector2(16, 16)
-script = ExtResource("4_23t8f")
+script = ExtResource("2_32aft")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1052236281]
 shape = SubResource("RectangleShape2D_23t8f")

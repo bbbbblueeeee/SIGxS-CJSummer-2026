@@ -11,8 +11,7 @@ var player_in_area : bool = false
 var is_selected : bool = false
 var completed : bool = false
 var will_end_past_ten : bool = false
-var will_end_past_midnight : bool = false 
-#@onready var move_component: Node = %MoveComponent
+var will_end_past_midnight : bool = false
 
 
 # Called when the node enters the scene tree for the first time.

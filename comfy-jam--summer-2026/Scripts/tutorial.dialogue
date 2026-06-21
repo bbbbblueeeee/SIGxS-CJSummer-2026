@@ -52,6 +52,5 @@ Mae: I usually only go to bed from 8:00 PM onwards. Until then, I'd rather stay 
 Mae: As long as I go to bed by 10:00 PM, I shouldn't lose any Obedience Points.
 $> scene_2.hide()
 $> dc.hide()
-$> Signals.movement_unlocked.emit()
 $> end_scene()
 => END

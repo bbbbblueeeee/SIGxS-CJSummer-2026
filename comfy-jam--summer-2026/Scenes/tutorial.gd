@@ -70,6 +70,7 @@ func end_scene():
 	await Fade.fade(1,0.5).finished
 	hide()
 	await Fade.fade(0,0.5).finished
+	Signals.movement_unlocked.emit()
 	
 func move_freely(end, dir):
 	if dir == "left":

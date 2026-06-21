@@ -40,6 +40,7 @@ $> textbox.texture = load("res://Assets/Portraits/anxious_julie.png")
 Julie: I mean, the conversation we’re having now is exactly the one I wanted to avoid.
 Julie: I know you’re mad at me, and you have every right to be.
 $> textbox.texture = load("res://Assets/Portraits/uneasy_julie.png")
+$> change_music("",1)
 Julie: But… could we go back to what we used to be? Just for tonight?
 Julie: There’s a fireworks show starting soon. I’d love to watch it with you before I leave tomorrow.
 $> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")
@@ -48,6 +49,7 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Alright then. Just for tonight.
 $> textbox.texture = load("res://Assets/Portraits/smiling_julie.png")
 Julie: Thanks.
+$> change_music("Sentimental_Music",1)
 $> change_scene_with_fade(TEMP, cg)
 $> textbox.texture = load("res://Assets/Portraits/speaking_julie.png")
 Julie: Oh, it’s starting!
