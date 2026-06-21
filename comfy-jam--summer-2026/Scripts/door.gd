@@ -97,6 +97,5 @@ func send_friend_visited(day):
 	Signals.update_friend_visited.emit(day)
 
 func trigger_cutscene(d) -> void:
-	print("trigger cutscene "+str(d))
 	did_meet_friend = true
 	Signals.play_cutscene.emit(d)
