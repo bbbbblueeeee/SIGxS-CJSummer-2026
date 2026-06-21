@@ -103,7 +103,7 @@ func update_friend_ending():
 	can_friend_ending = false
 
 func show_ending():
-	if can_friend_ending:
+	if visit_count == 3:
 		end_day_screen.display_friend_ending()
 	else:
 		end_day_screen.display_kid_ending()

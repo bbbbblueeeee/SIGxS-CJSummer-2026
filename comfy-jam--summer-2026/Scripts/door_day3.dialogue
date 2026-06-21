@@ -8,7 +8,7 @@ Mae: Is it worth it?
 - Yes.
 	$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 	Mae: Ok... let's see what she has to say.
-	do send_minus(100)
+	do send_minus(70)
 	do send_time(4)
 	do trigger_cutscene(3)
 - No.
