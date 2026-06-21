@@ -10,6 +10,7 @@ Mae: Is it worth it?
 	Mae: Ok... let's see what she has to say.
 	do send_minus(70)
 	do send_time(4)
+	do send_friend_visited(3)
 	do trigger_cutscene(3)
 - No.
 	$> textbox.texture = load("res://Assets/Portraits/uneasy2_mae.png")

@@ -37,7 +37,6 @@ func _process(delta: float) -> void:
 		else:
 			calculate_morning_dialogue()
 
-
 func on_change_music(new_song,duration):
 	var tween = create_tween()
 	await tween.tween_property(music,"volume_db",-80,duration).finished
@@ -95,7 +94,7 @@ func calculate_morning_dialogue():
 			await get_tree().create_timer(1).timeout
 			DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", 
 				dialogue, "start", [self])
-	
+
 func update_visit(d):
 	visit_count = d
 	print("visit count: "+str(visit_count))
