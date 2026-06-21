@@ -2,6 +2,7 @@
 if will_end_past_midnight:
 	$> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 	Mae: I don't have enough time left in the day to {{chore_name}}.
+	do deselect()
 else:
 	$> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 	Mae: Hmm... I could {{chore_name}}.

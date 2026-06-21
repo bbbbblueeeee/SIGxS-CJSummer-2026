@@ -32,7 +32,6 @@ func new_day(day):
 	for chore in chores_array:
 		chore.queue_free()
 	chores_array.clear()
-	print(chores_array)
 
 func create_chores_list(day):
 	if day==0:

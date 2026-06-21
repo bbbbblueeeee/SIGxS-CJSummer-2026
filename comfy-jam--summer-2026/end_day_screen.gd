@@ -36,11 +36,9 @@ func new_day(day):
 	press_enter.hide()
 	hide()
 	move_component.process_mode = PROCESS_MODE_INHERIT
-	print("Start Move") # For Testing
 
 func show_end_day_screen(points: int) -> void:
 	move_component.process_mode = PROCESS_MODE_DISABLED
-	print("Stop Move") # For Testing
 	points_tally.text = "Total Obedience Points: "
 	show()
 	await Fade.fade(0,0.5).finished

@@ -38,6 +38,7 @@ func add_time(t):
 
 func set_midnight():
 	current_time = 24
+	Signals.time_updated.emit(current_time)
 	calculate_time()
 
 func calculate_time():

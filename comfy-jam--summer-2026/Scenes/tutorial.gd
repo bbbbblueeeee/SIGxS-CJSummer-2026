@@ -39,10 +39,14 @@ func show_cutscene(day):
 	dc.hide()
 	chores.hide()
 	menu.show()
-	var tween = create_tween()
-	await tween.tween_property(black,"modulate:a",0,0.5).finished
+	await Fade.fade(1,0.5).finished
+	black.hide()
 	await wait_for_click()
+	menu.texture = load(("res://Assets/UI/menu.png"))
+	wait(1)
+	await Fade.fade(1,1).finished
 	menu.hide()
+	await Fade.fade(0,1.5).finished
 	show_dialogue_box()
 
 func show_dialogue_box():

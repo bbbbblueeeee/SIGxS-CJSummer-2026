@@ -92,4 +92,5 @@ Mae: (The fireworks show lasts until well past 11 o’clock. I barely make it ho
 Mae: (But I don’t regret going to see her.)
 Mae: (And, just like that, my summer break is over.)
 $> end_scene()
+$> door.deselect()
 => END

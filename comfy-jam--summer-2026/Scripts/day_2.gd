@@ -3,6 +3,7 @@ extends Node2D
 @onready var TEMP: TextureRect = $TEMP_beach
 @onready var julie: AnimatedSprite2D = $JulieSprite
 @onready var mae: AnimatedSprite2D = $MaeSprite
+@onready var door: Node2D = get_parent().get_parent().get_node("House").get_node("Door")
 var moving_mae: bool = false
 var mae_speed: float
 var textbox: TextureRect
@@ -16,7 +17,6 @@ func _ready() -> void:
 	Signals.send_balloon.connect(on_send_balloon)
 	
 func show_cutscene(day):
-	print(day)
 	if int(day) == 2:
 		await Fade.fade(1,0.5).finished
 		show()

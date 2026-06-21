@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://b4xjoaq8en3jq" path="res://Scripts/day_3.gd" id="20_mvexy"]
 [ext_resource type="Texture2D" uid="uid://i2i5xew5s7me" path="res://Assets/Outside/Rooftop.PNG" id="21_lx4pu"]
 [ext_resource type="Texture2D" uid="uid://c0obm1gbwbepn" path="res://Assets/CGs/Day 3_First.png" id="21_nwrbp"]
-[ext_resource type="Texture2D" uid="uid://rdbbjuhojubt" path="res://Assets/UI/menu.png" id="22_lx4pu"]
+[ext_resource type="Texture2D" uid="uid://dur0mxcog57wo" path="res://Assets/UI/menu.png" id="22_lx4pu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -412,7 +412,7 @@ animation = &"idle_sad"
 position = Vector2(1400, 400)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_vtqaf")
-animation = &"idle"
+animation = &"walk"
 
 [node name="cg" type="TextureRect" parent="Day3" unique_id=449666863]
 visible = false

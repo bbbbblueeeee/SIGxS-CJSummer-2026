@@ -48,4 +48,5 @@ $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: Enjoy your vacation.
 $> Signals.morning_after.emit(2)
 $> end_scene()
+$> door.deselect()
 => END

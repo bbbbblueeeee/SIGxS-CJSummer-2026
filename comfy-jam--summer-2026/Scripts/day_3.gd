@@ -4,6 +4,7 @@ extends Node2D
 @onready var julie: AnimatedSprite2D = $JulieSprite
 @onready var mae: AnimatedSprite2D = $MaeSprite
 @onready var blackscreen : TextureRect = $blackscreen
+@onready var door: Node2D = get_parent().get_parent().get_node("House").get_node("Door")
 var moving_mae: bool = false
 var mae_speed: float
 var textbox: TextureRect
@@ -20,7 +21,6 @@ func on_send_balloon(balloon):
 	textbox = balloon.get_node("Balloon").get_node("Control2").get_node("TextureRect")
 
 func show_cutscene(day):
-	print(day)
 	if int(day) == 3:
 		await Fade.fade(1,0.5).finished
 		show()
