@@ -98,6 +98,7 @@ func calculate_morning_dialogue():
 	
 func update_visit(d):
 	visit_count = d
+	print("visit count: "+str(visit_count))
 
 func update_friend_ending():
 	can_friend_ending = false
