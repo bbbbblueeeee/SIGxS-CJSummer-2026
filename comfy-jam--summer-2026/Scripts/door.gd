@@ -34,6 +34,7 @@ func new_day(day):
 
 func update_recorded_time(new_time):
 	recorded_time = new_time
+	print("Recorded Time: "+str(recorded_time))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -67,10 +68,6 @@ func show_dialogue_box():
 	else:
 		dialogue = load("res://Scripts/door_defeat.dialogue")
 	DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self, get_node("../../")])
-	#var dialogue_box : Node = load("res://Scenes/dialogue.tscn").instantiate()
-	#add_child(dialogue_box, true)
-	#dialogue_box.start(dialogue,"start")
-	pass
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	player_in_area = true
@@ -101,8 +98,3 @@ func trigger_cutscene(d) -> void:
 	print("trigger_cutscene called with: ", d)
 	did_meet_friend = true
 	Signals.play_cutscene.emit(d)
-	
-	
-	#var path = "res://Scripts/" + loc + ".dialogue"
-	#var dialogue = load(path)
-	#DialogueManager.show_dialogue_balloon_scene("res://Scenes/dialogue.tscn", dialogue, "start", [self])

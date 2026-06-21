@@ -10,10 +10,10 @@ $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: He’ll probably want to lay out some ground rules now that Mom and Dad are gone. Oh well, best to hear what he has to say.
 $> Signals.movement_unlocked.emit()
 $> ad_move.show()
-$> hide_after_while(ad_move)
-$> move_freely(3250, "left")
+$> move_freely(3212, "left")
 $> Signals.movement_locked.emit()
 $> wait(0.5)
+$> hide_after_while(ad_move)
 $> textbox.texture = load("res://Assets/Portraits/neutral_jun.png")
 Jun: Hey.
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")

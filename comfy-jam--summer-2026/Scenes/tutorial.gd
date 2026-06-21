@@ -80,7 +80,6 @@ func wait(s):
 	await get_tree().create_timer(s).timeout
 			
 func hide_after_while(l):
-	await get_tree().create_timer(2).timeout
 	var tween = create_tween()
 	tween.tween_property(l, "modulate:a", 0.0, 0.5)
 	await tween.finished

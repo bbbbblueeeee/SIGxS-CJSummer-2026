@@ -1,4 +1,5 @@
 ~ start
+$> Signals.movement_locked.emit()
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: Now that I think about it… our talk yesterday was hardly even a conversation.
 Mae: She kept telling me all about herself, but she hardly asked anything about me.
@@ -15,6 +16,8 @@ Mae: I don’t know if she wants to have this conversation, though. It looked li
 Mae: …
 $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: Well, I guess the decision is up to me.
-Mae: I’ll be able to find her as long as I leave home any time from 8:00 AM to 11:00 AM.
-Mae: [b]As long as I get my Obedience Points above 0 before the day ends, my parents shouldn’t ground me.[/b]
+Mae: I’ll be able to find her as long as I leave home any time from [b]8:00 AM to 11:00 AM[/b].
+Mae: As long as I get my Obedience Points above 0 before the day ends, my parents shouldn’t ground me.
+$> Signals.movement_unlocked.emit()
+$> reset_morning_dialogue()
 => END
