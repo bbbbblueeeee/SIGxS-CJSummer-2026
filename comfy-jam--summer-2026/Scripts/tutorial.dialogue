@@ -46,7 +46,9 @@ $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: On that note, I should probably sweep the floor before I go to bed.
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: I remember the broom and dustpan being in the [b]living room[/b], where my brother is.
+Mae: After that, I think I can [b]go to bed[/b].
 do tutorial_completed()
+Mae: I usually only go to bed from 8:00 PM onwards. Until then, I'd rather stay awake.
 Mae: As long as I go to bed by 10:00 PM, I shouldn't lose any Obedience Points.
 $> scene_2.hide()
 $> dc.hide()

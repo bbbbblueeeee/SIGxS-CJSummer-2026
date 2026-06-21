@@ -6,6 +6,7 @@ var recorded_time : int
 var did_meet_friend : bool
 var can_still_meet_friend : bool
 var textbox : TextureRect
+signal change_rooms
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +16,7 @@ func _ready() -> void:
 	position.x = 4832
 	position.y = 412
 	recorded_day = 0
-	recorded_time = 18 #18
+	recorded_time = 18
 	did_meet_friend = false
 	can_still_meet_friend = true
 	
@@ -34,7 +35,13 @@ func new_day(day):
 
 func update_recorded_time(new_time):
 	recorded_time = new_time
-	print("Recorded Time: "+str(recorded_time))
+	var path : String
+	if recorded_time > 19:
+		path = "night"
+		change_rooms.emit(path)
+	elif recorded_time > 17:
+		path = "sunset"
+		change_rooms.emit(path)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -8,6 +8,7 @@ extends Node2D
 @onready var menu: TextureRect = $"main menu"
 @onready var ad_move: Label = $ad
 @onready var ent: Label = $ent
+@onready var black: TextureRect = $"initial_black"
 @onready var player : Node = get_node("../../Player")
 var textbox : TextureRect
 
@@ -37,6 +38,9 @@ func show_cutscene(day):
 	ddct.hide()
 	dc.hide()
 	chores.hide()
+	menu.show()
+	var tween = create_tween()
+	await tween.tween_property(black,"modulate:a",0,0.5).finished
 	await wait_for_click()
 	menu.hide()
 	show_dialogue_box()
@@ -88,7 +92,9 @@ func hide_after_while(l):
 	
 func wait_for_click():
 	await get_tree().create_timer(0.1).timeout  # small delay to avoid instant skip
-	while not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	while not Input.is_action_just_released("object interaction"):
+		if Input.is_action_just_pressed("object interaction"):
+			menu.texture = load("res://Assets/UI/menu_pressed.png")
 		await get_tree().process_frame
 	
 		

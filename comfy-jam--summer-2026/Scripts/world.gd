@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 		Signals.clear_chores.emit()
 		Signals.next_day.emit(day)
 		is_next_day = false
+		$House.on_change_rooms("day")
 		await Fade.fade(0,0.5).finished
 		if day == 4:
 			show_ending()

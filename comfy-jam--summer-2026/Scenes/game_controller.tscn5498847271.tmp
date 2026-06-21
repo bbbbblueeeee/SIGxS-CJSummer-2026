@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b7j11ccis0ut5"]
+
+[ext_resource type="Script" uid="uid://bj6i2oh5bior" path="res://Scripts/global.gd" id="1_nqxm2"]
+[ext_resource type="Script" uid="uid://c3gchgxdu132l" path="res://Scripts/world.gd" id="2_27abl"]
+[ext_resource type="PackedScene" uid="uid://b7sc6ex8q1xen" path="res://Scenes/player.tscn" id="3_7la68"]
+[ext_resource type="PackedScene" uid="uid://wpxkwx5rtm7g" path="res://Scenes/ui.tscn" id="3_ppfu0"]
+[ext_resource type="PackedScene" uid="uid://cjwuyw6d46jg6" path="res://Scenes/house.tscn" id="4_6nxga"]
+[ext_resource type="PackedScene" uid="uid://l13lm78v14we" path="res://Scenes/chore_manager.tscn" id="4_27abl"]
+[ext_resource type="PackedScene" uid="uid://boenjddqfliwj" path="res://Scenes/time.tscn" id="4_ppfu0"]
+[ext_resource type="PackedScene" uid="uid://d1kkcwedjrxsi" path="res://Scenes/bed.tscn" id="5_g3622"]
+[ext_resource type="PackedScene" uid="uid://c8d7830xpve0r" path="res://Scenes/cut_scenes.tscn" id="6_gruqv"]
+[ext_resource type="PackedScene" uid="uid://1qcno3gutt6f" path="res://Scenes/obedience_points.tscn" id="6_k0qbb"]
+[ext_resource type="PackedScene" uid="uid://gh15sskgxr67" path="res://Scenes/fade.tscn" id="7_gruqv"]
+[ext_resource type="PackedScene" uid="uid://mlmt7sriqda2" path="res://Scenes/door.tscn" id="7_u4s5x"]
+[ext_resource type="PackedScene" uid="uid://ojjfeh5laowx" path="res://Scenes/end_day_screen.tscn" id="8_h1rn0"]
+[ext_resource type="PackedScene" uid="uid://dmwmmsconfbhs" path="res://Scenes/house_bgm.tscn" id="14_yg1k2"]
+[ext_resource type="AudioStream" uid="uid://5air6x35ahy3" path="res://Assets/Music/TSWMA_Sentiments_FinalDemo1.mp3" id="15_dhp01"]
+[ext_resource type="AudioStream" uid="uid://bqlq6m1stj1dd" path="res://Assets/Music/TSWMA_Tense_Demo1.mp3" id="16_qvxum"]
+
+[node name="GameController" type="Node" unique_id=2020275606]
+script = ExtResource("1_nqxm2")
+
+[node name="World" type="Node2D" parent="." unique_id=1648158631]
+script = ExtResource("2_27abl")
+
+[node name="Player" parent="World" unique_id=735912576 instance=ExtResource("3_7la68")]
+
+[node name="Camera2D" type="Camera2D" parent="World/Player" unique_id=1933069141]
+offset = Vector2(0, 60)
+limit_left = 0
+limit_right = 5120
+
+[node name="House" parent="World" unique_id=831075696 instance=ExtResource("4_6nxga")]
+visibility_layer = 2
+
+[node name="Bed" parent="World/House" unique_id=1845696154 instance=ExtResource("5_g3622")]
+position = Vector2(2495, -138)
+scale = Vector2(1.5, 1.5)
+
+[node name="ChoreManager" parent="World/House" unique_id=956873693 instance=ExtResource("4_27abl")]
+visibility_layer = 2
+
+[node name="Door" parent="World/House" unique_id=221451178 instance=ExtResource("7_u4s5x")]
+
+[node name="CutScenes" parent="World" unique_id=1128426716 instance=ExtResource("6_gruqv")]
+
+[node name="EndDay Screen" parent="World" unique_id=1704616727 instance=ExtResource("8_h1rn0")]
+layer = 2
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=1141565541]
+
+[node name="UI" parent="GUI" unique_id=1805872978 instance=ExtResource("3_ppfu0")]
+
+[node name="Fade" parent="GUI" unique_id=332422841 instance=ExtResource("7_gruqv")]
+visible = false
+
+[node name="Time" parent="GUI" unique_id=1515553904 instance=ExtResource("4_ppfu0")]
+
+[node name="ObediencePoints" parent="GUI" unique_id=1972092476 instance=ExtResource("6_k0qbb")]
+
+[node name="HouseBgm" parent="." unique_id=1231198727 instance=ExtResource("14_yg1k2")]
+volume_db = -8.0
+
+[node name="SentimentalBgm" parent="." unique_id=1522864425 instance=ExtResource("14_yg1k2")]
+stream = ExtResource("15_dhp01")
+autoplay = false
+
+[node name="TenseBgm" parent="." unique_id=1197535943 instance=ExtResource("14_yg1k2")]
+stream = ExtResource("16_qvxum")
+autoplay = false

@@ -17,6 +17,7 @@ $> textbox.texture = load("res://Assets/Portraits/uneasy1_mae.png")
 Mae: Or, I could just stay home.
 Mae: …
 Mae: Well, I have the rest of the day to decide whether or not I’ll go.
+Mae: If I do decide to go, I'll have to leave home some time from [b]8:00 PM to 11:00 PM[/b].
 $> textbox.texture = load("res://Assets/Portraits/speaking_mae.png")
 Mae: Let’s do some chores for now.
 $> Signals.movement_unlocked.emit()

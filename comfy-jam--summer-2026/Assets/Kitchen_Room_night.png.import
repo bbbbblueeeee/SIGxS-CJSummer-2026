@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4es6mli0648w"
-path="res://.godot/imported/menu_button.png-53f9a6b20b66e86071c7f1de6ff7f633.ctex"
+uid="uid://bf83pl38jv1mi"
+path="res://.godot/imported/Kitchen_Room_night.png-949bc7ea00413bed72fac8d55687f766.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/menu_button.png"
-dest_files=["res://.godot/imported/menu_button.png-53f9a6b20b66e86071c7f1de6ff7f633.ctex"]
+source_file="res://Assets/Kitchen_Room_night.png"
+dest_files=["res://.godot/imported/Kitchen_Room_night.png-949bc7ea00413bed72fac8d55687f766.ctex"]
 
 [params]
 

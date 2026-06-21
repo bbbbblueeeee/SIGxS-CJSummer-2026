@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vwhcihq068yy"
-path="res://.godot/imported/Kitchen_Room.png-5d764491c53fe6af977f787c512611af.ctex"
+uid="uid://da2yus6h0djlo"
+path="res://.godot/imported/Balcony_sunset.png-86fdeb843d3d037f7a235ebf12fed9ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Kitchen_Room.png"
-dest_files=["res://.godot/imported/Kitchen_Room.png-5d764491c53fe6af977f787c512611af.ctex"]
+source_file="res://Assets/Balcony_sunset.png"
+dest_files=["res://.godot/imported/Balcony_sunset.png-86fdeb843d3d037f7a235ebf12fed9ac.ctex"]
 
 [params]
 

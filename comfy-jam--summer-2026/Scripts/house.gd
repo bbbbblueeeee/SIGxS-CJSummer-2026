@@ -1,7 +1,9 @@
 extends Node2D
 var current_floor : int = 1
+var variant : String = "sunset"
 @onready var move_component : Node2D = $"../Player/MoveComponent"
 @onready var chore_manager: Node2D = $ChoreManager
+@onready var door: Node2D = $Door
 
 
 var floor_1_dict = [
@@ -35,6 +37,7 @@ func _ready() -> void:
 	Signals.floor_transition.connect(change_floor)
 	Signals.next_day.connect(new_day)
 	Signals.tutorial_done.connect(when_tutorial_done)
+	door.change_rooms.connect(on_change_rooms)
 	create_objects(floor_1_dict,floor_1_objects)
 	create_objects(floor_2_dict,floor_2_objects)
 	new_day(0)
@@ -72,13 +75,21 @@ func create_objects(object_dict, object_array):
 		add_child(new_object)
 		object_array.append(new_object)
 
+func on_change_rooms(path: String):
+		variant = path
+		if current_floor == 1:
+			$Room2.texture=load("res://Assets/Kitchen_Room_"+variant+".png")
+		if current_floor == 2:
+			$Room3.texture=load("res://Assets/Bedroom_"+variant+".png")
+			$Room4.texture=load("res://Assets/Balcony_"+variant+".png")
+
 func change_floor(floor):
 	move_component.process_mode = PROCESS_MODE_DISABLED
 	await Fade.fade(1,0.5).finished
 	current_floor = floor
 	if floor == 1:
 		$Room1.texture=load("res://Assets/Stairs_going_up.png")
-		$Room2.texture=load("res://Assets/Kitchen_Room.png")
+		$Room2.texture=load("res://Assets/Kitchen_Room_"+variant+".png")
 		$Room3.texture=load("res://Assets/Living_Room.png")
 		$Room4.texture=load("res://Assets/Door_Leading_Outside.png")
 		move_component.right_limit = 4956
@@ -93,8 +104,8 @@ func change_floor(floor):
 	elif floor == 2:
 		$Room1.texture=load("res://Assets/Stairs_going_down.png")
 		$Room2.texture=load("res://Assets/Utility_Room_.png")
-		$Room3.texture=load("res://Assets/Bedroom_day.png")
-		$Room4.texture=load("res://Assets/Balcony_day.png")
+		$Room3.texture=load("res://Assets/Bedroom_"+variant+".png")
+		$Room4.texture=load("res://Assets/Balcony_"+variant+".png")
 		move_component.right_limit = 4350
 		for object in floor_1_objects:
 			object.visible = false

@@ -22,7 +22,7 @@
 [ext_resource type="Script" uid="uid://b4xjoaq8en3jq" path="res://Scripts/day_3.gd" id="20_mvexy"]
 [ext_resource type="Texture2D" uid="uid://i2i5xew5s7me" path="res://Assets/Outside/Rooftop.PNG" id="21_lx4pu"]
 [ext_resource type="Texture2D" uid="uid://c0obm1gbwbepn" path="res://Assets/CGs/Day 3_First.png" id="21_nwrbp"]
-[ext_resource type="Texture2D" uid="uid://bujvrmakq06sc" path="res://Assets/UI/menu.png" id="22_lx4pu"]
+[ext_resource type="Texture2D" uid="uid://rdbbjuhojubt" path="res://Assets/UI/menu.png" id="22_lx4pu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0lsk"]
 font_size = 26
@@ -329,16 +329,16 @@ offset_bottom = 40.0
 texture = ExtResource("9_0ups5")
 
 [node name="main menu" type="TextureRect" parent="Tutorial" unique_id=410993261]
+visible = false
 offset_right = 1280.0
 offset_bottom = 720.0
 texture = ExtResource("22_lx4pu")
 
-[node name="Button" type="Button" parent="Tutorial/main menu" unique_id=1673836815]
-layout_mode = 0
-offset_left = 135.0
-offset_top = 546.0
-offset_right = 1141.0
-offset_bottom = 636.0
+[node name="initial_black" type="TextureRect" parent="Tutorial" unique_id=846618327]
+z_index = 99
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_lpi84")
 
 [node name="Day1" type="Node2D" parent="." unique_id=1464920332]
 visible = false

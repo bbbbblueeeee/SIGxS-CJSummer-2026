@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fpjeehydlqip"
-path="res://.godot/imported/TEMP_day0-2.png-e8f1429f3533e92511442e55e62c2ee1.ctex"
+uid="uid://kle75dd55j15"
+path="res://.godot/imported/Kitchen_Room_sunset.png-dfda357cf28e19a97b447dcde5b21a87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Temporary/TEMP_day0-2.png"
-dest_files=["res://.godot/imported/TEMP_day0-2.png-e8f1429f3533e92511442e55e62c2ee1.ctex"]
+source_file="res://Assets/Kitchen_Room_sunset.png"
+dest_files=["res://.godot/imported/Kitchen_Room_sunset.png-dfda357cf28e19a97b447dcde5b21a87.ctex"]
 
 [params]
 
